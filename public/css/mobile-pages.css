@@ -1,0 +1,139 @@
+.show-when-mobile2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.show-when-mobile4 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.additems {
+  font-size: 30px;
+}
+
+/* ------------Mob-table------------- */
+
+.dis {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.MainTitle {
+  text-align: center;
+}
+
+.details {
+  font-size: 40px;
+  padding: 20px;
+  width: 100vw;
+}
+
+.detTable {
+  width: 75vw;
+}
+
+.detTable td {
+  font-weight: bold;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  margin-top: 25px;
+}
+th,
+td {
+  font-size: 20px;
+}
+
+.icons2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shoow {
+  display: flex;
+  justify-content: center;
+}
+
+.detTable {
+  display: none;
+}
+
+.mobincom {
+  margin-top: 60px;
+}
+.table5 {
+  margin-top: 0;
+  max-width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25px;
+}
+
+.hiddentable {
+  margin-bottom: 0;
+}
+table.inco2 {
+  max-width: fit-content;
+  margin: 20px auto 0 auto;
+}
+.icon-th-list{
+  font-size: 35px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.icon-th-list2{
+  font-size: 35px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.ay7aga{
+  position: relative;
+}
+/* ------------Mob-forms------------- */
+
+.form-popup {
+  right: 0;
+  left: 0;
+}
+
+.form-popup2 {
+  right: 0;
+  left: 0;
+}
+
+.form-container {
+  width: 320px;
+}
+
+input {
+  color: #1b1b1b;
+  padding: 5px 10px;
+  width: 40%;
+}
+
+.icons2 span {
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+.numm2 {
+  display: none;
+}
+
+.iconstyl {
+  display: inline-block;
+}
+
+.Placeinput {
+  width: 40%;
+}

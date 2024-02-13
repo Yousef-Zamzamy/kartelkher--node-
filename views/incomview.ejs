@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/incomview.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec" id="MainSec">
+      <h1 class="MainTitle">الايرادات</h1>
+      <table class="center hide-when-mobile2" id="table">
+        <tr>
+          <th>م</th>
+          <th>التاريخ</th>
+          <th>الأسم</th>
+          <th>المبلغ</th>
+          <th>زكاة المال</th>
+          <th>صدقة جارية</th>
+          <th>علاج مرضي</th>
+          <th>ذبح و توزيع لحوم</th>
+          <th>العاملين عليها</th>
+        </tr>
+
+        <% incomarr.forEach((item,index) => { %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= item.date %></td>
+            <td><%= item.person %></td>
+            <td><%= item.incom %></t>
+            <td><%= item.zkah %></td>
+            <td><%= item.sdkah %></td>
+            <td><%= item.elag %></td>
+            <td><%= item.zab7 %></td>
+            <td><%= item.worker %></td>
+          </tr>
+        <% }) %>
+
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell"></th>
+          <th class="extcell" id="totalpaid">الأجمالي</th>
+          <th class="extcell" id="totalmoney">
+            <% 
+          let monall = 0;
+          for (let i = 0; i < incomarr.length; i++) {
+            monall = monall + incomarr[i].incom
+          } %>
+          <%= monall %>
+          </th>
+          <th class="extcell" id="totalzkah">
+            <% 
+          let zkahall = 0;
+          for (let i = 0; i < incomarr.length; i++) {
+            zkahall = zkahall + incomarr[i].zkah
+          } %>
+          <%= zkahall %>
+          </th>
+          <th class="extcell" id="totalsdkah">
+            <% 
+          let sdkahall = 0;
+          for (let i = 0; i < incomarr.length; i++) {
+            sdkahall = sdkahall + incomarr[i].sdkah
+          } %>
+          <%= sdkahall %>
+          </th>
+          <th class="extcell" id="totalelag">
+            <% 
+          let elagall = 0;
+          for (let i = 0; i < incomarr.length; i++) {
+            elagall = elagall + incomarr[i].elag
+          } %>
+          <%= elagall %>
+          </th>
+          <th class="extcell" id="totalzab7">
+            <% 
+          let zab7all = 0;
+          for (let i = 0; i < incomarr.length; i++) {
+            zab7all = zab7all + incomarr[i].zab7
+          } %>
+          <%= zab7all %>
+          </th>
+          <th class="extcell" id="totalworker">
+            <% 
+          let workerall = 0;
+          for (let i = 0; i < incomarr.length; i++) {
+            workerall = workerall + incomarr[i].worker
+          } %>
+          <%= workerall %>
+          </th>
+        </tr>
+      </table>
+
+      <div class="show-when-mobile2" id="mobincom">  
+        <% incomarr.forEach(item => { %>
+          <div class="details">
+            <div class="summ">
+                        <div class="iconstyl">
+                         <span class="icon-circle-left"></span><span class="icon-circle-down hide2"></span></div>
+                         <span class="mobname"><%= item.person %></span>
+                      </div>
+            <table class="detTable">
+              <tr>
+                <td>التاريخ</td>
+                <td class="mobdate"><%= item.date %></td>
+              </tr>
+              <tr>
+                <td>المبلغ</td>
+                <td class="mobmoney"><%= item.incom %></td>
+              </tr>
+              <tr>
+                <td>زكاة المال</td>
+                <td class="mobzkah"><%= item.zkah %></td>
+              </tr>
+              <tr>
+                <td>صدقة جارية</td>
+                <td class="mobsdkah"><%= item.sdkah %></td>
+              </tr>
+              <tr>
+                <td>ذبح و توزيع لحوم</td>
+                <td class="mobzab7"><%= item.zab7 %></td>
+              </tr>
+              <tr>
+                <td>علاج مرضي</td>
+                <td class="mobelag"><%= item.elag %></td>
+              </tr>
+              <tr>
+                <td>علاج مرضي</td>
+                <td class="mobworker"><%= item.worker %></td>
+              </tr>
+            </table>
+          </div>
+        <% }) %>
+      </div>
+
+    </section>
+  </body>
+</html>

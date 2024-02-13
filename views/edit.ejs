@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <base href="/">
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages2.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/edit.js"></script>
+</head>
+<body>
+  <div  dir="rtl">
+  <div class="form-popup2 hide-when-mobile" id="myForm2">
+    <form action="/edit/<%= obj._id %>?_method=PUT" method="post"  class="form-container">
+      <h1>تعديل</h1>
+
+      <label for="data"><b>التاريخ</b></label>
+      <input id="dateinput2" type="date" name="date" required value="<%= obj.date %>" />
+      <br />
+      <label for="name"><b>الاسم</b></label>
+      <input class="input2" type="Name" name="person" required value="<%= obj.person %>"/>
+      <br />
+      <label for="number"><b>المبلغ</b></label>
+      <input class="input2" type="number" min="0" name="incom" required value="<%= obj.incom %>"/>
+      <br />
+      <label for="number"><b>زكاة المال</b></label>
+      <input class="input2 ways2" type="number" min="0" name="zkah" required value="<%= obj.zkah %>"/>
+      <br />
+      <label for="number"><b>صدقة جارية</b></label>
+      <input class="input2 ways2" type="number" min="0" name="sdkah" required value="<%= obj.sdkah %>"/>
+      <br />
+      <label for="number"><b>علاج مرضي</b></label>
+      <input class="input2 ways2" type="number" min="0" name="elag" required value="<%= obj.elag %>"/>
+      <br />
+      <label for="number"><b>ذبح و توزيع لحوم</b></label>
+      <input class="input2 ways2" type="number" min="0" name="zab7" required value="<%= obj.zab7 %>"/>
+      <br />
+      <label for="number"><b>العاملين عليها</b></label>
+      <input class="input2 ways2" type="number" min="0" name="worker" required value="<%= obj.worker %>"/>
+
+      <div>
+        <button type="submit" class="btn savebtn" id="save2" disabled>حفظ</button>
+        <a href="/incom.html"><button type="button" class="btn cancel" id="cancel2">الغاء</button></a>
+      </div>
+    </form>          
+</div>
+</div>
+</body>
+</html>

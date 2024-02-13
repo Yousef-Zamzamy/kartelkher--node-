@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/elag.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+    rel="stylesheet"
+    href="css/mobile-header2.css"
+    media="(max-width: 367px)"
+  />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/elagview.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec" id="MainSec">
+      
+      <h1 class="MainTitle">علاج المرضي</h1>
+
+
+      <table class="center hide-when-mobile2" id="table">
+        <tr>
+          <th>م</th>
+          <th>التاريخ</th>
+          <th>المكان</th>
+          <th>البيان</th>
+          <th>المصروفات</th>
+          <th>المتبقي</th>
+        </tr>
+        <% elagarr.forEach((item,index) => { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= item.date %></td>
+            <td><%= item.places %></td>
+            <td><%= item.ways %></td>
+            <td><%= item.money %></td>
+            <td> ---- </td>
+          </tr>
+        <% }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell" id="totalpaid">
+            <% 
+            let elagall = 0;
+            for (let i = 0; i < elagarr.length; i++) {
+              elagall = elagall + elagarr[i].money
+            } %>
+            <%= elagall %></th>
+          </th>
+          <th class="extcell" id="totalremain"></th>
+        </tr>
+      
+      </table>
+      <div class="show-when-mobile2" id="mobincom">  
+        <% elagarr.forEach(item => { %>
+          <div class="details">
+            <div class="summ">
+                        <div class="iconstyl">
+                         <span class="icon-circle-left"></span><span class="icon-circle-down hide2"></span></div>
+                        <span><%= item.places %></span>
+                      </div>
+            <table class="detTable">
+              <tr>
+                <td>التاريخ</td>
+                <td class="mobdate"><%= item.date %></td>
+              </tr>
+              <tr>
+                <td>البيان</td>
+                <td class="mobways"><%= item.ways %></td>
+              </tr>
+              <tr>
+                <td>المصروفات</td>
+                <td class="mobmoney"><%= item.money %></td>
+              </tr>
+              <tr>
+                <td>المتبقي</td>
+                <td class="mobzkah"> ------ </td>
+              </tr>
+            </table>
+          </div>
+        <% }) %>
+        
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/outcome.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/outcome.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec tall" id="MainSec">
+      <h1 class="MainTitle">مصروفات</h1>
+      <div class="choose">
+        <h1>أختر المحافظة</h1>
+        <select id="goverments" class="Placeinput2" value="0000" required>
+          <option value="none"></option>
+          <option value="أسوان">أسوان</option>
+          <option value="الأقصر">الأقصر</option>
+          <option value="قنا">قنا</option>
+          <option value="سوهاج">سوهاج</option>
+          <option value="المنيا">المنيا</option>
+          <option value="بني سويف">بني سويف</option>
+          <option value="البحر الأحمر">البحر الأحمر</option>
+          <option value="الواحات البحرية">الواحات البحرية</option>
+          <option value="البحيرة">البحيرة</option>
+          <option value="الإسكندرية">الإسكندرية</option>
+          <option value="القاهرة">القاهرة</option>
+          <option value="/">الجميع</option>
+        </select>
+      </div>
+
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">دراو / أسوان</th>
+        </tr>
+        <tr class="rows">
+          <th class="place1">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place1">البيان</th>
+          <th class="place1">المصروفات</th>
+          <th class="place1">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place1 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">الضبعية / الأقصر</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">قمولا / قنا</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">المحافظة / سوهاج</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">إدفا و الغوانم / سوهاج</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">بهتا / سوهاج</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">الشوكا – طما / سوهاج</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">نزله البرشا - ملوي / المنيا</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">بني سويف / بني سويف</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">حلايب / البحر الأحمر</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">شلاتين / البحر الأحمر</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">أبو رماد / البحر الأحمر</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">القصر / الواحات البحرية</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">الحيز / الواحات البحرية</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">الإنتاج الأول / البحيرة</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">كريون – كفر الدوار / البحيرة</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">العامرية / الإسكندرية</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">كوم الدكة / الإسكندرية</th>
+        </tr>
+        <tr class="rows">
+          <th class="place2">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place2">البيان</th>
+          <th class="place2">المصروفات</th>
+          <th class="place2">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place2 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">الدخيلة / الإسكندرية</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">أبو قير / الإسكندرية</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table hide">
+        <tr>
+          <th colspan="7" class="place">كفر طهرمس / القاهرة</th>
+        </tr>
+        <tr class="rows">
+          <th class="place3">م</th>
+          <th class="datearrang">
+            <button class="desort">
+              <span class="icon-sort-amount-asc"></span></button
+            ><span>التاريخ</span
+            ><button class="sort">
+              <span class="icon-sort-amount-desc"></span>
+            </button>
+          </th>
+          <th class="place3">البيان</th>
+          <th class="place3">المصروفات</th>
+          <th class="place3">تعديلات</th>
+        </tr>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المحافظة</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell place3 totaloutcome"></th>
+          <th class="hidecell">تعديلات</th>
+        </tr>
+      </table>
+
+
+      <div class="show-when-mobile2" id="mobincom">
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">دراو / أسوان</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">الضبعية / الأقصر</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">قمولا / قنا</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">المحافظة / سوهاج</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">إدفا و الغوانم / سوهاج</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">بهتا / سوهاج</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">الشوكا – طما / سوهاج</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">نزله البرشا - ملوي / المنيا</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">بني سويف / بني سويف</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">حلايب / البحر الأحمر</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">شلاتين / البحر الأحمر</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">أبو رماد / البحر الأحمر</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">القصر / الواحات البحرية</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">الحيز / الواحات البحرية</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">الإنتاج الأول / البحيرة</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">كريون – كفر الدوار / البحيرة</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">العامرية / الإسكندرية</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">كوم الدكة / الإسكندرية</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">الدخيلة / الإسكندرية</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details hide">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">أبو قير / الإسكندرية</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="mobdatearrang">
+                <button class="mobdesort">
+                  <span class="icon-sort-amount-asc"></span></button
+                ><span>التاريخ</span
+                ><button class="mobsort">
+                  <span class="icon-sort-amount-desc"></span>
+                </button>
+              </th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المحافظة</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotaloutcome"></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="form-popup form-popup11 hide-when-mobile" id="myForm3">
+        <form action="/action_page.php" class="form-container">
+          <h1>اضافه مصاريف</h1>
+
+          <label for="data"><b>التاريخ</b></label>
+          <input id="dateinput3" type="date" name="data" required />
+          <br />
+          <label for="place"><b>المكان/المحافظة</b></label>
+          <select id="places3" class="Placeinput" value="0000" required>
+            <option value=""></option>
+            <option class="options" value="دراو / أسوان">دراو / أسوان</option>
+            <option class="options" value="الضبعية / الأقصر">الضبعية / الأقصر</option>
+            <option class="options" value="قمولا / قنا">قمولا / قنا</option>
+            <option class="options" value="المحافظة / سوهاج">المحافظة / سوهاج</option>
+            <option class="options" value="إدفا و الغوانم / سوهاج">إدفا و الغوانم / سوهاج</option>
+            <option class="options" value="بهتا / سوهاج">بهتا / سوهاج</option>
+            <option class="options" value="الشوكا – طما / سوهاج">الشوكا – طما / سوهاج</option>
+            <option class="options" value="نزله البرشا - ملوي / المنيا">نزله البرشا - ملوي / المنيا</option>
+            <option class="options" value="بني سويف / بني سويف">بني سويف / بني سويف</option>
+            <option class="options" value="حلايب / البحر الأحمر">حلايب / البحر الأحمر</option>
+            <option class="options" value="شلاتين / البحر الأحمر">شلاتين / البحر الأحمر</option>
+            <option class="options" value="أبو رماد / البحر الأحمر">أبو رماد / البحر الأحمر</option>
+            <option class="options" value="القصر / الواحات البحرية">القصر / الواحات البحرية</option>
+            <option class="options" value="الحيز / الواحات البحرية">الحيز / الواحات البحرية</option>
+            <option class="options" value="الإنتاج الأول / البحيرة">الإنتاج الأول / البحيرة</option>
+            <option class="options" value="كريون – كفر الدوار / البحيرة">كريون – كفر الدوار / البحيرة</option>
+            <option class="options" value="العامرية / الإسكندرية">العامرية / الإسكندرية</option>
+            <option class="options" value="كوم الدكة / الإسكندرية">كوم الدكة / الإسكندرية</option>
+            <option class="options" value="الدخيلة / الإسكندرية">الدخيلة / الإسكندرية</option>
+            <option class="options" value="أبو قير / الإسكندرية">أبو قير / الإسكندرية</option>
+          </select>
+          <br />
+          <label for="number"><b>البيان</b></label>
+          <input class="input3" type="name" min="0" required />
+          <br />
+          <label for="number"><b>المصروفات</b></label>
+          <input class="input3" type="number" min="0" required />
+          <div>
+            <button type="button" class="btn savebtn" id="save3" disabled>حفظ</button>
+            <button type="button" class="btn cancel" id="cancel3">الغاء</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-popup form-popup2 hide-when-mobile" id="myForm2">
+        <form action="/action_page.php" class="form-container">
+          <h1>تعديل</h1>
+
+          <label for="data"><b>التاريخ</b></label>
+          <input id="dateinput2" type="date" name="data" required />
+          <br />
+          <label for="place"><b>المكان/المحافظة</b></label>
+          <select id="places2" class="Placeinput" value="0000" required>
+            <option value=""></option>
+            <option class="options" value="دراو / أسوان">دراو / أسوان</option>
+            <option class="options" value="الضبعية / الأقصر">الضبعية / الأقصر</option>
+            <option class="options" value="قمولا / قنا">قمولا / قنا</option>
+            <option class="options" value="المحافظة / سوهاج">المحافظة / سوهاج</option>
+            <option class="options" value="إدفا و الغوانم / سوهاج">إدفا و الغوانم / سوهاج</option>
+            <option class="options" value="بهتا / سوهاج">بهتا / سوهاج</option>
+            <option class="options" value="الشوكا – طما / سوهاج">الشوكا – طما / سوهاج</option>
+            <option class="options" value="نزله البرشا - ملوي / المنيا">نزله البرشا - ملوي / المنيا</option>
+            <option class="options" value="بني سويف / بني سويف">بني سويف / بني سويف</option>
+            <option class="options" value="حلايب / البحر الأحمر">حلايب / البحر الأحمر</option>
+            <option class="options" value="شلاتين / البحر الأحمر">شلاتين / البحر الأحمر</option>
+            <option class="options" value="أبو رماد / البحر الأحمر">أبو رماد / البحر الأحمر</option>
+            <option class="options" value="القصر / الواحات البحرية">القصر / الواحات البحرية</option>
+            <option class="options" value="الحيز / الواحات البحرية">الحيز / الواحات البحرية</option>
+            <option class="options" value="الإنتاج الأول / البحيرة">الإنتاج الأول / البحيرة</option>
+            <option class="options" value="كريون – كفر الدوار / البحيرة">كريون – كفر الدوار / البحيرة</option>
+            <option class="options" value="العامرية / الإسكندرية">العامرية / الإسكندرية</option>
+            <option class="options" value="كوم الدكة / الإسكندرية">كوم الدكة / الإسكندرية</option>
+            <option class="options" value="الدخيلة / الإسكندرية">الدخيلة / الإسكندرية</option>
+            <option class="options" value="أبو قير / الإسكندرية">أبو قير / الإسكندرية</option>
+          </select>
+          <br />
+          <label for="number"><b>البيان</b></label>
+          <input class="input2" type="name" min="0" required />
+          <br />
+          <label for="number"><b>المصروفات</b></label>
+          <input class="input2" type="number" min="0" required />
+          <div>
+            <button type="button" class="btn savebtn" id="save2" disabled>حفظ</button>
+            <button type="button" class="btn cancel" id="cancel2">الغاء</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

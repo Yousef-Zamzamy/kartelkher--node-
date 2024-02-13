@@ -1,0 +1,105 @@
+/* ------------Mob-header------------- */
+
+.show-when-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hide-when-mobile,
+.hide-when-mobile2,
+.hide-when-mobile3 {
+  display: none;
+}
+
+.mob-sub-list {
+  display: none;
+  position: fixed;
+  background-color: #1b1b1b;
+  border-top: 1px solid aqua;
+  padding: 10px;
+  text-align: center;
+  top: 79px;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.clicked{
+  animation: mymove 0.3s 1;
+}
+
+@keyframes mymove {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+} 
+
+.mob-sub-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 20px;
+  border-bottom: 1px solid aqua;
+  text-align: right;
+}
+
+.subsubmob {
+  display: none;
+  text-align: right;
+  position: relative;
+  right: 50px;
+}
+
+i {
+  cursor: pointer;
+  font-style: normal;
+  padding: 0 50px;
+}
+
+.links {
+  padding: 0 50px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hide2 {
+  display: none;
+}
+
+.show2 {
+  display: inline-block;
+}
+
+.summ {
+  cursor: pointer;
+}
+
+.fix {
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.shift {
+  padding-top: 90px;
+}
+
+.shoow {
+  display: flex;
+  justify-content: center;
+}
+
+.shooow {
+  display: block;
+}
+.show-when-mobile3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

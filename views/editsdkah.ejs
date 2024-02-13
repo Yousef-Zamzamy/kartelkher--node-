@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <base href="/">
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages2.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/editsdkah.js"></script>
+</head>
+<body>
+  <div  dir="rtl">
+  <div class="form-popup2 hide-when-mobile" id="myForm2">
+    <form action="/editsdkah/<%= obj._id %>?_method=PUT" method="post"  class="form-container">
+      <h1>تعديل</h1>
+
+      <label for="data"><b>التاريخ</b></label>
+          <input id="dateinput2" type="date" name="date" value="<%= obj.date %>" required />
+          <br />
+          <label for="ways"><b>البيان</b></label>
+          <select id="ways2" class="Placeinput" name="ways" value="<%= obj.ways %>" required>
+            <option value="<%= obj.ways %>"><%= obj.ways %></option>
+              <option value="آبار مياه">آبار مياه</option>
+              <option value="توصيلة مياه شرب">توصيلة مياه شرب</option>
+              <option value="توصيل كهرباء والعداد">توصيل كهرباء والعداد</option>
+              <option value="حمامات">حمامات</option>
+              <option value="بناء اسقف">بناء اسقف</option>
+              <option value="ماكينات خياطة">ماكينات خياطة</option>
+              <option value="اصلاح اجهزة طبية">اصلاح اجهزة طبية</option>
+              <option value="اكفان">اكفان</option>
+          </select>
+          <br />
+          <label for="number"><b>التسلسل</b></label>
+          <input id="name" class="input2" type="number" name="list" value="<%= obj.list %>" required />
+          <br />
+          <label for="place"><b>المكان</b></label>
+          <select id="places2" name="places" class="Placeinput" value="<%= obj.places %>" required>
+            <option value="<%= obj.places %>"><%= obj.places %></option>
+            <option value="دراو / أسوان">دراو / أسوان</option>
+            <option value="الضبعية / الأقصر">الضبعية / الأقصر</option>
+            <option value="قمولا / قنا">قمولا / قنا</option>
+            <option value="المحافظة / سوهاج">المحافظة / سوهاج</option>
+            <option value="إدفا و الغوانم / سوهاج">إدفا و الغوانم / سوهاج</option>
+            <option value="بهتا / سوهاج">بهتا / سوهاج</option>
+            <option value="الشوكا – طما / سوهاج">الشوكا – طما / سوهاج</option>
+            <option value="نزله البرشا - ملوي / المنيا">نزله البرشا - ملوي / المنيا</option>
+            <option value="بني سويف / بني سويف">بني سويف / بني سويف</option>
+            <option value="حلايب / البحر الأحمر">حلايب / البحر الأحمر</option>
+            <option value="شلاتين / البحر الأحمر">شلاتين / البحر الأحمر</option>
+            <option value="أبو رماد / البحر الأحمر">أبو رماد / البحر الأحمر</option>
+            <option value="القصر / الواحات البحرية">القصر / الواحات البحرية</option>
+            <option value="الحيز / الواحات البحرية">الحيز / الواحات البحرية</option>
+            <option value="الإنتاج الأول / البحيرة">الإنتاج الأول / البحيرة</option>
+            <option value="كريون – كفر الدوار / البحيرة">كريون – كفر الدوار / البحيرة</option>
+            <option value="العامرية / الإسكندرية">العامرية / الإسكندرية</option>
+            <option value="كوم الدكة / الإسكندرية">كوم الدكة / الإسكندرية</option>
+            <option value="الدخيلة / الإسكندرية">الدخيلة / الإسكندرية</option>
+            <option value="أبو قير / الإسكندرية">أبو قير / الإسكندرية</option>
+            <option value="كفر طهرمس / القاهرة">كفر طهرمس / القاهرة</option>
+          </select>
+          <br />
+          <label for="number"><b>المصروفات</b></label>
+          <input class="input2" type="number" min="0" name="money" value="<%= obj.money %>" required />
+
+        <button type="submit" class="btn savebtn" id="save2" disabled>حفظ</button>
+        <a href="/sdkah.html"><button type="button" class="btn cancel" id="cancel2">الغاء</button></a>
+      </div>
+    </form>          
+</div>
+</div>
+</body>
+</html>

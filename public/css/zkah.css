@@ -1,0 +1,83 @@
+.MainTitle {
+  font-size: 45px;
+  color: #1b1b1b;
+  padding: 10px 75px;
+}
+
+#table3 {
+  margin: 0 auto;
+  position: relative;
+  top: -81px;
+}
+
+.detTable {
+  display: none;
+}
+
+.shoow {
+  display: flex;
+  justify-content: center;
+}
+
+table.inco {
+ max-width: fit-content;
+  margin: 20px auto 0 auto;
+}
+
+.Placeinput {
+  width: 50%;
+  height: 30px;
+}
+
+.form-popup {
+  right: 145px;
+  bottom: 60px;
+  transform: scale(1.2);
+}
+
+.form-popup2 {
+  left: 120px;
+  bottom: 60px;
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 1000px) {
+  .form-popup {
+    transform: scale(1.1);
+  }
+  
+  .form-popup2 {
+    transform: scale(1.1);
+  }
+}
+
+
+.form-container {
+  width: 390px;
+}
+
+.datearrang span{
+  padding: 0 5px;
+}
+
+.mobdatearrang button{
+  font-size: 20px;
+}
+
+
+
+
+.show-when-mobile3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.clicked{
+  animation: mymove 0.3s 1;
+}
+
+@keyframes mymove {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+} 

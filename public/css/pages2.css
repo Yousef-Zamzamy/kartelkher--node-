@@ -1,0 +1,90 @@
+.form-container {
+  margin-top: 50px;
+  padding: 8px;
+  background-color: #1f1f1f;
+  color: white;
+  width: 450px;
+  border: 2px solid aqua;
+  border-radius: 25px;
+}
+
+.form-popup2 {
+  position: fixed;
+  z-index: 99;
+  transform: scale(1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  margin: 7px 64px;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .cancel:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+input {
+  color: #1b1b1b;
+  padding: 5px 10px;
+  width: 50%;
+}
+
+label b {
+  padding: 10px 26px;
+  display: inline-block;
+  width: 165px;
+}
+
+.savebtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.form-container h1 {
+  font-size: 30px;
+  width: 150px;
+  border: 3px solid aqua;
+  text-align: center;
+  border-radius: 20px;
+  padding: 7px 10px;
+  margin: 9px auto;
+}
+
+.mobdatearrang {
+  margin: 15px 0;
+}
+
+select {
+  color: #1b1b1b;
+  padding: 5px 10px;
+  width: 50%;
+}

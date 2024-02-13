@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <base href="/">
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages2.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/editelag.js"></script>
+</head>
+<body>
+  <div  dir="rtl">
+  <div class="form-popup2 hide-when-mobile" id="myForm2">
+    <form action="/editelag/<%= obj._id %>?_method=PUT" method="post"  class="form-container">
+      <h1>تعديل</h1>
+
+      <label for="data"><b>التاريخ</b></label>
+      <input id="dateinput2" type="date" name="date" value="<%= obj.date %>" required />
+      <br />
+      <label for="place"><b>المكان</b></label>
+      <select id="places2" name="places" class="Placeinput" value="<%= obj.places %>">
+        <option value="مركز محمد رشيد للأورام بالأسكندرية">مركز محمد رشيد للأورام بالأسكندرية</option>
+        <option value="مستشفي أبو الريش القاهره">مستشفي أبو الريش القاهره</option>
+      </select>
+      <br />
+      <label for="number"><b>البيان</b></label>
+      <input class="input2" type="name" name="ways" value="<%= obj.ways %>" min="0" required />
+      <br />
+      <label for="number"><b>المصروفات</b></label>
+      <input class="input2" type="number" min="0" name="money" value="<%= obj.money %>" required />
+
+      <div>
+        <button type="submit" class="btn savebtn" id="save2" disabled>حفظ</button>
+        <a href="/elag.html"><button type="button" class="btn cancel" id="cancel2">الغاء</button></a>
+      </div>
+    </form>          
+</div>
+</div>
+</body>
+</html>

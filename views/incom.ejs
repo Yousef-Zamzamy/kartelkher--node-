@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/incom.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body>
+    <div  dir="rtl" id="body">
+       <%- include('./components/header.ejs') %>
+      
+      <section class="MainSec" id="MainSec">
+        <h1 class="MainTitle">الايرادات</h1>
+        
+        <span class="icon-th-list2 show-when-mobile" id="det"></span>
+      
+        <table  class="center show-when-mobile inco2  hide2" id="dettable">
+          <tr class="">
+            <th class="">الاجمالي</th>
+            <th class="">----</th>
+          </tr>
+          <tr class="">
+            <th class="">المبلغ</th>
+            <th id="totalmoney2">
+              <% 
+            let mobmonall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobmonall = mobmonall + incomarr[i].incom
+            } %>
+            <%= mobmonall %>
+            </th>
+          </tr>
+          <tr class="">
+            <th class="">زكاه المال</th>
+            <th id="totalzkah2">
+              <% 
+            let mobzkahall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobzkahall = mobzkahall + incomarr[i].zkah
+            } %>
+            <%= mobzkahall %>
+            </th>
+          </tr>
+          <tr class="">
+            <th class="">صدقة جارية</th>
+            <th id="totalsdkah2">
+              <% 
+            let mobsdkahall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobsdkahall = mobsdkahall + incomarr[i].sdkah
+            } %>
+            <%= mobsdkahall %>
+            </th>
+          </tr>
+          <tr class="">
+            <th class="">علاج مرضي</th>
+            <th id="totalelag2">
+              <% 
+            let mobelagall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobelagall = mobelagall + incomarr[i].elag
+            } %>
+            <%= mobelagall %>
+            </th>
+          </tr>
+          <tr class="">
+            <th class="">ذبح و توزيع لحوم</th>
+            <th id="totalzab72">
+              <% 
+            let mobzab7all = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobzab7all = mobzab7all + incomarr[i].zab7
+            } %>
+            <%= mobzab7all %>
+            </th>
+          </tr>
+          <tr class="">
+            <th class="">العاملين عليها</th>
+            <th id="totalworker2">
+              <% 
+            let mobworkerall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobworkerall = mobworkerall + incomarr[i].worker
+            } %>
+            <%= mobworkerall %>
+            </th>
+          </tr>
+          </tr>
+        </table>
+      
+        <table class="center hide-when-mobile2" id="table">
+          <tr>
+            <th>م</th>
+            <th>التاريخ</th>
+            <th>الأسم</th>
+            <th>المبلغ</th>
+            <th>زكاة المال</th>
+            <th>صدقة جارية</th>
+            <th>علاج مرضي</th>
+            <th>ذبح و توزيع لحوم</th>
+            <th>العاملين عليها</th>
+            <th>تعديلات</th>
+          </tr>
+
+          <% incomarr.forEach((item,index) => { %>
+            <tr>
+              <td class="numb"><%= index + 1 %></td>
+              <td class="date"><%= item.date %></td>
+              <td class="name"><%= item.person %></td>
+              <td class="money"><%= item.incom %></t>
+              <td class="zkah"><%= item.zkah %></td>
+              <td class="sdkah"><%= item.sdkah %></td>
+              <td class="elag"><%= item.elag %></td>
+              <td class="zab7"><%= item.zab7 %></td>
+              <td class="worker"><%= item.worker %></td>
+              <td>
+                <div>
+                  <form class="buttons" style="display: inline;" action="/incom.html/<%= item._id %>?_method=DELETE"  method="post">
+                    <button><span class="icon-trash del"></span></button>
+                  </form>
+                  <a href="edit/<%= item._id %>">
+                    <button>
+                    <span class="icon-pencil"></span>
+                  </button>
+                </div>
+                </td>
+            </tr>
+          <% }) %>
+
+
+          <tr class="rows">
+            <th class="hidecell">م</th>
+            <th class="hidecell"></th>
+            <th class="extcell" id="totalpaid">الأجمالي</th>
+            <th class="extcell" id="totalmoney">
+              <% 
+            let monall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              monall = monall + incomarr[i].incom
+            } %>
+            <%= monall %>
+            </th>
+            <th class="extcell" id="totalzkah">
+              <% 
+            let zkahall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              zkahall = zkahall + incomarr[i].zkah
+            } %>
+            <%= zkahall %>
+            </th>
+            <th class="extcell" id="totalsdkah">
+              <% 
+            let sdkahall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              sdkahall = sdkahall + incomarr[i].sdkah
+            } %>
+            <%= sdkahall %>
+            </th>
+            <th class="extcell" id="totalelag">
+              <% 
+            let elagall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              elagall = elagall + incomarr[i].elag
+            } %>
+            <%= elagall %>
+            </th>
+            <th class="extcell" id="totalzab7">
+              <% 
+            let zab7all = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              zab7all = zab7all + incomarr[i].zab7
+            } %>
+            <%= zab7all %>
+            </th>
+            <th class="extcell" id="totalworker">
+              <% 
+            let workerall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              workerall = workerall + incomarr[i].worker
+            } %>
+            <%= workerall %>
+            </th>
+          </tr>
+        </table>
+      
+        <div class="show-when-mobile2" id="mobincom">  
+          <% incomarr.forEach(item => { %>
+            <div class="details">
+              <div class="summ">
+                          <div class="iconstyl">
+                           <span class="icon-circle-left"></span><span class="icon-circle-down hide2"></span></div>
+                           <span class="mobname"><%= item.person %></span>
+                        </div>
+              <table class="detTable">
+                <tr>
+                  <td>التاريخ</td>
+                  <td class="mobdate"><%= item.date %></td>
+                </tr>
+                <tr>
+                  <td>المبلغ</td>
+                  <td class="mobmoney"><%= item.incom %></td>
+                </tr>
+                <tr>
+                  <td>زكاة المال</td>
+                  <td class="mobzkah"><%= item.zkah %></td>
+                </tr>
+                <tr>
+                  <td>صدقة جارية</td>
+                  <td class="mobsdkah"><%= item.sdkah %></td>
+                </tr>
+                <tr>
+                  <td>ذبح و توزيع لحوم</td>
+                  <td class="mobzab7"><%= item.zab7 %></td>
+                </tr>
+                <tr>
+                  <td>علاج مرضي</td>
+                  <td class="mobelag"><%= item.elag %></td>
+                </tr>
+                <tr>
+                  <td>علاج مرضي</td>
+                  <td class="mobworker"><%= item.worker %></td>
+                </tr>
+                <tr>
+                  <td>تعديلات</td>
+                  <td>
+                    <div class="icons2">
+                      
+                      <form class="buttons" style="display: inline;" action="/incom.html/<%= item._id %>?_method=DELETE"  method="post">
+                        <button class="icon-trash del"></button>
+                      </form>
+                      <a href="edit/<%= item._id %>">
+                        <button>
+                        <span class="icon-pencil2"></span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          <% }) %>
+        </div>
+          
+        
+      
+        <div class="form-popup hide-when-mobile" id="myForm">
+          <form action="/incom.html" method="post" class="form-container">
+            <h1>اضافه</h1>
+      
+            <label for="data"><b>التاريخ</b></label>
+            <input id="dateinput" type="date" name="date" required />
+            <br />
+            <label for="name"><b>الاسم</b></label>
+            <input class="input" type="Name" id="name" name="person" required />
+            <br />
+            <label for="number"><b>المبلغ</b></label>
+            <input class="input" type="number" min="0" name="incom" required />
+            <br />
+            <label for="number"><b>زكاة المال</b></label>
+            <input class="input ways" type="number"  min="0" name="zkah" required />
+            <br />
+            <label for="number"><b>صدقة جارية</b></label>
+            <input class="input ways" type="number"  min="0" name="sdkah" required />
+            <br />
+            <label for="number"><b>علاج مرضي</b></label>
+            <input class="input ways" type="number"  min="0" name="elag" required />
+            <br />
+            <label for="number"><b>ذبح و توزيع لحوم</b></label>
+            <input class="input ways" type="number" min="0" name="zab7" required />
+            <br />
+            <label for="number"><b>العاملين عليها</b></label>
+            <input class="input ways" type="number"  min="0" name="worker" required />
+      
+            <div>
+              <button type="submit" class="btn savebtn" id="save" disabled>حفظ</button>
+              <button type="submit" class="btn cancel" id="cancel">الغاء</button>
+            </div>
+          </form>
+        </div>
+      
+      
+      </section>
+    </div>
+  </body>
+</html>

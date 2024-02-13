@@ -1,0 +1,134 @@
+.MainTitle {
+  font-size: 45px;
+  color: #1b1b1b;
+  padding: 20px 75px;
+}
+
+.detTable {
+  display: none;
+}
+
+.shoow {
+  display: flex;
+  justify-content: center;
+}
+
+table.inco {
+  max-width: fit-content;
+  margin: 20px auto 0 auto;
+}
+
+.Placeinput2 {
+  width: 30%;
+  height: 30px;
+}
+
+.Placeinput {
+  width: 50%;
+  height: 30px;
+}
+
+.form-popup {
+  right: 125px;
+  bottom: 40px;
+  transform: scale(1.1);
+}
+
+.form-popup2 {
+  left: 120px;
+  bottom: 40px;
+  transform: scale(1.1);
+}
+
+.form-popup11 {
+  right: 217px;
+  bottom: 55px;
+  transform: scale(1.2);
+}
+
+@media (max-width: 1000px) {
+  .form-popup {
+    transform: scale(1.1);
+  }
+
+  .form-popup11 {
+    transform: scale(1.1);
+  }
+  
+  .form-popup2 {
+    transform: scale(1.1);
+  }
+}
+
+.form-container {
+  width: 390px;
+}
+
+.tall {
+  overflow: scroll;
+}
+
+.addcurrency {
+  position: fixed;
+  color: #fff;
+  bottom: 13vh;
+  right: 3vh;
+  background-color: #1b1b1b;
+  padding: 12px 8px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.addoutcome {
+  position: fixed;
+  color: #fff;
+  bottom: 4vh;
+  right: 3vh;
+  background-color: #1b1b1b;
+  padding: 12px 8px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-container h1 {
+  width: 190px;
+  font-size: 25px;
+}
+
+.form-popup1 {
+  right: 190px;
+  bottom: 110px;
+  transform: scale(1.2);
+}
+
+
+.datearrang span{
+  padding: 0 5px;
+}
+
+.mobdatearrang span{
+  padding: 0 5px;
+}
+
+.mobdatearrang button {
+  font-size: 14px;
+}
+.clicked{
+  animation: mymove 0.3s 1;
+}
+
+@keyframes mymove {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+} 
+
+.choose{
+  display: flex;
+    justify-content: space-around;
+}
