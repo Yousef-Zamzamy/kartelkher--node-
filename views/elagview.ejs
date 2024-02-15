@@ -43,7 +43,6 @@
           <th>المكان</th>
           <th>البيان</th>
           <th>المصروفات</th>
-          <th>المتبقي</th>
         </tr>
         <% elagarr.forEach((item,index) => { %>
           <tr>
@@ -52,7 +51,6 @@
             <td><%= item.places %></td>
             <td><%= item.ways %></td>
             <td><%= item.money %></td>
-            <td> ---- </td>
           </tr>
         <% }) %>
         <tr class="rows">
@@ -68,7 +66,6 @@
             } %>
             <%= elagall %></th>
           </th>
-          <th class="extcell" id="totalremain"></th>
         </tr>
       
       </table>
@@ -92,10 +89,6 @@
               <tr>
                 <td>المصروفات</td>
                 <td class="mobmoney"><%= item.money %></td>
-              </tr>
-              <tr>
-                <td>المتبقي</td>
-                <td class="mobzkah"> ------ </td>
               </tr>
             </table>
           </div>

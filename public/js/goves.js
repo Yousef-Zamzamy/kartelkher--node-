@@ -39,6 +39,17 @@ const Numbering = () => {
 };
 Numbering();
 
+const Numbering2 = () => {
+  const allmobtable = document.querySelectorAll(".mobtable");
+  allmobtable.forEach((item) => {
+    const numb2 = item.querySelectorAll(".numb2");
+    for (let i = 0; i < numb2.length; i++) {
+      numb2[i].innerText = i + 1;
+    }
+  });
+};
+Numbering2();
+
 const summaryfn = () => {
   const summary = document.querySelectorAll(".summ");
   const detTable = document.querySelectorAll(".detTable");

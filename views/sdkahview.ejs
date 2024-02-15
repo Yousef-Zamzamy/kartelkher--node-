@@ -40,7 +40,6 @@
           <th>البيان</th>
           <th>المكان</th>
           <th>المصروفات</th>
-          <th>المتبقي</th>
         </tr>
         <% sdkaharr.forEach((item,index) => { %>
           <tr>
@@ -49,7 +48,6 @@
             <td><%= item.ways %> <%= item.list %></td>
             <td><%= item.places %></td>
             <td><%= item.money %></td>
-            <td> ------ </td>
           </tr>
         <% }) %>
         <tr class="rows">
@@ -65,7 +63,6 @@
             } %>
             <%= sdkahall %>
           </th>
-          <th class="extcell" id="totalremain"> ---- </th>
         </tr>
       
       </table>
@@ -86,10 +83,6 @@
               <tr>
                 <td>المصروفات</td>
                 <td class="mobmoney"><%= item.money %></td>
-              </tr>
-              <tr>
-                <td>المتبقي</td>
-                <td class="mobmoney"> ----- </td>
               </tr>
             </table>
           </div>

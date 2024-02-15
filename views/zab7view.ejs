@@ -18,10 +18,10 @@
       media="(max-width: 767px)"
     />
     <link
-    rel="stylesheet"
-    href="css/mobile-header2.css"
-    media="(max-width: 367px)"
-  />
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
 
     <link rel="stylesheet" href="iconmoon/style.css" />
     <script defer src="js/pages.js"></script>
@@ -32,8 +32,90 @@
     <%- include('./components/header.ejs') %>
 
     <section class="MainSec" id="MainSec">
-      <div id="zab7table"></div>
-      
+      <table class="center hide-when-mobile2" id="table">
+        <tr>
+          <th>م</th>
+          <th>التاريخ</th>
+          <th>البيان</th>
+          <th>المكان</th>
+          <th>عدد المستفيدين</th>
+          <th>مصروفات اللحم</th>
+          <th>مصروفات الأرز</th>
+          <th>المصروفات</th>
+        </tr>
+
+        <% zab7arr.forEach((item,index) => { %>
+
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= item.date %></td>
+          <td><%= item.ways %></td>
+          <td><%= item.places %></td>
+          <td><%= item.users %></td>
+          <td><%= item.meatmoney %></td>
+          <td><%= item.ricemoney %></td>
+          <td>
+            <% let totmoney = item.meatmoney + item.ricemoney %> <%= totmoney %>
+          </td>
+        </tr>
+        <% }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell" id="totalkart">
+            <% let usersall = 0; for (let i = 0; i < zab7arr.length; i++) {
+            usersall = usersall + zab7arr[i].users } %> <%= usersall %>
+          </th>
+          <th class="extcell" id="totalpaidl7m">
+            <% let meatall = 0; for (let i = 0; i < zab7arr.length; i++) {
+            meatall = meatall + zab7arr[i].meatmoney } %> <%= meatall %>
+          </th>
+
+          <th class="extcell" id="totalpaidrice">
+            <% let riceall = 0; for (let i = 0; i < zab7arr.length; i++) {
+            riceall = riceall + zab7arr[i].ricemoney } %> <%= riceall %>
+          </th>
+          <th class="extcell" id="totalpaid"><%= meatall + riceall %></th>
+        </tr>
+      </table>
+
+      <div class="show-when-mobile2" id="mobincom">
+        <% zab7arr.forEach(item => { %>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span><%= item.ways %></span> <span><%= item.places %></span>
+          </div>
+          <table class="detTable">
+            <tr>
+              <td>التاريخ</td>
+              <td class="mobdate"><%= item.date %></td>
+            </tr>
+            <tr>
+              <td>عدد المستفيدين</td>
+              <td class="mobmoney"><%= item.users %></td>
+            </tr>
+            <tr>
+              <td>مصروفات اللحم</td>
+              <td class="mobmoney"><%= item.meatmoney %></td>
+            </tr>
+            <tr>
+              <td>مصروفات الأرز</td>
+              <td class="mobmoney"><%= item.ricemoney %></td>
+            </tr>
+            <tr>
+              <td>المصروفات</td>
+              <td class="mobmoney"><%= item.meatmoney + item.ricemoney %></td>
+            </tr>
+          </table>
+        </div>
+        <% }) %>
+      </div>
     </section>
   </body>
 </html>
