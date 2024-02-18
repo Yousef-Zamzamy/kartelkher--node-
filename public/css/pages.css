@@ -181,3 +181,11 @@ label b {
   font-size: 20px;
   margin-left: 25px;
 }
+
+.red th {
+  color: red;
+}
+
+.blue th{
+  color: blue;
+}

@@ -116,6 +116,70 @@
           <%= workerall %>
           </th>
         </tr>
+        <tr class="rows red">
+          <th class="hidecell">م</th>
+          <th class="hidecell"></th>
+          <th class="hidecell"></th>
+          <th class="extcell" id="totalpaid">تم صرف</th>
+      
+          <th class="extcell" id="totalzkah">
+            <% 
+            let totzkah = 0
+            zkaharr.forEach(item => {
+              totzkah = totzkah + item.money
+            }); %>
+            <%= totzkah %>
+          </th>
+          <th class="extcell" id="totalsdkah">
+            <% 
+            let totsdkah = 0
+            sdkaharr.forEach(item => {
+              totsdkah = totsdkah + item.money
+            }); %>
+            <%= totsdkah %>
+          
+          </th>
+          <th class="extcell" id="totalelag">
+            <% 
+            let totelag = 0
+            elagarr.forEach(item => {
+              totelag = totelag + item.money
+            }); %>
+            <%= totelag %>
+          
+          </th>
+          <th class="extcell" id="totalzab7">
+            <% 
+            let totzab7 = 0
+            zab7arr.forEach(item => {
+              totzab7 = totzab7 + item.meatmoney + item.ricemoney
+            }); %>
+            <%= totzab7 %>
+          
+          </th>
+        </tr>
+
+        <tr class="rows blue">
+          <th class="hidecell">م</th>
+          <th class="hidecell"></th>
+          <th class="hidecell"></th>
+          <th class="extcell" id="totalpaid">المتبقي</th>
+          
+          <th class="extcell" id="totalzkah">
+          <%= zkahall - totzkah %>
+          </th>
+          <th class="extcell" id="totalsdkah">
+            <%= sdkahall - totsdkah %>
+          </th>
+          <th class="extcell" id="totalelag">
+            <%= elagall - totelag %>
+          </th>
+          <th class="extcell" id="totalzab7">
+            <%= zab7all - totzab7 %>
+          </th>
+        
+        </tr>
+        
       </table>
 
       <div class="show-when-mobile2" id="mobincom">  

@@ -46,7 +46,21 @@ app.get("/incom.html", (req, res) => {
   Income.find()
     .sort({ date: 1 })
     .then((result) => {
-      res.render("incom", { incomarr: result });
+      Zkah.find().then((result1) => {
+        Sdkah.find().then((result2) => {
+          Elag.find().then((result3) => {
+            Zab7.find().then((result4) => {
+              res.render("incom", {
+                incomarr: result,
+                zkaharr: result1,
+                sdkaharr: result2,
+                elagarr: result3,
+                zab7arr: result4,
+              });
+            });
+          });
+        });
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -56,7 +70,21 @@ app.get("/incomview.html", (req, res) => {
   Income.find()
     .sort({ date: 1 })
     .then((result) => {
-      res.render("incomview", { incomarr: result });
+      Zkah.find().then((result1) => {
+        Sdkah.find().then((result2) => {
+          Elag.find().then((result3) => {
+            Zab7.find().then((result4) => {
+              res.render("incomview", {
+                incomarr: result,
+                zkaharr: result1,
+                sdkaharr: result2,
+                elagarr: result3,
+                zab7arr: result4,
+              });
+            });
+          });
+        });
+      });
     })
     .catch((err) => {
       console.log(err);
