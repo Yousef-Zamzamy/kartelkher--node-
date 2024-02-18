@@ -1965,8 +1965,6 @@ app.delete("/incom.html/:id", (req, res) => {
             });
           });
           Income.findOne({ _id: req.params.id }).then((result2) => {
-            console.log(result2);
-            console.log(req.body);
             zkah = result2.zkah;
             sdkah = result2.sdkah;
             elag = result2.elag;
