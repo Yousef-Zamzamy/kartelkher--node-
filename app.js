@@ -330,7 +330,6 @@ app.get("/editfinancial/:id", (req, res) => {
   Financial.findById(req.params.id)
     .then((result) => {
       referer = req.headers.referer || "/";
-      console.log(referer);
       res.render("editfinancial", { obj: result, lastUrl: referer });
     })
     .catch((err) => {

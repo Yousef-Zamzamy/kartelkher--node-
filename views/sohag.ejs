@@ -42,10 +42,7 @@
         </tr>
         <tr class="rows">
           <th class="">م</th>
-          <th class="datearrang">
-            <span>التاريخ</span>
-            
-          </th>
+          <th class="">التاريخ</th>
           <th class="">البيان</th>
           <th class="">الرصيد</th>
           <th class="">تعديلات</th>
@@ -80,10 +77,14 @@
             <% 
             let total = 0;
             let totall = 0;
+            let mobtotall = 0 
+            let mobtotal = 0
             for (let i = 0; i < financialarr.length; i++) {
             if ( financialarr[i].type == "أضافة رصيد" && financialarr[i].places == "دياب / المحافظة – سوهاج") {
               total = total + financialarr[i].money
               totall = total
+              mobtotal = total
+              mobtotall = total
             }
           } %>
             <%= total %>
@@ -196,10 +197,14 @@
             <% 
             let totaal = 0;
             let totaall = 0;
+            let mobtotaall = 0 
+            let mobtotaal = 0
             for (let i = 0; i < financialarr.length; i++) {
             if ( financialarr[i].type == "أضافة رصيد" && financialarr[i].places == "دياب / إدفا و الغوانم – سوهاج") {
               totaal = totaal + financialarr[i].money
               totaall = totaal
+              mobtotaal = totaal
+              mobtotaall = totaal
             }
           } %>
             <%= totaal %>
@@ -274,10 +279,7 @@
         </tr>
         <tr class="rows">
           <th class="">م</th>
-          <th class="datearrang">
-            <span>التاريخ</span>
-            
-          </th>
+          <th class="">التاريخ</th>
           <th class="">البيان</th>
           <th class="">الرصيد</th>
           <th class="">تعديلات</th>
@@ -312,10 +314,14 @@
             <% 
             let totaaal = 0;
             let totaaall = 0;
+            let mobtotaaall = 0 
+            let mobtotaaal = 0
             for (let i = 0; i < financialarr.length; i++) {
             if ( financialarr[i].type == "أضافة رصيد" && financialarr[i].places == "رداد مراد / بهتا – سوهاج") {
               totaaal = totaaal + financialarr[i].money
               totaaall = totaaal
+              mobtotaaal = totaaal
+              mobtotaaall = totaaal
             }
           } %>
             <%= totaaal %>
@@ -429,10 +435,14 @@
             <% 
             let totaaaal = 0;
             let totaaaall = 0;
+            let mobtotaaaall = 0 
+            let mobtotaaaal = 0
             for (let i = 0; i < financialarr.length; i++) {
             if ( financialarr[i].type == "أضافة رصيد" && financialarr[i].places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
               totaaaal = totaaaal + financialarr[i].money
               totaaaall = totaaaal
+              mobtotaaaal = totaaaal
+              mobtotaaaall = totaaaal
             }
           } %>
             <%= totaaaal %>
@@ -516,21 +526,38 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">الرصيد</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "دياب / المحافظة – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotalcurrence"></th>
+              <th class="extcell mobtotalcurrence"> <%= mobtotal %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -546,27 +573,55 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th colspan="4" class="">الرصيدالمتاح</th>
-              <th colspan="3" class="mobtotalcurrence"></th>
+              <th colspan="3" class="mobtotalcurrence"> <%= mobtotall %> </th>
             </tr>
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">المصروفات</th>
               <th class="">المتبقي</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "دياب / المحافظة – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= mobtotal - item.money %>
+                          <% mobtotal = mobtotal - item.money %>   </td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotaloutcome"></th>
-              <th class="extcell mobtotalremain"></th>
+              <th class="extcell totaloutcome"> 
+            <% 
+            let mobtotal2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "دياب / المحافظة – سوهاج") {
+              mobtotal2 = mobtotal2 + financialarr[i].money
+            }
+          } %>
+            <%= mobtotal2 %>
+            </th>
+          <th class="extcell totalremain"> <%= mobtotall - mobtotal2 %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -582,21 +637,38 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">الرصيد</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "دياب / إدفا و الغوانم – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotalcurrence"></th>
+              <th class="extcell mobtotalcurrence"><%= mobtotaal %></th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -612,27 +684,55 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th colspan="4" class="">الرصيدالمتاح</th>
-              <th colspan="3" class="mobtotalcurrence"></th>
+              <th colspan="3" class="mobtotalcurrence"> <%= mobtotaall %> </th>
             </tr>
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">المصروفات</th>
               <th class="">المتبقي</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "دياب / إدفا و الغوانم – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= mobtotaal - item.money %>
+                          <% mobtotaal = mobtotaal - item.money %>   </td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotaloutcome"></th>
-              <th class="extcell mobtotalremain"></th>
+              <th class="extcell totaloutcome"> 
+            <% 
+            let mobtotaal2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "دياب / إدفا و الغوانم – سوهاج") {
+              mobtotaal2 = mobtotaal2 + financialarr[i].money
+            }
+          } %>
+            <%= mobtotaal2 %>
+            </th>
+          <th class="extcell totalremain"> <%= mobtotaall - mobtotaal2 %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -648,21 +748,38 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">الرصيد</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "رداد مراد / بهتا – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotalcurrence"></th>
+              <th class="extcell mobtotalcurrence"> <%= mobtotaaal %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -678,27 +795,55 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th colspan="4" class="">الرصيدالمتاح</th>
-              <th colspan="3" class="mobtotalcurrence"></th>
+              <th colspan="3" class="mobtotalcurrence"> <%= mobtotaaall %> </th>
             </tr>
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">المصروفات</th>
               <th class="">المتبقي</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "رداد مراد / بهتا – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= mobtotaaal - item.money %>
+                          <% mobtotaaal = mobtotaaal - item.money %>   </td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotaloutcome"></th>
-              <th class="extcell mobtotalremain"></th>
+              <th class="extcell totaloutcome"> 
+            <% 
+            let mobtotaaal2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "رداد مراد / بهتا – سوهاج") {
+              mobtotaaal2 = mobtotaaal2 + financialarr[i].money
+            }
+          } %>
+            <%= mobtotaaal2 %>
+            </th>
+          <th class="extcell totalremain"> <%= mobtotaaall - mobtotaaal2 %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -716,21 +861,38 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">الرصيد</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotalcurrence"></th>
+              <th class="extcell mobtotalcurrence"> <%= mobtotaaaal %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
@@ -748,27 +910,55 @@
           <table class="center hide-when-mobile2 mobtable detTable">
             <tr class="rows">
               <th colspan="4" class="">الرصيدالمتاح</th>
-              <th colspan="3" class="mobtotalcurrence"></th>
+              <th colspan="3" class="mobtotalcurrence"> <%= mobtotaaaall %> </th>
             </tr>
             <tr class="rows">
               <th class="">م</th>
-              <th class="mobdatearrang">
-                <button class="mobdesort">
-                  <span class="icon-sort-amount-asc"></span></button
-                ><span>التاريخ</span>
-                <button class="mobsort"><span class="icon-sort-amount-desc"></span></button>
-              </th>
+              <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">المصروفات</th>
               <th class="">المتبقي</th>
               <th class="">تعديلات</th>
             </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= mobtotaaaal - item.money %>
+                          <% mobtotaaaal = mobtotaaaal - item.money %>   </td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/sohag.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editfinancial/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
             <tr class="rows">
               <th class="hidecell">م</th>
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
-              <th class="extcell mobtotaloutcome"></th>
-              <th class="extcell mobtotalremain"></th>
+              <th class="extcell totaloutcome"> 
+            <% 
+            let mobtotaaaal2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+              mobtotaaaal2 = mobtotaaaal2 + financialarr[i].money
+            }
+          } %>
+            <%= mobtotaaaal2 %>
+            </th>
+          <th class="extcell totalremain"> <%= mobtotaaaall - mobtotaaaal2 %> </th>
               <th class="hidecell">تعديلات</th>
             </tr>
           </table>
