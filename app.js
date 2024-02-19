@@ -15,6 +15,7 @@ const Income = require("./models/incomesSchema");
 const Zkah = require("./models/zkahSchema");
 const Sdkah = require("./models/sdkahSchema");
 const Elag = require("./models/elagSchema");
+const Worker = require("./models/workerSchema");
 const Zab7 = require("./models/zab7Schema");
 const Financial = require("./models/financialSchema");
 
@@ -50,13 +51,16 @@ app.get("/incom.html", (req, res) => {
         Sdkah.find().then((result2) => {
           Elag.find().then((result3) => {
             Zab7.find().then((result4) => {
+             Worker.find().then((result5) => {
               res.render("incom", {
                 incomarr: result,
                 zkaharr: result1,
                 sdkaharr: result2,
                 elagarr: result3,
                 zab7arr: result4,
+                workerarr: result5,
               });
+             })
             });
           });
         });
@@ -231,6 +235,40 @@ app.get("/editzab7/:id", (req, res) => {
       console.log(err);
     });
 });
+
+// worker & workerview
+app.get("/worker.html", (req, res) => {
+  Worker.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Income.find().then((result2) => {
+        res.render("worker", { workerarr: result, incomarr: result2 });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/workerview.html", (req, res) => {
+  Worker.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("workerview", { workerarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editworker/:id", (req, res) => {
+  Worker.findById(req.params.id)
+    .then((result) => {
+      res.render("editworker", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 
 // financial & financialview
 app.get("/financial.html", (req, res) => {
@@ -553,6 +591,31 @@ app.post("/zab7.html", (req, res) => {
           });
       } else {
         res.redirect("/zab7.html");
+      }
+    });
+  });
+});
+app.post("/worker.html", (req, res) => {
+  let mobworkerall = 0;
+  let workerMoney = 0;
+  Income.find().then((result) => {
+    result.forEach((item) => {
+      mobworkerall = mobworkerall + item.worker;
+    });
+    Worker.find().then((result) => {
+      result.forEach((item) => {
+        workerMoney = workerMoney + item.money;
+      });
+      if (mobworkerall >= Number(req.body.money) + workerMoney) {
+        Worker.create(req.body)
+          .then(() => {
+            res.redirect("/worker.html");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      } else {
+        res.redirect("/worker.html");
       }
     });
   });
@@ -1461,6 +1524,35 @@ app.put("/editzab7/:id", (req, res) => {
     });
   });
 });
+app.put("/editworker/:id", (req, res) => {
+  let mobworkerall = 0;
+  let workerMoney = 0;
+  let oldworker = 0;
+  Income.find().then((result) => {
+    result.forEach((item) => {
+      mobworkerall = mobworkerall + item.worker;
+    });
+    Worker.find().then((result) => {
+      result.forEach((item) => {
+        workerMoney = workerMoney + item.money;
+      });
+      Worker.findOne({ _id: req.params.id }).then((result) => {
+        oldworker = result.money;
+        if (mobworkerall >= Number(req.body.money) + workerMoney - oldworker) {
+          Worker.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/worker.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/worker.html");
+        }
+      });
+    });
+  });
+});
 app.put("/editaswan/:id", (req, res) => {
   let totcurrence = 0;
   let totoutcome = 0;
@@ -2100,6 +2192,11 @@ app.delete("/elag.html/:id", (req, res) => {
 app.delete("/zab7.html/:id", (req, res) => {
   Zab7.deleteOne({ _id: req.params.id }).then((result) => {
     res.redirect("/zab7.html");
+  });
+});
+app.delete("/worker.html/:id", (req, res) => {
+  Worker.deleteOne({ _id: req.params.id }).then((result) => {
+    res.redirect("/worker.html");
   });
 });
 app.delete("/aswan.html/:id", (req, res) => {
