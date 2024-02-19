@@ -353,12 +353,91 @@ app.get("/financialview.html", (req, res) => {
       console.log(err);
     });
 });
-let referer = 0;
-app.get("/editfinancial/:id", (req, res) => {
+app.get("/editaswan/:id", (req, res) => {
   Financial.findById(req.params.id)
     .then((result) => {
-      referer = req.headers.referer || "/";
-      res.render("editfinancial", { obj: result, lastUrl: referer });
+      res.render("editaswan", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editluxur/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editluxur", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editsohag/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editsohag", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editkena/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editkena", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editminya/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editminya", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editbhera/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editbhera", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editwahat/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editwahat", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editredsea/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editredsea", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editalex/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editalex", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editbnyswef/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editbnyswef", { obj: result });
     })
     .catch((err) => {
       console.log(err);
@@ -1382,486 +1461,503 @@ app.put("/editzab7/:id", (req, res) => {
     });
   });
 });
-app.put("/editfinancial/:id", (req, res) => {
+app.put("/editaswan/:id", (req, res) => {
   let totcurrence = 0;
   let totoutcome = 0;
-  if (referer == "http://localhost:3000/aswan.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (
+        item.type == "أضافة رصيد" &&
+        item.places == "الحج كمال / دراو – أسوان"
+      ) {
+        totcurrence = totcurrence + item.money;
+      } else if (
+        item.type == "أضافة مصروفات" &&
+        item.places == "الحج كمال / دراو – أسوان"
+      ) {
+        totoutcome = totoutcome + item.money;
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
         if (
-          item.type == "أضافة رصيد" &&
-          item.places == "الحج كمال / دراو – أسوان"
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
         ) {
-          totcurrence = totcurrence + item.money;
-        } else if (
-          item.type == "أضافة مصروفات" &&
-          item.places == "الحج كمال / دراو – أسوان"
-        ) {
-          totoutcome = totoutcome + item.money;
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/aswan.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/aswan.html");
         }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
-    });
-  }
-  if (referer == "http://localhost:3000/luxur.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
+      } else if (req.body.type == "أضافة مصروفات") {
         if (
-          item.type == "أضافة رصيد" &&
-          item.places == "علا / الضبعية – الأقصر"
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
         ) {
-          totcurrence = totcurrence + item.money;
-        } else if (
-          item.type == "أضافة مصروفات" &&
-          item.places == "علا / الضبعية – الأقصر"
-        ) {
-          totoutcome = totoutcome + item.money;
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/aswan.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/aswan.html");
         }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
+      }
     });
-  }
-  if (referer == "http://localhost:3000/kena.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
+  });
+});
+app.put("/editluxur/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (
+        item.type == "أضافة رصيد" &&
+        item.places == "علا / الضبعية – الأقصر"
+      ) {
+        totcurrence = totcurrence + item.money;
+      } else if (
+        item.type == "أضافة مصروفات" &&
+        item.places == "علا / الضبعية – الأقصر"
+      ) {
+        totoutcome = totoutcome + item.money;
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
         if (
-          item.type == "أضافة رصيد" &&
-          item.places == "عبده لاوندي / قمولا – قنا"
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
         ) {
-          totcurrence = totcurrence + item.money;
-        } else if (
-          item.type == "أضافة مصروفات" &&
-          item.places == "عبده لاوندي / قمولا – قنا"
-        ) {
-          totoutcome = totoutcome + item.money;
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/luxur.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/luxur.html");
         }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
-    });
-  }
-  if (referer == "http://localhost:3000/sohag.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
-        if (item.places == "دياب / المحافظة – سوهاج") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "رداد مراد / بهتا – سوهاج") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
-    });
-  }
-  if (referer == "http://localhost:3000/bnyswef.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
-        if (item.type == "أضافة رصيد" && item.places == "اشرف / بني سويف") {
-          totcurrence = totcurrence + item.money;
-        } else if (
-          item.type == "أضافة مصروفات" &&
-          item.places == "اشرف / بني سويف"
-        ) {
-          totoutcome = totoutcome + item.money;
-        }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
-    });
-  }
-  if (referer == "http://localhost:3000/redsea.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
-        if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
-    });
-  }
-  if (referer == "http://localhost:3000/wahat.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
-        if (item.places == "شكري / القصر - الواحات البحرية") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        }
-      });
-    });
-  }
-  if (referer == "http://localhost:3000/minya.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
+      } else if (req.body.type == "أضافة مصروفات") {
         if (
-          item.type == "أضافة رصيد" &&
-          item.places == "محمدعيد / نزله البرشا - ملوي – المنيا"
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
         ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/luxur.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/luxur.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editkena/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (
+        item.type == "أضافة رصيد" &&
+        item.places == "عبده لاوندي / قمولا – قنا"
+      ) {
+        totcurrence = totcurrence + item.money;
+      } else if (
+        item.type == "أضافة مصروفات" &&
+        item.places == "عبده لاوندي / قمولا – قنا"
+      ) {
+        totoutcome = totoutcome + item.money;
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/kena.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/kena.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/kena.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/kena.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editsohag/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (item.places == "دياب / المحافظة – سوهاج") {
+        if (item.type == "أضافة رصيد") {
           totcurrence = totcurrence + item.money;
-        } else if (
-          item.type == "أضافة مصروفات" &&
-          item.places == "محمدعيد / نزله البرشا - ملوي – المنيا"
-        ) {
+        } else if (item.type == "أضافة مصروفات") {
           totoutcome = totoutcome + item.money;
         }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
+      } else if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
         }
-      });
+      } else if (item.places == "رداد مراد / بهتا – سوهاج") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      } else if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      }
     });
-  }
-  if (referer == "http://localhost:3000/bhera.html") {
-    Financial.find().then((result) => {
-      result.forEach((item) => {
-        if (item.places == "عادل بسيوني / الإنتاج الأول – البحيرة") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (
-          item.places == "كاشف القويسني / كريون – كفر الدوار – البحيرة"
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
         ) {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/sohag.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/sohag.html");
         }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect(referer);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect(referer);
-          }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/sohag.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/sohag.html");
         }
-      });
+      }
     });
-  }
-  if (referer == "http://localhost:3000/alex.html") {
-    Financial.find().then((result) => {
+  });
+});
+app.put("/editbnyswef/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (item.type == "أضافة رصيد" && item.places == "اشرف / بني سويف") {
+        totcurrence = totcurrence + item.money;
+      } else if (
+        item.type == "أضافة مصروفات" &&
+        item.places == "اشرف / بني سويف"
+      ) {
+        totoutcome = totoutcome + item.money;
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/bnyswef.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/bnyswef.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/bnyswef.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/bnyswef.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editredsea/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      } else if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      } else if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/redsea.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/redsea.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/redsea.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/redsea.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editwahat/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (item.places == "شكري / القصر - الواحات البحرية") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      } else if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/wahat.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/wahat.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/wahat.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/wahat.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editminya/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (
+        item.type == "أضافة رصيد" &&
+        item.places == "محمدعيد / نزله البرشا - ملوي – المنيا"
+      ) {
+        totcurrence = totcurrence + item.money;
+      } else if (
+        item.type == "أضافة مصروفات" &&
+        item.places == "محمدعيد / نزله البرشا - ملوي – المنيا"
+      ) {
+        totoutcome = totoutcome + item.money;
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/minya.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/minya.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/minya.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/minya.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editbhera/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
+    result.forEach((item) => {
+      if (item.places == "عادل بسيوني / الإنتاج الأول – البحيرة") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      } else if (
+        item.places == "كاشف القويسني / كريون – كفر الدوار – البحيرة"
+      ) {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/bhera.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/bhera.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/bhera.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/bhera.html");
+        }
+      }
+    });
+  });
+});
+app.put("/editalex/:id", (req, res) => {
+  let totcurrence = 0;
+  let totoutcome = 0;
+  Financial.find().then((result) => {
       result.forEach((item) => {
         if (item.places == "عبده / العامرية – الإسكندرية") {
           if (item.type == "أضافة رصيد") {
@@ -1897,13 +1993,13 @@ app.put("/editfinancial/:id", (req, res) => {
           ) {
             Financial.updateOne({ _id: req.params.id }, req.body)
               .then((result) => {
-                res.redirect(referer);
+                res.redirect("/alex.html");
               })
               .catch((err) => {
                 console.log(err);
               });
           } else {
-            res.redirect(referer);
+            res.redirect("/alex.html");
           }
         } else if (req.body.type == "أضافة مصروفات") {
           if (
@@ -1912,18 +2008,17 @@ app.put("/editfinancial/:id", (req, res) => {
           ) {
             Financial.updateOne({ _id: req.params.id }, req.body)
               .then((result) => {
-                res.redirect(referer);
+                res.redirect("/alex.html");
               })
               .catch((err) => {
                 console.log(err);
               });
           } else {
-            res.redirect(referer);
+            res.redirect("/alex.html");
           }
         }
       });
-    });
-  }
+  });
 });
 
 //delete Request all pages----------------------------------------------------------

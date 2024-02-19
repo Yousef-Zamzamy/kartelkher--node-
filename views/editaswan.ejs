@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <base href="/">
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages2.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/editfinancial.js"></script>
+</head>
+<body>
+  <div  dir="rtl">
+  <div class="form-popup2 hide-when-mobile" id="myForm2">
+    <form action="/editaswan/<%= obj._id %>?_method=PUT" method="post"  class="form-container">
+      <h1>تعديل</h1>
+
+      <label for="data"><b>التاريخ</b></label>
+          <input id="dateinput2" type="date" name="date" value="<%= obj.date %>" required />
+          <br />
+          <label for="place"><b>المسئول/المكان</b></label>
+          <select id="places2" class="Placeinput" name="places" value="<%= obj.places %>" required>
+            <option value="<%= obj.places %>"><%= obj.places %></option>
+            <option value="الحج كمال / دراو – أسوان">الحج كمال / دراو – أسوان</option>
+            <option value="علا / الضبعية – الأقصر">علا / الضبعية – الأقصر</option>
+            <option value="عبده لاوندي / قمولا – قنا">عبده لاوندي / قمولا – قنا</option>
+            <option value="دياب / المحافظة – سوهاج">دياب / المحافظة – سوهاج</option>
+            <option value="دياب / إدفا و الغوانم – سوهاج">دياب / إدفا و الغوانم – سوهاج</option>
+            <option value="رداد مراد / بهتا – سوهاج">رداد مراد / بهتا – سوهاج</option>
+            <option value="عثمان أبو مروان / الشوكا – طما – سوهاج">عثمان أبو مروان / الشوكا – طما – سوهاج</option>
+            <option value="محمدعيد / نزله البرشا - ملوي – المنيا">محمدعيد / نزلة البرشا - ملوي – المنيا</option>
+            <option value="اشرف / بني سويف">اشرف / بني سويف</option>
+            <option value="هاشم عثمان / حلايب – البحر الأحمر">هاشم عثمان / حلايب – البحر الأحمر</option>
+            <option value="محمود حسنين / شلاتين – البحر الأحمر">محمود حسنين / شلاتين – البحر الأحمر</option>
+            <option value="الشيخ اوهاج / أبو رماد – البحر الأحمر">الشيخ اوهاج / أبو رماد – البحر الأحمر</option>
+            <option value="شكري / القصر - الواحات البحرية">شكري / القصر - الواحات البحرية</option>
+            <option value="عبدالله بدار / الحيز – الواحات البحرية">عبدالله بدار / الحيز – الواحات البحرية</option>
+            <option value="عادل بسيوني / الإنتاج الأول – البحيرة">عادل بسيوني / الإنتاج الأول – البحيرة</option>
+            <option value="كاشف القويسني / كريون – كفر الدوار – البحيرة">كاشف القويسني / كريون – كفر الدوار – البحيرة</option>
+            <option value="عبده / العامرية – الإسكندرية">عبده / العامرية – الإسكندرية</option>
+            <option value="مجدي كلور / كوم الدكة – الإسكندرية">مجدي كلور / كوم الدكة – الإسكندرية</option>
+            <option value="محمد عبد التواب / الدخيلة – الإسكندرية">محمد عبد التواب / الدخيلة – الإسكندرية</option>
+            <option value="عادل عرجاوي / أبو قير - الإسكندرية">عادل عرجاوي / أبو قير - الإسكندرية</option>
+          </select>
+          <br />
+          <label for="ways"><b>النوع</b></label>
+          <select id="type" class="Placeinput" name="type" value="<%= obj.type %>" required>
+              <option value="<%= obj.type %>"><%= obj.type %></option>
+              <option value="أضافة رصيد">أضافة رصيد</option>
+              <option value="أضافة مصروفات">أضافة مصروفات</option>
+              
+          </select>
+          <br />
+          <label for="ways"><b>البيان</b></label>
+          <select id="ways2" class="Placeinput" name="ways" value="<%= obj.ways %>" required>
+              <option value="<%= obj.ways %>"><%= obj.ways %></option>
+              <option value="دعم مادي">دعم مادي</option>
+              <option value="كروت الخير">كروت الخير</option>
+              <option value="حفاضات">حفاضات</option>
+              <option value="مصاريف مدارس">مصاريف مدارس</option>
+              <option value="إفطار صائم">إفطار صائم</option>
+              <option value="موائد الرحمن">موائد الرحمن</option>
+              <option value="عيديات">عيديات</option>
+              <option value="ملابس عيد">ملابس عيد</option>
+              <option value="ذكاة الفطر">ذكاة الفطر</option>
+              <option value="أضحية العيد">أضحية العيد</option>
+              <option value="آبار مياه">آبار مياه</option>
+              <option value="توصيلة مياه شرب">توصيلة مياه شرب</option>
+              <option value="توصيل كهرباء والعداد">توصيل كهرباء والعداد</option>
+              <option value="حمامات">حمامات</option>
+              <option value="بناء اسقف">بناء اسقف</option>
+              <option value="ماكينات خياطة">ماكينات خياطة</option>
+              <option value="اصلاح اجهزة طبية">اصلاح اجهزة طبية</option>
+              <option value="اكفان">اكفان</option>
+          </select>
+          <br />
+          <label for="number"><b>الرصيد</b></label>
+          <input class="input2" type="number" name="money" value="<%= obj.money %>" min="0" required />
+
+      <div>
+        <button type="submit" class="btn savebtn" id="save2" disabled>حفظ</button>
+        <a href="/aswan.html"><button type="button" class="btn cancel" id="cancel2">الغاء</button></a>
+      </div>
+    </form>          
+</div>
+</div>
+</body>
+</html>

@@ -28,7 +28,7 @@
 <body>
   <div  dir="rtl">
   <div class="form-popup2 hide-when-mobile" id="myForm2">
-    <form action="/editfinancial/<%= obj._id %>?_method=PUT" method="post"  class="form-container">
+    <form action="/editminya/<%= obj._id %>?_method=PUT" method="post"  class="form-container">
       <h1>تعديل</h1>
 
       <label for="data"><b>التاريخ</b></label>
@@ -95,7 +95,7 @@
 
       <div>
         <button type="submit" class="btn savebtn" id="save2" disabled>حفظ</button>
-        <a href=" <%= lastUrl %> "><button type="button" class="btn cancel" id="cancel2">الغاء</button></a>
+        <a href="/minya.html"><button type="button" class="btn cancel" id="cancel2">الغاء</button></a>
       </div>
     </form>          
 </div>
