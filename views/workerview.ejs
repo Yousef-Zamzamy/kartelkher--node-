@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/worker.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+    rel="stylesheet"
+    href="css/mobile-header2.css"
+    media="(max-width: 367px)"
+  />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/workerview.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec" id="MainSec">
+      
+      <h1 class="MainTitle">العاملين عليها</h1>
+
+
+      <table class="center hide-when-mobile2" id="table">
+        <tr>
+          <th>م</th>
+          <th>التاريخ</th>
+          <th>البيان</th>
+          <th>المصروفات</th>
+        </tr>
+        <% workerarr.forEach((item,index) => { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= item.date %></td>
+            <td><%= item.ways %></td>
+            <td><%= item.money %></td>
+          </tr>
+        <% }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell" id="totalpaid">
+            <% 
+            let workerall = 0;
+            for (let i = 0; i < workerarr.length; i++) {
+              workerall = workerall + workerarr[i].money
+            } %>
+            <%= workerall %></th>
+          </th>
+        </tr>
+      
+      </table>
+      <div class="show-when-mobile2" id="mobincom">  
+        <% workerarr.forEach(item => { %>
+          <div class="details">
+            <div class="summ">
+                        <div class="iconstyl">
+                         <span class="icon-circle-left"></span><span class="icon-circle-down hide2"></span></div>
+                        <span><%= item.ways %></span>
+                      </div>
+            <table class="detTable">
+              <tr>
+                <td>التاريخ</td>
+                <td class="mobdate"><%= item.date %></td>
+              </tr>
+              <tr>
+                <td>المصروفات</td>
+                <td class="mobmoney"><%= item.money %></td>
+              </tr>
+            </table>
+          </div>
+        <% }) %>
+        
+      </div>
+    </section>
+  </body>
+</html>

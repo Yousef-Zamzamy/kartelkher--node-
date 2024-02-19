@@ -41,18 +41,49 @@
       
         <table  class="center show-when-mobile inco2  hide2" id="dettable">
           <tr class="">
+            <th class="">------------</th>
             <th class="">الاجمالي</th>
-            <th class="">----</th>
+            <th class="red">تم صرف</th>
+            <th class="blue">المتبقي</th>
           </tr>
           <tr class="">
             <th class="">المبلغ</th>
-            <th id="totalmoney2">
+            <th  id="totalmoney2">
               <% 
             let mobmonall = 0;
             for (let i = 0; i < incomarr.length; i++) {
               mobmonall = mobmonall + incomarr[i].incom
             } %>
             <%= mobmonall %>
+            </th>
+            <th class="red">
+              <% 
+                let mobtotzkah = 0
+            zkaharr.forEach(item => {
+              mobtotzkah = mobtotzkah + item.money
+            }); 
+            
+            let mobtotsdkah = 0
+              sdkaharr.forEach(item => {
+                mobtotsdkah = mobtotsdkah + item.money
+              }); 
+              let mobtotelag = 0
+              elagarr.forEach(item => {
+                mobtotelag = mobtotelag + item.money
+              });
+
+              let mobtotzab7 = 0
+              zab7arr.forEach(item => {
+                mobtotzab7 = mobtotzab7 + item.meatmoney + item.ricemoney
+              });
+
+              let mobtotworker = 0
+              workerarr.forEach(item => {
+                mobtotworker = mobtotworker + item.money
+              });
+              %>
+              <%= mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah %></th>
+              <th class="blue"><%= mobmonall - (mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah) %></th>
             </th>
           </tr>
           <tr class="">
@@ -65,6 +96,8 @@
             } %>
             <%= mobzkahall %>
             </th>
+            <th class="red"><%= mobtotzkah %></th>
+            <th class="blue"><%= mobzkahall - mobtotzkah %></th>
           </tr>
           <tr class="">
             <th class="">صدقة جارية</th>
@@ -76,6 +109,8 @@
             } %>
             <%= mobsdkahall %>
             </th>
+            <th class="red"><%= mobtotsdkah %></th>
+            <th class="blue"><%= mobsdkahall - mobtotsdkah %></th>
           </tr>
           <tr class="">
             <th class="">علاج مرضي</th>
@@ -87,6 +122,8 @@
             } %>
             <%= mobelagall %>
             </th>
+            <th class="red"><%= mobtotelag %></th>
+            <th class="blue"><%= mobelagall - mobtotelag %></th>
           </tr>
           <tr class="">
             <th class="">ذبح و توزيع لحوم</th>
@@ -98,6 +135,8 @@
             } %>
             <%= mobzab7all %>
             </th>
+            <th class="red"><%= mobtotzab7 %></th>
+            <th class="blue"><%= mobzab7all - mobtotzab7 %></th>
           </tr>
           <tr class="">
             <th class="">العاملين عليها</th>
@@ -109,6 +148,8 @@
             } %>
             <%= mobworkerall %>
             </th>
+            <th class="red"><%= mobtotworker %></th>
+            <th class="blue"><%= mobworkerall - mobtotworker %></th>
           </tr>
           </tr>
         </table>
