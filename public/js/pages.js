@@ -24,3 +24,62 @@ exit2.addEventListener("click" , (e) => {
     window.history.pushState(null, "", location.href = "/");
   }
 })
+
+
+const Numbering = () => {
+  const alltable = document.querySelectorAll(".table");
+  alltable.forEach((item) => {
+    const numb = item.querySelectorAll(".numb");
+    for (let i = 0; i < numb.length; i++) {
+      numb[i].innerText = i + 1;
+    }
+  });
+};
+Numbering();
+
+const Numbering2 = () => {
+  const allmobtable = document.querySelectorAll(".mobtable");
+  allmobtable.forEach((item) => {
+    const numb2 = item.querySelectorAll(".numb2");
+    for (let i = 0; i < numb2.length; i++) {
+      numb2[i].innerText = i + 1;
+    }
+  });
+};
+Numbering2();
+
+const summaryfn = () => {
+  const summary = document.querySelectorAll(".summ");
+  const detTable = document.querySelectorAll(".detTable");
+  summary.forEach((item) => {
+    item.addEventListener("click", (eo) => {
+      const opentab = document.querySelectorAll(".shooow");
+      if (
+        !item.parentElement
+          .getElementsByClassName("detTable")[0]
+          .classList.contains("shooow")
+      ) {
+        item.parentElement
+          .getElementsByClassName("detTable")[0]
+          .classList.toggle("shooow");
+        item
+          .getElementsByClassName("icon-circle-left")[0]
+          .classList.toggle("hide2");
+        item
+          .getElementsByClassName("icon-circle-down")[0]
+          .classList.toggle("show2");
+      }
+
+      opentab.forEach((item) => {
+        item.classList.remove("shooow");
+        item.parentElement
+          .getElementsByClassName("icon-circle-left")[0]
+          .classList.remove("hide2");
+        item.parentElement
+          .getElementsByClassName("icon-circle-down")[0]
+          .classList.remove("show2");
+      });
+    });
+  });
+};
+summaryfn();

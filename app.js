@@ -42,6 +42,105 @@ app.get("/home.html", (req, res) => {
   res.render("home");
 });
 
+app.get("/reports.html", (req, res) => {
+  Income.find({
+    $and: [
+      { date: { $gte: "2024-01-01" } }, 
+      { date: { $lt: "2024-02-01" } }],
+  }).then((result1) => {
+    Income.find({
+      $and: [
+        { date: { $gte: "2024-02-01" } }, 
+        { date: { $lt: "2024-03-01" } }],
+    }).then((result2) => {
+      Income.find({
+        $and: [
+          { date: { $gte: "2024-03-01" } },
+          { date: { $lt: "2024-04-01" } },
+        ],
+      }).then((result3) => {
+        Income.find({
+          $and: [
+            { date: { $gte: "2024-04-01" } },
+            { date: { $lt: "2024-05-01" } },
+          ],
+        }).then((result4) => {
+          Income.find({
+            $and: [
+              { date: { $gte: "2024-05-01" } },
+              { date: { $lt: "2024-06-01" } },
+            ],
+          }).then((result5) => {
+            Income.find({
+              $and: [
+                { date: { $gte: "2024-06-01" } },
+                { date: { $lt: "2024-07-01" } },
+              ],
+            }).then((result6) => {
+              Income.find({
+                $and: [
+                  { date: { $gte: "2024-07-01" } },
+                  { date: { $lt: "2024-08-01" } },
+                ],
+              }).then((result7) => {
+                Income.find({
+                  $and: [
+                    { date: { $gte: "2024-08-01" } },
+                    { date: { $lt: "2024-09-01" } },
+                  ],
+                }).then((result8) => {
+                  Income.find({
+                    $and: [
+                      { date: { $gte: "2024-09-01" } },
+                      { date: { $lt: "2024-10-01" } },
+                    ],
+                  }).then((result9) => {
+                    Income.find({
+                      $and: [
+                        { date: { $gte: "2024-10-01" } },
+                        { date: { $lt: "2024-11-01" } },
+                      ],
+                    }).then((result10) => {
+                      Income.find({
+                        $and: [
+                          { date: { $gte: "2024-11-01" } },
+                          { date: { $lt: "2024-12-01" } },
+                        ],
+                      }).then((result11) => {
+                        Income.find({
+                          $and: [
+                            { date: { $gte: "2024-12-01" } },
+                            { date: { $lt: "2025-01-01" } },
+                          ],
+                        }).then((result12) => {
+                          res.render("reports", {
+                            incomjan: result1,
+                            incomfeb: result2,
+                            incommar: result3,
+                            incomapr: result4,
+                            incommay: result5,
+                            incomjune: result6,
+                            incomjuly: result7,
+                            incomaug: result8,
+                            incomsep: result9,
+                            incomoct: result10,
+                            incomnov: result11,
+                            incomdec: result12,
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+});
+
 // income & incomeview
 app.get("/incom.html", (req, res) => {
   Income.find()
@@ -51,16 +150,16 @@ app.get("/incom.html", (req, res) => {
         Sdkah.find().then((result2) => {
           Elag.find().then((result3) => {
             Zab7.find().then((result4) => {
-             Worker.find().then((result5) => {
-              res.render("incom", {
-                incomarr: result,
-                zkaharr: result1,
-                sdkaharr: result2,
-                elagarr: result3,
-                zab7arr: result4,
-                workerarr: result5,
+              Worker.find().then((result5) => {
+                res.render("incom", {
+                  incomarr: result,
+                  zkaharr: result1,
+                  sdkaharr: result2,
+                  elagarr: result3,
+                  zab7arr: result4,
+                  workerarr: result5,
+                });
               });
-             })
             });
           });
         });
@@ -269,7 +368,6 @@ app.get("/editworker/:id", (req, res) => {
     });
 });
 
-
 // financial & financialview
 app.get("/financial.html", (req, res) => {
   Financial.find()
@@ -291,11 +389,30 @@ app.get("/aswan.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/aswanview.html", (req, res) => {
+  Financial.find()
+    .then((result) => {
+      res.render("aswanview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 app.get("/luxur.html", (req, res) => {
   Financial.find()
     .sort({ date: 1 })
     .then((result) => {
       res.render("luxur", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/luxurview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("luxurview", { financialarr: result });
     })
     .catch((err) => {
       console.log(err);
@@ -311,11 +428,31 @@ app.get("/kena.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/kenaview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("kenaview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 app.get("/sohag.html", (req, res) => {
   Financial.find()
     .sort({ date: 1 })
     .then((result) => {
       res.render("sohag", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/sohagview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("sohagview", { financialarr: result });
     })
     .catch((err) => {
       console.log(err);
@@ -331,11 +468,31 @@ app.get("/minya.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/minyaview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("minyaview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 app.get("/bnyswef.html", (req, res) => {
   Financial.find()
     .sort({ date: 1 })
     .then((result) => {
       res.render("bnyswef", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/bnyswefview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("bnyswefview", { financialarr: result });
     })
     .catch((err) => {
       console.log(err);
@@ -351,11 +508,31 @@ app.get("/redsea.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/redseaview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("redseaview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 app.get("/wahat.html", (req, res) => {
   Financial.find()
     .sort({ date: 1 })
     .then((result) => {
       res.render("wahat", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/wahatview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("wahatview", { financialarr: result });
     })
     .catch((err) => {
       console.log(err);
@@ -371,11 +548,31 @@ app.get("/bhera.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/bheraview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("bheraview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 app.get("/alex.html", (req, res) => {
   Financial.find()
     .sort({ date: 1 })
     .then((result) => {
       res.render("alex", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/alexview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("alexview", { financialarr: result });
     })
     .catch((err) => {
       console.log(err);
@@ -2050,66 +2247,66 @@ app.put("/editalex/:id", (req, res) => {
   let totcurrence = 0;
   let totoutcome = 0;
   Financial.find().then((result) => {
-      result.forEach((item) => {
-        if (item.places == "عبده / العامرية – الإسكندرية") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "مجدي كلور / كوم الدكة – الإسكندرية") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "محمد عبد التواب / الدخيلة – الإسكندرية") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
-        } else if (item.places == "عادل عرجاوي / أبو قير - الإسكندرية") {
-          if (item.type == "أضافة رصيد") {
-            totcurrence = totcurrence + item.money;
-          } else if (item.type == "أضافة مصروفات") {
-            totoutcome = totoutcome + item.money;
-          }
+    result.forEach((item) => {
+      if (item.places == "عبده / العامرية – الإسكندرية") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
         }
-      });
-      Financial.findOne({ _id: req.params.id }).then((result2) => {
-        if (result2.type == "أضافة رصيد") {
-          if (
-            totcurrence - result2.money + Number(req.body.money) >=
-            totoutcome
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect("/alex.html");
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect("/alex.html");
-          }
-        } else if (req.body.type == "أضافة مصروفات") {
-          if (
-            totcurrence >=
-            totoutcome - result2.money + Number(req.body.money)
-          ) {
-            Financial.updateOne({ _id: req.params.id }, req.body)
-              .then((result) => {
-                res.redirect("/alex.html");
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            res.redirect("/alex.html");
-          }
+      } else if (item.places == "مجدي كلور / كوم الدكة – الإسكندرية") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
         }
-      });
+      } else if (item.places == "محمد عبد التواب / الدخيلة – الإسكندرية") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      } else if (item.places == "عادل عرجاوي / أبو قير - الإسكندرية") {
+        if (item.type == "أضافة رصيد") {
+          totcurrence = totcurrence + item.money;
+        } else if (item.type == "أضافة مصروفات") {
+          totoutcome = totoutcome + item.money;
+        }
+      }
+    });
+    Financial.findOne({ _id: req.params.id }).then((result2) => {
+      if (result2.type == "أضافة رصيد") {
+        if (
+          totcurrence - result2.money + Number(req.body.money) >=
+          totoutcome
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/alex.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/alex.html");
+        }
+      } else if (req.body.type == "أضافة مصروفات") {
+        if (
+          totcurrence >=
+          totoutcome - result2.money + Number(req.body.money)
+        ) {
+          Financial.updateOne({ _id: req.params.id }, req.body)
+            .then((result) => {
+              res.redirect("/alex.html");
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          res.redirect("/alex.html");
+        }
+      }
+    });
   });
 });
 

@@ -42,54 +42,35 @@
         <table  class="center show-when-mobile inco2  hide2" id="dettable">
           <tr class="">
             <th class="">------------</th>
-            <th class="">الاجمالي</th>
+            <th class="">الايرادات</th>
             <th class="red">تم صرف</th>
             <th class="blue">المتبقي</th>
           </tr>
-          <tr class="">
-            <th class="">المبلغ</th>
-            <th  id="totalmoney2">
-              <% 
-            let mobmonall = 0;
-            for (let i = 0; i < incomarr.length; i++) {
-              mobmonall = mobmonall + incomarr[i].incom
-            } %>
-            <%= mobmonall %>
-            </th>
-            <th class="red">
-              <% 
-                let mobtotzkah = 0
-            zkaharr.forEach(item => {
-              mobtotzkah = mobtotzkah + item.money
-            }); 
-            
-            let mobtotsdkah = 0
-              sdkaharr.forEach(item => {
-                mobtotsdkah = mobtotsdkah + item.money
-              }); 
-              let mobtotelag = 0
-              elagarr.forEach(item => {
-                mobtotelag = mobtotelag + item.money
-              });
-
-              let mobtotzab7 = 0
-              zab7arr.forEach(item => {
-                mobtotzab7 = mobtotzab7 + item.meatmoney + item.ricemoney
-              });
-
-              let mobtotworker = 0
-              workerarr.forEach(item => {
-                mobtotworker = mobtotworker + item.money
-              });
-              %>
-              <%= mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah %></th>
-              <th class="blue"><%= mobmonall - (mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah) %></th>
-            </th>
-          </tr>
+          
           <tr class="">
             <th class="">زكاه المال</th>
             <th id="totalzkah2">
               <% 
+              let mobtotzkah = 0
+let mobtotsdkah = 0
+let mobtotelag = 0
+let mobtotzab7 = 0
+let mobtotworker = 0
+zkaharr.forEach(item => {
+              mobtotzkah = mobtotzkah + item.money
+            });
+sdkaharr.forEach(item => {
+                mobtotsdkah = mobtotsdkah + item.money
+              });
+elagarr.forEach(item => {
+                mobtotelag = mobtotelag + item.money
+              });
+zab7arr.forEach(item => {
+                mobtotzab7 = mobtotzab7 + item.meatmoney + item.ricemoney
+              });
+workerarr.forEach(item => {
+                mobtotworker = mobtotworker + item.money
+              });
             let mobzkahall = 0;
             for (let i = 0; i < incomarr.length; i++) {
               mobzkahall = mobzkahall + incomarr[i].zkah
@@ -151,6 +132,20 @@
             <th class="red"><%= mobtotworker %></th>
             <th class="blue"><%= mobworkerall - mobtotworker %></th>
           </tr>
+          <tr class="">
+            <th class="">الاجمالي</th>
+            <th  id="totalmoney2">
+              <% 
+            let mobmonall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              mobmonall = mobmonall + incomarr[i].incom
+            } %>
+            <%= mobmonall %>
+            </th>
+            <th class="red">
+              <%= mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah %></th>
+              <th class="blue"><%= mobmonall - (mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah) %></th>
+            </th>
           </tr>
         </table>
       
@@ -197,7 +192,7 @@
           <tr class="rows">
             <th class="hidecell">م</th>
             <th class="hidecell"></th>
-            <th class="extcell" id="totalpaid">الأجمالي</th>
+            <th class="extcell" id="totalpaid">الايرادات</th>
             <th class="extcell" id="totalmoney">
               <% 
             let monall = 0;
@@ -361,7 +356,7 @@
                   <td class="mobelag"><%= item.elag %></td>
                 </tr>
                 <tr>
-                  <td>علاج مرضي</td>
+                  <td>العاملين عليها</td>
                   <td class="mobworker"><%= item.worker %></td>
                 </tr>
                 <tr>

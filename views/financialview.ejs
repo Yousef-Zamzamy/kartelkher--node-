@@ -24,14 +24,30 @@
     />
 
     <link rel="stylesheet" href="iconmoon/style.css" />
-    <script defer src="js/pages.js"></script>
+    <script defer src="js/financial.js"></script>
     <script defer src="js/mobile-header.js"></script>
   </head>
   <body dir="rtl" id="body">
     <%- include('./components/header.ejs') %>
 
     <section class="MainSec tall" id="MainSec">
-
+      <h1 class="MainTitle">حسابات</h1>
+      <div class="choose">
+        <h1>أختر المحافظة</h1>
+        <select onchange="location = this.value;" id="goverments" class="Placeinput2" value="0000" required>
+          <option value=""></option>
+          <option value="aswanview.html">أسوان</option>
+          <option value="luxurview.html">الأقصر</option>
+          <option value="kenaview.html">قنا</option>
+          <option value="sohagview.html">سوهاج</option>
+          <option value="minyaview.html">المنيا</option>
+          <option value="bnyswefview.html">بني سويف</option>
+          <option value="redseaview.html">البحر الأحمر</option>
+          <option value="wahatview.html">الواحات البحرية</option>
+          <option value="bheraview.html">البحيرة</option>
+          <option value="alexview.html">الإسكندرية</option>
+        </select>
+      </div>
     </section>
   </body>
 </html>

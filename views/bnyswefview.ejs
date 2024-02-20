@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/financial.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec tall" id="MainSec">
+      <div class="head">
+        <h1 class="MainTitle">حسابات بني سويف</h1>
+        <a href="financialview.html"><button class="back">Back</button></a>
+      </div>
+
+      <table class="center hide-when-mobile2 table">
+        <tr>
+          <th colspan="7" class="place">رصيد اشرف / بني سويف</th>
+        </tr>
+        <tr class="rows">
+          <th class="">م</th>
+          <th class="datearrang">
+            <span>التاريخ</span>
+            
+          </th>
+          <th class="">البيان</th>
+          <th class="">الرصيد</th>
+          
+        </tr>
+        <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "اشرف / بني سويف") {
+          %>
+          <tr class="rows">
+            <td class="numb"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            
+          </tr>
+        <%
+        } }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell totalcurrence">
+            <% 
+            let total = 0;
+            let totall = 0;
+            let mobtotall = 0 
+            let mobtotal = 0
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة رصيد" && financialarr[i].places == "اشرف / بني سويف") {
+              total = total + financialarr[i].money
+              totall = total
+              mobtotal = total
+              mobtotall = total
+            }
+          } %>
+            <%= total %>
+            </th>
+          
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table">
+        <tr>
+          <th colspan="7" class="place">مصروفات اشرف / بني سويف</th>
+        </tr>
+        <tr>
+          <th colspan="4" class="">الرصيد المتاح</th>
+          <th colspan="3" class="totalcurrence"> <%= total %> </th>
+        </tr>
+        <tr class="rows">
+          <th class="">م</th>
+          <th class="datearrang">
+            <span>التاريخ</span>
+            
+          </th>
+          <th class="">البيان</th>
+          <th class="">المصروفات</th>
+          <th class="">المتبقي</th>
+          
+        </tr>
+        <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "اشرف / بني سويف") {
+          %>
+          <tr class="rows">
+            <td class="numb"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= total - item.money %>
+                          <% total = total - item.money %> </td>
+            
+          </tr>
+        <%
+        } }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell totaloutcome">
+            <% 
+            let total2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "اشرف / بني سويف") {
+              total2 = total2 + financialarr[i].money
+            }
+          } %>
+            <%= total2 %>
+            </th>
+          <th class="extcell totalremain"> <%= totall - total2 %> </th>
+          
+        </tr>
+      </table>
+
+      <div class="show-when-mobile4" id="mobincom">
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">رصيد اشرف / بني سويف</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="">التاريخ</th>
+              <th class="">البيان</th>
+              <th class="">الرصيد</th>
+              
+            </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "اشرف / بني سويف") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            
+          </tr>
+        <%
+        } }) %>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المكان</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotalcurrence"> <%= mobtotal %> </th>
+              
+            </tr>
+          </table>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">مصروفات اشرف / بني سويف</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th colspan="4" class="">الرصيدالمتاح</th>
+              <th colspan="3" class="mobtotalcurrence"> <%= mobtotall %> </th>
+            </tr>
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="">التاريخ</th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">المتبقي</th>
+              
+            </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "اشرف / بني سويف") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= mobtotal - item.money %>
+                          <% mobtotal = mobtotal - item.money %>   </td>
+            
+          </tr>
+        <%
+        } }) %>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المكان</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell totaloutcome"> 
+            <% 
+            let mobtotal2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "اشرف / بني سويف") {
+              mobtotal2 = mobtotal2 + financialarr[i].money
+            }
+          } %>
+            <%= mobtotal2 %>
+            </th>
+          <th class="extcell totalremain"> <%= mobtotall - mobtotal2 %> </th>
+              
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

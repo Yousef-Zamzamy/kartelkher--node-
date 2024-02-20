@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link rel="stylesheet" href="css/financial.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec tall" id="MainSec">
+      <div class="head">
+        <h1 class="MainTitle">حسابات أسوان</h1>
+        <a href="financialview.html"><button class="back">Back</button></a>
+      </div>
+
+      <table class="center hide-when-mobile2 table">
+        <tr>
+          <th colspan="7" class="place">رصيد الحج كمال / دراو – أسوان</th>
+        </tr>
+        <tr class="rows">
+          <th class="">م</th>
+          <th class="">التاريخ</th>
+          <th class="">البيان</th>
+          <th class="">الرصيد</th>
+        </tr>
+        <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "الحج كمال / دراو – أسوان") {
+          %>
+          <tr class="rows">
+            <td class="numb"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            
+          </tr>
+        <%
+        } }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell totalcurrence"> 
+            <% 
+            let total = 0;
+            let totall = 0;
+
+            let mobtotal = 0;
+            let mobtotall = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة رصيد" && financialarr[i].places == "الحج كمال / دراو – أسوان") {
+              total = total + financialarr[i].money
+              totall = total
+              mobtotal = total
+              mobtotall = total
+            }
+          } %>
+            <%= total %>
+          </th>
+        </tr>
+      </table>
+      <table class="center hide-when-mobile2 table">
+        <tr>
+          <th colspan="7" class="place">مصروفات الحج كمال / دراو – أسوان</th>
+        </tr>
+        <tr>
+          <th colspan="4" class="">الرصيد المتاح</th>
+          <th colspan="3" class="totalcurrence"> <%= total %> </th>
+        </tr>
+        <tr class="rows">
+          <th class="">م</th>
+          <th class="datearrang">
+            <span>التاريخ</span>
+          </th>
+          <th class="">البيان</th>
+          <th class="">المصروفات</th>
+          <th class="">المتبقي</th>
+        </tr>
+        <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "الحج كمال / دراو – أسوان") {
+          %>
+          <tr class="rows">
+            <td class="numb"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= total - item.money %>
+                          <% total = total - item.money %>   </td>
+            
+          </tr>
+        <%
+        } }) %>
+        <tr class="rows">
+          <th class="hidecell">م</th>
+          <th class="hidecell">المكان</th>
+          <th class="extcell">الاجمالي</th>
+          <th class="extcell totaloutcome"> 
+            <% 
+            let total2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "الحج كمال / دراو – أسوان") {
+              total2 = total2 + financialarr[i].money
+            }
+          } %>
+            <%= total2 %>
+            </th>
+          <th class="extcell totalremain"> <%= totall - total2 %> </th>
+        </tr>
+      </table>
+
+      <div class="show-when-mobile4" id="mobincom">
+        <div class="details ">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">رصيد الحج كمال / دراو – أسوان</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="">التاريخ</th>
+              <th class="">البيان</th>
+              <th class="">الرصيد</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <% 
+        financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة رصيد" && item.places == "الحج كمال / دراو – أسوان") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/aswan.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editaswan/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المكان</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell mobtotalcurrence"><%= mobtotal %></th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+        <div class="details ">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span>
+              <span class="icon-circle-down hide2"></span>
+            </div>
+            <span class="mobplace">مصروفات الحج كمال / دراو – أسوان</span>
+          </div>
+          <table class="center hide-when-mobile2 mobtable detTable">
+            <tr class="rows">
+              <th colspan="4" class="">الرصيدالمتاح</th>
+              <th colspan="3" class="mobtotalcurrence"> <%= mobtotall %></th>
+            </tr>
+            <tr class="rows">
+              <th class="">م</th>
+              <th class="">التاريخ</th>
+              <th class="">البيان</th>
+              <th class="">المصروفات</th>
+              <th class="">المتبقي</th>
+              <th class="">تعديلات</th>
+            </tr>
+            <% financialarr.forEach((item,index) => { 
+          if ( item.type == "أضافة مصروفات" && item.places == "الحج كمال / دراو – أسوان") {
+          %>
+          <tr class="rows">
+            <td class="numb2"></td>
+            <td class=""><%= item.date %></td>
+            <td class=""><%= item.ways %></td>
+            <td class=""><%= item.money %></td>
+            <td class=""> <%= mobtotal - item.money %>
+                          <% mobtotal = mobtotal - item.money %>   </td>
+            <td class="">
+              <div>
+                <form class="buttons" style="display: inline;" action="/aswan.html/<%= item._id %>?_method=DELETE"  method="post">
+                  <button><span class="icon-trash del"></span></button>
+                </form>
+                <a href="editaswan/<%= item._id %>">
+                  <button>
+                  <span class="icon-pencil"></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        <%
+        } }) %>
+            <tr class="rows">
+              <th class="hidecell">م</th>
+              <th class="hidecell">المكان</th>
+              <th class="extcell">الاجمالي</th>
+              <th class="extcell totaloutcome"> 
+            <% 
+            let mobtotal2 = 0;
+            for (let i = 0; i < financialarr.length; i++) {
+            if ( financialarr[i].type == "أضافة مصروفات" && financialarr[i].places == "الحج كمال / دراو – أسوان") {
+              mobtotal2 = mobtotal2 + financialarr[i].money
+            }
+          } %>
+            <%= mobtotal2 %>
+            </th>
+          <th class="extcell totalremain"> <%= mobtotall - mobtotal2 %> </th>
+              <th class="hidecell">تعديلات</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="form-popup form-popup11 hide-when-mobile" id="myForm3">
+        <form action="/aswan.html" method="post" class="form-container">
+          <h1>الحسابات</h1>
+
+          <label for="data"><b>التاريخ</b></label>
+          <input id="dateinput3" type="date" name="date" required />
+          <br />
+          <label for="place"><b>المسئول/المكان</b></label>
+          <select id="places3" class="Placeinput" name="places" value="0000" required>
+            <option value=""></option>
+            <option class="options" value="الحج كمال / دراو – أسوان">الحج كمال / دراو – أسوان </option>
+            </select>
+          <br />
+          <label for="ways"><b>النوع</b></label>
+          <select id="type" class="Placeinput" name="type" required>
+              <option value=""></option>
+              <option value="أضافة رصيد">أضافة رصيد</option>
+              <option value="أضافة مصروفات">أضافة مصروفات</option>
+              
+          </select>
+          <br />
+          <label for="ways"><b>البيان</b></label>
+          <select id="ways3" class="Placeinput" name="ways" required>
+              <option value=""></option>
+              <option value="دعم مادي">دعم مادي</option>
+              <option value="كروت الخير">كروت الخير</option>
+              <option value="حفاضات">حفاضات</option>
+              <option value="مصاريف مدارس">مصاريف مدارس</option>
+              <option value="إفطار صائم">إفطار صائم</option>
+              <option value="موائد الرحمن">موائد الرحمن</option>
+              <option value="عيديات">عيديات</option>
+              <option value="ملابس عيد">ملابس عيد</option>
+              <option value="ذكاة الفطر">ذكاة الفطر</option>
+              <option value="أضحية العيد">أضحية العيد</option>
+              <option value="آبار مياه">آبار مياه</option>
+              <option value="توصيلة مياه شرب">توصيلة مياه شرب</option>
+              <option value="توصيل كهرباء والعداد">توصيل كهرباء والعداد</option>
+              <option value="حمامات">حمامات</option>
+              <option value="بناء اسقف">بناء اسقف</option>
+              <option value="ماكينات خياطة">ماكينات خياطة</option>
+              <option value="اصلاح اجهزة طبية">اصلاح اجهزة طبية</option>
+              <option value="اكفان">اكفان</option>
+          </select>
+          <br />
+          <label for="number"><b>المصروفات</b></label>
+          <input class="input3" type="number" name="money" min="0" required />
+          <div>
+            <button type="submit" class="btn savebtn" id="save3" disabled>حفظ</button>
+            <button type="button" class="btn cancel" id="cancel3">الغاء</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
