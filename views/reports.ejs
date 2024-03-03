@@ -83,7 +83,12 @@
           <tr>
             <td class="numb"></td>
             <td>مصروفات شهر يناير</td>
-            <td> ------ </td>
+            <td> <% let zkahjanout = 0
+                 zkahjan.forEach(item => {
+                  zkahjanout = zkahjanout + item.money
+                 }); %> 
+                 <%= zkahjanout %>
+                </td>
             <td> ------ </td>
             <td> ------ </td>
             <td> ------ </td>

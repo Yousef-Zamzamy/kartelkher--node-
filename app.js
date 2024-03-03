@@ -41,17 +41,12 @@ app.get("/", (req, res) => {
 app.get("/home.html", (req, res) => {
   res.render("home");
 });
-
 app.get("/reports.html", (req, res) => {
   Income.find({
-    $and: [
-      { date: { $gte: "2024-01-01" } }, 
-      { date: { $lt: "2024-02-01" } }],
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
   }).then((result1) => {
     Income.find({
-      $and: [
-        { date: { $gte: "2024-02-01" } }, 
-        { date: { $lt: "2024-03-01" } }],
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
     }).then((result2) => {
       Income.find({
         $and: [
@@ -113,19 +108,442 @@ app.get("/reports.html", (req, res) => {
                             { date: { $lt: "2025-01-01" } },
                           ],
                         }).then((result12) => {
-                          res.render("reports", {
-                            incomjan: result1,
-                            incomfeb: result2,
-                            incommar: result3,
-                            incomapr: result4,
-                            incommay: result5,
-                            incomjune: result6,
-                            incomjuly: result7,
-                            incomaug: result8,
-                            incomsep: result9,
-                            incomoct: result10,
-                            incomnov: result11,
-                            incomdec: result12,
+                          Zkah.find({
+                            $and: [
+                              { date: { $gte: "2024-01-01" } },
+                              { date: { $lt: "2024-02-01" } },
+                            ],
+                          }).then((result13) => {
+                            Zkah.find({
+                              $and: [
+                                { date: { $gte: "2024-02-01" } },
+                                { date: { $lt: "2024-03-01" } },
+                              ],
+                            }).then((result14) => {
+                              Zkah.find({
+                                $and: [
+                                  { date: { $gte: "2024-03-01" } },
+                                  { date: { $lt: "2024-04-01" } },
+                                ],
+                              }).then((result15) => {
+                                Zkah.find({
+                                  $and: [
+                                    { date: { $gte: "2024-04-01" } },
+                                    { date: { $lt: "2024-05-01" } },
+                                  ],
+                                }).then((result16) => {
+                                  Zkah.find({
+                                    $and: [
+                                      { date: { $gte: "2024-05-01" } },
+                                      { date: { $lt: "2024-06-01" } },
+                                    ]
+                                  }).then((result17) => {
+                                    Zkah.find({
+                                      $and: [
+                                        { date: { $gte: "2024-06-01" } },
+                                        { date: { $lt: "2024-07-01" } },
+                                      ]
+                                    }).then((result18) => {
+                                      Zkah.find({
+                                        $and: [
+                                          { date: { $gte: "2024-07-01" } },
+                                          { date: { $lt: "2024-08-01" } },
+                                        ]
+                                      }).then((result19) => {
+                                        Zkah.find({
+                                          $and: [
+                                            { date: { $gte: "2024-08-01" } },
+                                            { date: { $lt: "2024-09-01" } },
+                                          ]
+                                        }).then((result20) => {
+                                          Zkah.find({
+                                            $and: [
+                                              { date: { $gte: "2024-09-01" } },
+                                              { date: { $lt: "2024-10-01" } },
+                                            ]
+                                          }).then((result21) => {
+                                            Zkah.find({
+                                              $and: [
+                                                { date: { $gte: "2024-10-01" } },
+                                                { date: { $lt: "2024-11-01" } },
+                                              ]
+                                            }).then((result22) => {
+                                              Zkah.find({
+                                                $and: [
+                                                  { date: { $gte: "2024-11-01" } },
+                                                  { date: { $lt: "2024-12-01" } },
+                                                ]
+                                              }).then((result23) => {
+                                                Zkah.find({
+                                                  $and: [
+                                                    { date: { $gte: "2024-12-01" } },
+                                                    { date: { $lt: "2025-01-01" } },
+                                                  ]
+                                                }).then((result24) => {
+                                                  Sdkah.find({
+                                                    $and: [
+                                                      { date: { $gte: "2024-01-01" } },
+                                                      { date: { $lt: "2024-02-01" } },
+                                                    ]
+                                                  }).then((result25) => {
+                                                    Sdkah.find({
+                                                      $and: [
+                                                        { date: { $gte: "2024-02-01" } },
+                                                        { date: { $lt: "2024-03-01" } },
+                                                      ]
+                                                    }).then((result26) => {
+                                                      Sdkah.find({
+                                                        $and: [
+                                                          { date: { $gte: "2024-03-01" } },
+                                                          { date: { $lt: "2024-04-01" } },
+                                                        ]
+                                                      }).then((result27) => {
+                                                        Sdkah.find({
+                                                          $and: [
+                                                            { date: { $gte: "2024-04-01" } },
+                                                            { date: { $lt: "2024-05-01" } },
+                                                          ]
+                                                        }).then((result28) => {
+                                                          Sdkah.find({
+                                                            $and: [
+                                                              { date: { $gte: "2024-05-01" } },
+                                                              { date: { $lt: "2024-06-01" } },
+                                                            ]
+                                                          }).then((result29) => {
+                                                            Sdkah.find({
+                                                              $and: [
+                                                                { date: { $gte: "2024-06-01" } },
+                                                                { date: { $lt: "2024-07-01" } },
+                                                              ]
+                                                            }).then((result30) => {
+                                                              Sdkah.find({
+                                                                $and: [
+                                                                  { date: { $gte: "2024-07-01" } },
+                                                                  { date: { $lt: "2024-08-01" } },
+                                                                ]
+                                                              }).then((result31) => {
+                                                                Sdkah.find({
+                                                                  $and: [
+                                                                    { date: { $gte: "2024-08-01" } },
+                                                                    { date: { $lt: "2024-09-01" } },
+                                                                  ]
+                                                                }).then((result32) => {
+                                                                  Sdkah.find({
+                                                                    $and: [
+                                                                      { date: { $gte: "2024-09-01" } },
+                                                                      { date: { $lt: "2024-10-01" } },
+                                                                    ]
+                                                                  }).then((result33) => {
+                                                                    Sdkah.find({
+                                                                      $and: [
+                                                                        { date: { $gte: "2024-10-01" } },
+                                                                        { date: { $lt: "2024-11-01" } },
+                                                                      ]
+                                                                    }).then((result34) => {
+                                                                      Sdkah.find({
+                                                                        $and: [
+                                                                          { date: { $gte: "2024-11-01" } },
+                                                                          { date: { $lt: "2024-12-01" } },
+                                                                        ]
+                                                                      }).then((result35) => {
+                                                                        Sdkah.find({
+                                                                          $and: [
+                                                                            { date: { $gte: "2024-12-01" } },
+                                                                            { date: { $lt: "2025-01-01" } },
+                                                                          ]
+                                                                        }).then((result36) => {
+                                                                          Elag.find({
+                                                                            $and: [
+                                                                              { date: { $gte: "2024-01-01" } },
+                                                                              { date: { $lt: "2024-02-01" } },
+                                                                            ]
+                                                                          }).then((result37) => {
+                                                                            Elag.find({
+                                                                              $and: [
+                                                                                { date: { $gte: "2024-02-01" } },
+                                                                                { date: { $lt: "2024-03-01" } },
+                                                                              ]
+                                                                            }).then((result38) => {
+                                                                              Elag.find({
+                                                                                $and: [
+                                                                                  { date: { $gte: "2024-03-01" } },
+                                                                                  { date: { $lt: "2024-04-01" } },
+                                                                                ]
+                                                                              }).then((result39) => {
+                                                                                Elag.find({
+                                                                                  $and: [
+                                                                                    { date: { $gte: "2024-04-01" } },
+                                                                                    { date: { $lt: "2024-05-01" } },
+                                                                                  ]
+                                                                                }).then((result40) => {
+                                                                                  Elag.find({
+                                                                                    $and: [
+                                                                                      { date: { $gte: "2024-05-01" } },
+                                                                                      { date: { $lt: "2024-06-01" } },
+                                                                                    ]
+                                                                                  }).then((result41) => {
+                                                                                    Elag.find({
+                                                                                      $and: [
+                                                                                        { date: { $gte: "2024-06-01" } },
+                                                                                        { date: { $lt: "2024-07-01" } },
+                                                                                      ]
+                                                                                    }).then((result42) => {
+                                                                                      Elag.find({
+                                                                                        $and: [
+                                                                                          { date: { $gte: "2024-07-01" } },
+                                                                                          { date: { $lt: "2024-08-01" } },
+                                                                                        ]
+                                                                                      }).then((result43) => {
+                                                                                        Elag.find({
+                                                                                          $and: [
+                                                                                            { date: { $gte: "2024-08-01" } },
+                                                                                            { date: { $lt: "2024-09-01" } },
+                                                                                          ]
+                                                                                        }).then((result44) => {
+                                                                                          Elag.find({
+                                                                                            $and: [
+                                                                                              { date: { $gte: "2024-09-01" } },
+                                                                                              { date: { $lt: "2024-10-01" } },
+                                                                                            ]
+                                                                                          }).then((result45) => {
+                                                                                            Elag.find({
+                                                                                              $and: [
+                                                                                                { date: { $gte: "2024-10-01" } },
+                                                                                                { date: { $lt: "2024-11-01" } },
+                                                                                              ]
+                                                                                            }).then((result46) => {
+                                                                                              Elag.find({
+                                                                                                $and: [
+                                                                                                  { date: { $gte: "2024-11-01" } },
+                                                                                                  { date: { $lt: "2024-12-01" } },
+                                                                                                ]
+                                                                                              }).then((result47) => {
+                                                                                                Elag.find({
+                                                                                                  $and: [
+                                                                                                    { date: { $gte: "2024-12-01" } },
+                                                                                                    { date: { $lt: "2025-01-01" } },
+                                                                                                  ]
+                                                                                                }).then((result48) => {
+                                                                                                  Zab7.find({
+                                                                                                    $and: [
+                                                                                                      { date: { $gte: "2024-01-01" } },
+                                                                                                      { date: { $lt: "2024-02-01" } },
+                                                                                                    ]
+                                                                                                  }).then((result49) => {
+                                                                                                    Zab7.find({
+                                                                                                      $and: [
+                                                                                                        { date: { $gte: "2024-02-01" } },
+                                                                                                        { date: { $lt: "2024-03-01" } },
+                                                                                                      ]
+                                                                                                    }).then((result50) => {
+                                                                                                      Zab7.find({
+                                                                                                        $and: [
+                                                                                                          { date: { $gte: "2024-03-01" } },
+                                                                                                          { date: { $lt: "2024-04-01" } },
+                                                                                                        ]
+                                                                                                      }).then((result51) => {
+                                                                                                        Zab7.find({
+                                                                                                          $and: [
+                                                                                                            { date: { $gte: "2024-04-01" } },
+                                                                                                            { date: { $lt: "2024-05-01" } },
+                                                                                                          ]
+                                                                                                        }).then((result52) => {
+                                                                                                          Zab7.find({
+                                                                                                            $and: [
+                                                                                                              { date: { $gte: "2024-05-01" } },
+                                                                                                              { date: { $lt: "2024-06-01" } },
+                                                                                                            ]
+                                                                                                          }).then((result53) => {
+                                                                                                            Zab7.find({
+                                                                                                              $and: [
+                                                                                                                { date: { $gte: "2024-06-01" } },
+                                                                                                                { date: { $lt: "2024-07-01" } },
+                                                                                                              ]
+                                                                                                            }).then((result54) => {
+                                                                                                              Zab7.find({
+                                                                                                                $and: [
+                                                                                                                  { date: { $gte: "2024-07-01" } },
+                                                                                                                  { date: { $lt: "2024-08-01" } },
+                                                                                                                ]
+                                                                                                              }).then((result55) => {
+                                                                                                                Zab7.find({
+                                                                                                                  $and: [
+                                                                                                                    { date: { $gte: "2024-08-01" } },
+                                                                                                                    { date: { $lt: "2024-09-01" } },
+                                                                                                                  ]
+                                                                                                                }).then((result56) => {
+                                                                                                                  Zab7.find({
+                                                                                                                    $and: [
+                                                                                                                      { date: { $gte: "2024-09-01" } },
+                                                                                                                      { date: { $lt: "2024-10-01" } },
+                                                                                                                    ]
+                                                                                                                  }).then((result57) => {
+                                                                                                                    Zab7.find({
+                                                                                                                      $and: [
+                                                                                                                        { date: { $gte: "2024-10-01" } },
+                                                                                                                        { date: { $lt: "2024-11-01" } },
+                                                                                                                      ]
+                                                                                                                    }).then((result58) => {
+                                                                                                                      Zab7.find({
+                                                                                                                        $and: [
+                                                                                                                          { date: { $gte: "2024-11-01" } },
+                                                                                                                          { date: { $lt: "2024-12-01" } },
+                                                                                                                        ]
+                                                                                                                      }).then((result59) => {
+                                                                                                                        Zab7.find({
+                                                                                                                          $and: [
+                                                                                                                            { date: { $gte: "2024-12-01" } },
+                                                                                                                            { date: { $lt: "2025-01-01" } },
+                                                                                                                          ]
+                                                                                                                        }).then((result60) => {
+                                                                                                                          Worker.find({
+                                                                                                                            $and: [
+                                                                                                                              { date: { $gte: "2024-01-01" } },
+                                                                                                                              { date: { $lt: "2024-02-01" } },
+                                                                                                                            ]
+                                                                                                                          }).then((result61) => {
+                                                                                                                            Worker.find({
+                                                                                                                              $and: [
+                                                                                                                                { date: { $gte: "2024-02-01" } },
+                                                                                                                                { date: { $lt: "2024-03-01" } },
+                                                                                                                              ]
+                                                                                                                            }).then((result62) => {
+                                                                                                                              Worker.find({
+                                                                                                                                $and: [
+                                                                                                                                  { date: { $gte: "2024-03-01" } },
+                                                                                                                                  { date: { $lt: "2024-04-01" } },
+                                                                                                                                ]
+                                                                                                                              }).then((result63) => {
+                                                                                                                                Worker.find({
+                                                                                                                                  $and: [
+                                                                                                                                    { date: { $gte: "2024-04-01" } },
+                                                                                                                                    { date: { $lt: "2024-05-01" } },
+                                                                                                                                  ]
+                                                                                                                                }).then((result64) => {
+                                                                                                                                  Worker.find({
+                                                                                                                                    $and: [
+                                                                                                                                      { date: { $gte: "2024-05-01" } },
+                                                                                                                                      { date: { $lt: "2024-06-01" } },
+                                                                                                                                    ]
+                                                                                                                                  }).then((result65) => {
+                                                                                                                                    Worker.find({
+                                                                                                                                      $and: [
+                                                                                                                                        { date: { $gte: "2024-06-01" } },
+                                                                                                                                        { date: { $lt: "2024-07-01" } },
+                                                                                                                                      ]
+                                                                                                                                    }).then((result66) => {
+                                                                                                                                      Worker.find({
+                                                                                                                                        $and: [
+                                                                                                                                          { date: { $gte: "2024-07-01" } },
+                                                                                                                                          { date: { $lt: "2024-08-01" } },
+                                                                                                                                        ]
+                                                                                                                                      }).then((result67) => {
+                                                                                                                                        Worker.find({
+                                                                                                                                          $and: [
+                                                                                                                                            { date: { $gte: "2024-08-01" } },
+                                                                                                                                            { date: { $lt: "2024-09-01" } },
+                                                                                                                                          ]
+                                                                                                                                        }).then((result68) => {
+                                                                                                                                          Worker.find({
+                                                                                                                                            $and: [
+                                                                                                                                              { date: { $gte: "2024-09-01" } },
+                                                                                                                                              { date: { $lt: "2024-10-01" } },
+                                                                                                                                            ]
+                                                                                                                                          }).then((result69) => {
+                                                                                                                                            Worker.find({
+                                                                                                                                              $and: [
+                                                                                                                                                { date: { $gte: "2024-10-01" } },
+                                                                                                                                                { date: { $lt: "2024-11-01" } },
+                                                                                                                                              ]
+                                                                                                                                            }).then((result70) => {
+                                                                                                                                              Worker.find({
+                                                                                                                                                $and: [
+                                                                                                                                                  { date: { $gte: "2024-11-01" } },
+                                                                                                                                                  { date: { $lt: "2024-12-01" } },
+                                                                                                                                                ]
+                                                                                                                                              }).then((result71) => {
+                                                                                                                                                Worker.find({
+                                                                                                                                                  $and: [
+                                                                                                                                                    { date: { $gte: "2024-12-01" } },
+                                                                                                                                                    { date: { $lt: "2025-01-01" } },
+                                                                                                                                                  ]
+                                                                                                                                                }).then((result72) => {
+                                                                                                                                                  res.render("reports", {
+                                                                                                                                                    incomjan: result1,incomfeb: result2,incommar: result3,incomapr: result4,
+                                                                                                                                                    incommay: result5,incomjune: result6,incomjuly: result7,incomaug: result8,
+                                                                                                                                                    incomsep: result9,incomoct: result10,incomnov: result11,incomdec: result12,
+                                                                                                                                                    zkahjan: result13,zkahfeb: result14,zkahmar: result15,zkahapr: result16,
+                                                                                                                                                    zkahmay: result17,zkahjune: result18,zkahjuly: result19,zkahaug: result20,
+                                                                                                                                                    zkahsep: result21,zkahoct: result22,zkahnov: result23,zkahdec: result24,
+                                                                                                                                                    sdkahjan: result25,sdkahfeb: result26,sdkahmar: result27,sdkahapr: result28,
+                                                                                                                                                    sdkahmay: result29,sdkahjune: result30,sdkahjuly: result31,sdkahaug: result32,
+                                                                                                                                                    sdkahsep: result33,sdkahoct: result34,sdkahnov: result35,sdkahdec: result36,
+                                                                                                                                                    elagjan: result37,elagfeb: result38,elagmar: result39,elagapr: result40,
+                                                                                                                                                    elagmay: result41,elagjune: result42,elagjuly: result43,elagaug: result44,
+                                                                                                                                                    elagsep: result45,elagoct: result46,elagnov: result47,elagdec: result48,
+                                                                                                                                                    zab7jan: result49,zab7feb: result50,zab7mar: result51,zab7apr: result52,
+                                                                                                                                                    zab7may: result53,zab7june: result54,zab7july: result55,zab7aug: result56,
+                                                                                                                                                    zab7sep: result57,zab7oct: result58,zab7nov: result59,zab7dec: result60,
+                                                                                                                                                  });
+                                                                                                                                                });
+                                                                                                                                              });
+                                                                                                                                            });
+                                                                                                                                          });
+                                                                                                                                        });
+                                                                                                                                      });
+                                                                                                                                    });
+                                                                                                                                  });
+                                                                                                                                });
+                                                                                                                              });
+                                                                                                                            });
+                                                                                                                          });
+                                                                                                                        });
+                                                                                                                      });
+                                                                                                                    });
+                                                                                                                  });
+                                                                                                                });
+                                                                                                              });
+                                                                                                            });
+                                                                                                          });
+                                                                                                        });
+                                                                                                      });
+                                                                                                    });
+                                                                                                  });
+                                                                                                });
+                                                                                              });
+                                                                                            });
+                                                                                          });
+                                                                                        });
+                                                                                      });
+                                                                                    });
+                                                                                  });
+                                                                                });
+                                                                              });
+                                                                            });
+                                                                          });
+                                                                        });
+                                                                      });
+                                                                    });
+                                                                  });
+                                                                });
+                                                              });
+                                                            });
+                                                          });
+                                                        });
+                                                      });
+                                                    });
+                                                  });
+                                                });
+                                              });
+                                            });
+                                          });
+                                        });
+                                      });
+                                    });
+                                  });
+                                });
+                              });
+                            });
                           });
                         });
                       });
