@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body>
+    <div  dir="rtl" id="body">
+       <%- include('./components/header.ejs') %>
+      
+      <section class="MainSec" id="MainSec">
+        <div class="headParent">
+          <h1 class="MainTitle">تقرير الايرادات</h1>
+          <a href="incom.html"><button class="back">Back</button></a>
+        </div>
+      
+        <table class="center hide-when-mobile2" id="table">
+          <tr>
+          
+            <th>/</th>
+            <th>زكاة المال</th>
+            <th>صدقة جارية</th>
+            <th>علاج مرضي</th>
+            <th>ذبح و توزيع لحوم</th>
+            <th>العاملين عليها</th>
+            <th>الاجمالي</th>
+          </tr>
+
+          <tr class="rows">
+          
+            <th class="extcell" id="totalpaid">الايرادات</th>
+            
+            <th class="extcell" id="totalzkah">
+              <% 
+            let zkahall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              zkahall = zkahall + incomarr[i].zkah
+            } %>
+            <%= zkahall %>
+            </th>
+            <th class="extcell" id="totalsdkah">
+              <% 
+            let sdkahall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              sdkahall = sdkahall + incomarr[i].sdkah
+            } %>
+            <%= sdkahall %>
+            </th>
+            <th class="extcell" id="totalelag">
+              <% 
+            let elagall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              elagall = elagall + incomarr[i].elag
+            } %>
+            <%= elagall %>
+            </th>
+            <th class="extcell" id="totalzab7">
+              <% 
+            let zab7all = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              zab7all = zab7all + incomarr[i].zab7
+            } %>
+            <%= zab7all %>
+            </th>
+            <th class="extcell" id="totalworker">
+              <% 
+            let workerall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              workerall = workerall + incomarr[i].worker
+            } %>
+            <%= workerall %>
+            </th>
+            <th class="extcell" id="totalmoney">
+              <% 
+            let monall = 0;
+            for (let i = 0; i < incomarr.length; i++) {
+              monall = monall + incomarr[i].incom
+            } %>
+            <%= monall %>
+            </th>
+          </tr>
+
+          <tr class="rows red">
+          
+            <th class="extcell" id="totalpaid">تم صرف</th>
+            <th>
+              <% 
+                let totzkah = 0
+            zkaharr.forEach(item => {
+              totzkah = totzkah + item.money
+            }); 
+            
+            let totsdkah = 0
+              sdkaharr.forEach(item => {
+                totsdkah = totsdkah + item.money
+              }); 
+              let totelag = 0
+              elagarr.forEach(item => {
+                totelag = totelag + item.money
+              });
+
+              let totzab7 = 0
+              zab7arr.forEach(item => {
+                totzab7 = totzab7 + item.meatmoney + item.ricemoney
+              });
+
+              let totworker = 0
+              workerarr.forEach(item => {
+                totworker = totworker + item.money
+              });
+              %>
+                <%= totzkah %></th>
+          
+            
+            <th class="extcell" id="totalsdkah">    
+              <%= totsdkah %>
+            </th>
+            <th class="extcell" id="totalelag">
+              <%= totelag %>
+            </th>
+            <th class="extcell" id="totalzab7">
+            
+              <%= totzab7 %>
+            </th>
+            <th class="extcell" id="totalworker">
+            
+              <%= totworker %>
+            </th>
+            <th><%= totworker + totzab7 + totelag + totsdkah + totzkah %></th>
+            
+          </tr>
+
+          <tr class="rows blue">
+          
+            <th class="extcell" id="totalpaid">المتبقي</th>
+            
+            <th class="extcell" id="totalzkah">
+            <%= zkahall - totzkah %>
+            </th>
+            <th class="extcell" id="totalsdkah">
+              <%= sdkahall - totsdkah %>
+            </th>
+            <th class="extcell" id="totalelag">
+              <%= elagall - totelag %>
+            </th>
+            <th class="extcell" id="totalzab7">
+              <%= zab7all - totzab7 %>
+            </th>
+            <th class="extcell" id="totalworker">
+              <%= workerall - totworker %>
+            </th>
+            <th class="extcell" id="totalworker">
+              <%= monall - (totworker + totzab7 + totelag + totsdkah + totzkah) %>
+            </th>
+          
+          </tr>
+        </table>
+      
+        <div class="show-when-mobile2" id="mobincom">  
+          <table  class="center show-when-mobile inco2 " id="dettable">
+            <tr class="">
+              <th class="">------------</th>
+              <th class="">الايرادات</th>
+              <th class="red">تم صرف</th>
+              <th class="blue">المتبقي</th>
+            </tr>
+            <tr class="">
+              <th class="">زكاه المال</th>
+              <th id="totalzkah2">
+                <% 
+                let mobtotzkah = 0
+                let mobtotsdkah = 0
+                let mobtotelag = 0
+                let mobtotzab7 = 0
+                let mobtotworker = 0
+                     zkaharr.forEach(item => {
+                mobtotzkah = mobtotzkah + item.money
+              });
+                     sdkaharr.forEach(item => {
+                  mobtotsdkah = mobtotsdkah + item.money
+                });
+                     elagarr.forEach(item => {
+                  mobtotelag = mobtotelag + item.money
+                });
+                     zab7arr.forEach(item => {
+                  mobtotzab7 = mobtotzab7 + item.meatmoney + item.ricemoney
+                });
+                     workerarr.forEach(item => {
+                  mobtotworker = mobtotworker + item.money
+                });
+              let mobzkahall = 0;
+              for (let i = 0; i < incomarr.length; i++) {
+                mobzkahall = mobzkahall + incomarr[i].zkah
+              } %>
+              <%= mobzkahall %>
+              </th>
+              <th class="red"><%= mobtotzkah %></th>
+              <th class="blue"><%= mobzkahall - mobtotzkah %></th>
+            </tr>
+            <tr class="">
+              <th class="">صدقة جارية</th>
+              <th id="totalsdkah2">
+                <% 
+              let mobsdkahall = 0;
+              for (let i = 0; i < incomarr.length; i++) {
+                mobsdkahall = mobsdkahall + incomarr[i].sdkah
+              } %>
+              <%= mobsdkahall %>
+              </th>
+              <th class="red"><%= mobtotsdkah %></th>
+              <th class="blue"><%= mobsdkahall - mobtotsdkah %></th>
+            </tr>
+            <tr class="">
+              <th class="">علاج مرضي</th>
+              <th id="totalelag2">
+                <% 
+              let mobelagall = 0;
+              for (let i = 0; i < incomarr.length; i++) {
+                mobelagall = mobelagall + incomarr[i].elag
+              } %>
+              <%= mobelagall %>
+              </th>
+              <th class="red"><%= mobtotelag %></th>
+              <th class="blue"><%= mobelagall - mobtotelag %></th>
+            </tr>
+            <tr class="">
+              <th class="">ذبح و توزيع لحوم</th>
+              <th id="totalzab72">
+                <% 
+              let mobzab7all = 0;
+              for (let i = 0; i < incomarr.length; i++) {
+                mobzab7all = mobzab7all + incomarr[i].zab7
+              } %>
+              <%= mobzab7all %>
+              </th>
+              <th class="red"><%= mobtotzab7 %></th>
+              <th class="blue"><%= mobzab7all - mobtotzab7 %></th>
+            </tr>
+            <tr class="">
+              <th class="">العاملين عليها</th>
+              <th id="totalworker2">
+                <% 
+              let mobworkerall = 0;
+              for (let i = 0; i < incomarr.length; i++) {
+                mobworkerall = mobworkerall + incomarr[i].worker
+              } %>
+              <%= mobworkerall %>
+              </th>
+              <th class="red"><%= mobtotworker %></th>
+              <th class="blue"><%= mobworkerall - mobtotworker %></th>
+            </tr>
+            <tr class="">
+              <th class="">الاجمالي</th>
+              <th  id="totalmoney2">
+                <% 
+              let mobmonall = 0;
+              for (let i = 0; i < incomarr.length; i++) {
+                mobmonall = mobmonall + incomarr[i].incom
+              } %>
+              <%= mobmonall %>
+              </th>
+              <th class="red">
+                <%= mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah %></th>
+                <th class="blue"><%= mobmonall - (mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah) %></th>
+              </th>
+            </tr>
+          </table>
+        </div>
+          
+      </section>
+    </div>
+  </body>
+</html>

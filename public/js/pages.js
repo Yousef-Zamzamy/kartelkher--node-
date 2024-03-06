@@ -83,3 +83,42 @@ const summaryfn = () => {
   });
 };
 summaryfn();
+
+
+
+
+const summaryfn2 = () => {
+  const summary = document.querySelectorAll(".summ2");
+  const detTable = document.querySelectorAll(".detTable2");
+  summary.forEach((item) => {
+    item.addEventListener("click", (eo) => {
+      const opentab = document.querySelectorAll(".shooow2");
+      if (
+        !item.parentElement
+          .getElementsByClassName("detTable2")[0]
+          .classList.contains("shooow2")
+      ) {
+        item.parentElement
+          .getElementsByClassName("detTable2")[0]
+          .classList.toggle("shooow2");
+        item
+          .getElementsByClassName("icon-circle-left")[0]
+          .classList.toggle("hide2");
+        item
+          .getElementsByClassName("icon-circle-down")[0]
+          .classList.toggle("show2");
+      }
+
+      opentab.forEach((item) => {
+        item.classList.remove("shooow2");
+        item.parentElement
+          .getElementsByClassName("icon-circle-left")[0]
+          .classList.remove("hide2");
+        item.parentElement
+          .getElementsByClassName("icon-circle-down")[0]
+          .classList.remove("show2");
+      });
+    });
+  });
+};
+summaryfn2();

@@ -10,6 +10,7 @@
   font-size: 60px;
   color: #1b1b1b;
   padding: 10px 75px;
+  display: inline-block;
 }
 
 table {
@@ -49,6 +50,29 @@ th.hidecell{
   text-align: center;
   cursor: pointer;
 }
+
+
+.reports {
+  position: relative;
+  color: #fff;
+  background-color: #1b1b1b;
+  padding: 12px 8px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  left: 75px;
+}
+
+
+.headParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 
 .icons {
   display: flex;
@@ -196,4 +220,44 @@ label b {
 
 .blue{
   color: blue;
+}
+
+
+.details {
+  font-size: 40px;
+  padding: 20px;
+  width: 96vw;
+}
+.details2 {
+  padding: 20px;
+  width: 96vw;
+}
+
+.summ, .summ2 {
+  cursor: pointer;
+}
+
+.detTable, .detTable2 {
+  display: none;
+}
+
+
+
+.iconstyl, .iconstyl2 {
+  display: inline-block;
+}
+
+.hide2 {
+  display: none;
+}
+
+.shooow, .shooow2 {
+  display: block;
+}
+
+.show2 {
+  display: inline-block;
+}
+.cont {
+  font-size: 25px ;
 }

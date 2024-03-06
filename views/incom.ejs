@@ -35,7 +35,14 @@
        <%- include('./components/header.ejs') %>
       
       <section class="MainSec" id="MainSec">
-        <h1 class="MainTitle">الايرادات</h1>
+        <div class="headParent">
+          <h1 class="MainTitle">الايرادات</h1>
+          <div>
+            <a href="./yearlyincom.html">
+              <button class="reports">التقرير السنوي</button>
+            </a>
+          </div>
+        </div>
         
         <span class="icon-th-list2 show-when-mobile" id="det"></span>
       
@@ -43,42 +50,20 @@
           <tr class="">
             <th class="">------------</th>
             <th class="">الايرادات</th>
-            <th class="red">تم صرف</th>
-            <th class="blue">المتبقي</th>
+  
           </tr>
           
           <tr class="">
             <th class="">زكاه المال</th>
             <th id="totalzkah2">
               <% 
-              let mobtotzkah = 0
-let mobtotsdkah = 0
-let mobtotelag = 0
-let mobtotzab7 = 0
-let mobtotworker = 0
-zkaharr.forEach(item => {
-              mobtotzkah = mobtotzkah + item.money
-            });
-sdkaharr.forEach(item => {
-                mobtotsdkah = mobtotsdkah + item.money
-              });
-elagarr.forEach(item => {
-                mobtotelag = mobtotelag + item.money
-              });
-zab7arr.forEach(item => {
-                mobtotzab7 = mobtotzab7 + item.meatmoney + item.ricemoney
-              });
-workerarr.forEach(item => {
-                mobtotworker = mobtotworker + item.money
-              });
             let mobzkahall = 0;
             for (let i = 0; i < incomarr.length; i++) {
               mobzkahall = mobzkahall + incomarr[i].zkah
             } %>
             <%= mobzkahall %>
             </th>
-            <th class="red"><%= mobtotzkah %></th>
-            <th class="blue"><%= mobzkahall - mobtotzkah %></th>
+            
           </tr>
           <tr class="">
             <th class="">صدقة جارية</th>
@@ -90,8 +75,7 @@ workerarr.forEach(item => {
             } %>
             <%= mobsdkahall %>
             </th>
-            <th class="red"><%= mobtotsdkah %></th>
-            <th class="blue"><%= mobsdkahall - mobtotsdkah %></th>
+            
           </tr>
           <tr class="">
             <th class="">علاج مرضي</th>
@@ -103,8 +87,7 @@ workerarr.forEach(item => {
             } %>
             <%= mobelagall %>
             </th>
-            <th class="red"><%= mobtotelag %></th>
-            <th class="blue"><%= mobelagall - mobtotelag %></th>
+          
           </tr>
           <tr class="">
             <th class="">ذبح و توزيع لحوم</th>
@@ -116,8 +99,7 @@ workerarr.forEach(item => {
             } %>
             <%= mobzab7all %>
             </th>
-            <th class="red"><%= mobtotzab7 %></th>
-            <th class="blue"><%= mobzab7all - mobtotzab7 %></th>
+            
           </tr>
           <tr class="">
             <th class="">العاملين عليها</th>
@@ -129,8 +111,7 @@ workerarr.forEach(item => {
             } %>
             <%= mobworkerall %>
             </th>
-            <th class="red"><%= mobtotworker %></th>
-            <th class="blue"><%= mobworkerall - mobtotworker %></th>
+          
           </tr>
           <tr class="">
             <th class="">الاجمالي</th>
@@ -141,10 +122,6 @@ workerarr.forEach(item => {
               mobmonall = mobmonall + incomarr[i].incom
             } %>
             <%= mobmonall %>
-            </th>
-            <th class="red">
-              <%= mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah %></th>
-              <th class="blue"><%= mobmonall - (mobtotworker + mobtotzab7 + mobtotelag + mobtotsdkah + mobtotzkah) %></th>
             </th>
           </tr>
         </table>
@@ -192,7 +169,7 @@ workerarr.forEach(item => {
           <tr class="rows">
             <th class="hidecell">م</th>
             <th class="hidecell"></th>
-            <th class="extcell" id="totalpaid">الايرادات</th>
+            <th class="extcell" id="totalpaid">الاجمالي</th>
             <th class="extcell" id="totalmoney">
               <% 
             let monall = 0;
@@ -241,84 +218,6 @@ workerarr.forEach(item => {
             } %>
             <%= workerall %>
             </th>
-          </tr>
-
-          <tr class="rows red">
-            <th class="hidecell">م</th>
-            <th class="hidecell"></th>
-            <th class="extcell" id="totalpaid">تم صرف</th>
-            <th>
-              <% 
-                let totzkah = 0
-            zkaharr.forEach(item => {
-              totzkah = totzkah + item.money
-            }); 
-            
-            let totsdkah = 0
-              sdkaharr.forEach(item => {
-                totsdkah = totsdkah + item.money
-              }); 
-              let totelag = 0
-              elagarr.forEach(item => {
-                totelag = totelag + item.money
-              });
-
-              let totzab7 = 0
-              zab7arr.forEach(item => {
-                totzab7 = totzab7 + item.meatmoney + item.ricemoney
-              });
-
-              let totworker = 0
-              workerarr.forEach(item => {
-                totworker = totworker + item.money
-              });
-              %>
-              <%= totworker + totzab7 + totelag + totsdkah + totzkah %></th>
-          
-            <th class="extcell" id="totalzkah">    
-            <%= totzkah %>
-            </th>
-            <th class="extcell" id="totalsdkah">    
-              <%= totsdkah %>
-            </th>
-            <th class="extcell" id="totalelag">
-              <%= totelag %>
-            </th>
-            <th class="extcell" id="totalzab7">
-            
-              <%= totzab7 %>
-            </th>
-            <th class="extcell" id="totalworker">
-            
-              <%= totworker %>
-            </th>
-            
-          </tr>
-
-          <tr class="rows blue">
-            <th class="hidecell">م</th>
-            <th class="hidecell"></th>
-            <th class="extcell" id="totalpaid">المتبقي</th>
-            <th class="extcell" id="totalworker">
-              <%= monall - (totworker + totzab7 + totelag + totsdkah + totzkah) %>
-            </th>
-            <th class="extcell" id="totalzkah">
-            <%= zkahall - totzkah %>
-            </th>
-            <th class="extcell" id="totalsdkah">
-              <%= sdkahall - totsdkah %>
-            </th>
-            <th class="extcell" id="totalelag">
-              <%= elagall - totelag %>
-            </th>
-            <th class="extcell" id="totalzab7">
-              <%= zab7all - totzab7 %>
-            </th>
-            <th class="extcell" id="totalworker">
-              <%= workerall - totworker %>
-            </th>
-            
-          
           </tr>
         </table>
       

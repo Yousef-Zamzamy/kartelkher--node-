@@ -41,6 +41,622 @@ app.get("/", (req, res) => {
 app.get("/home.html", (req, res) => {
   res.render("home");
 });
+
+
+// income & incomeview
+app.get("/incom.html", (req, res) => {
+  Income.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("incom", {
+        incomarr: result,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/yearlyincom.html", (req, res) => {
+  Income.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Zkah.find().then((result1) => {
+        Sdkah.find().then((result2) => {
+          Elag.find().then((result3) => {
+            Zab7.find().then((result4) => {
+              Worker.find().then((result5) => {
+                res.render("yearlyincom", {
+                  incomarr: result,
+                  zkaharr: result1,
+                  sdkaharr: result2,
+                  elagarr: result3,
+                  zab7arr: result4,
+                  workerarr: result5,
+                });
+              });
+            });
+          });
+        });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.get("/incomview.html", (req, res) => {
+  Income.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Zkah.find().then((result1) => {
+        Sdkah.find().then((result2) => {
+          Elag.find().then((result3) => {
+            Zab7.find().then((result4) => {
+              res.render("incomview", {
+                incomarr: result,
+                zkaharr: result1,
+                sdkaharr: result2,
+                elagarr: result3,
+                zab7arr: result4,
+              });
+            });
+          });
+        });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/edit/:id", (req, res) => {
+  Income.findById(req.params.id)
+    .then((result) => {
+      res.render("edit", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// zkah & zkahview
+app.get("/zkah.html", (req, res) => {
+  Zkah.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Income.find().then((result2) => {
+        res.render("zkah", { zkaharr: result, incomarr: result2 });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/monthlyzkah.html", (req, res) => {
+  Zkah.find({
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
+  }).sort({ date: 1 }).then((result) => {
+    Zkah.find({
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
+    }).sort({ date: 1 }).then((result2) => {
+    Zkah.find({
+      $and: [{ date: { $gte: "2024-03-01" } }, { date: { $lt: "2024-04-01" } }],
+    }).sort({ date: 1 }).then((result3) => {
+      Zkah.find({
+        $and: [{ date: { $gte: "2024-04-01" } }, { date: { $lt: "2024-05-01" } }],
+      }).sort({ date: 1 }).then((result4) => {
+        Zkah.find({
+          $and: [{ date: { $gte: "2024-05-01" } }, { date: { $lt: "2024-06-01" } }],
+        }).sort({ date: 1 }).then((result5) => {
+          Zkah.find({
+            $and: [{ date: { $gte: "2024-06-01" } }, { date: { $lt: "2024-07-01" } }],
+          }).sort({ date: 1 }).then((result6) => {
+            Zkah.find({
+              $and: [{ date: { $gte: "2024-07-01" } }, { date: { $lt: "2024-08-01" } }],
+            }).sort({ date: 1 }).then((result7) => {
+              Zkah.find({
+                $and: [{ date: { $gte: "2024-08-01" } }, { date: { $lt: "2024-09-01" } }],
+              }).sort({ date: 1 }).then((result8) => {
+                Zkah.find({
+                  $and: [{ date: { $gte: "2024-09-01" } }, { date: { $lt: "2024-10-01" } }],
+                }).sort({ date: 1 }).then((result9) => {
+                  Zkah.find({
+                    $and: [{ date: { $gte: "2024-10-01" } }, { date: { $lt: "2024-11-01" } }],
+                  }).sort({ date: 1 }).then((result10) => {
+                    Zkah.find({
+                      $and: [{ date: { $gte: "2024-11-01" } }, { date: { $lt: "2024-12-01" } }],
+                    }).sort({ date: 1 }).then((result11) => {
+                      Zkah.find({
+                        $and: [{ date: { $gte: "2024-12-01" } }, { date: { $lt: "2025-01-01" } }],
+                      }).sort({ date: 1 }).then((result12) => {
+                        res.render("monthlyzkah", { 
+                          janzkah: result, 
+                          febzkah: result2,
+                          marzkah: result3,
+                          aprzkah: result4,
+                          mayzkah: result5,
+                          junezkah: result6,
+                          julyzkah: result7,
+                          augzkah: result8,
+                          sepzkah: result9,
+                          octzkah: result10,
+                          novzkah: result11,
+                          deczkah: result12,});
+                      })
+                    })
+                  })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+});
+app.get("/zkahview.html", (req, res) => {
+  Zkah.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("zkahview", { zkaharr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editzkah/:id", (req, res) => {
+  Zkah.findById(req.params.id)
+    .then((result) => {
+      res.render("editzkah", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// sdkah & sdkahview
+app.get("/sdkah.html", (req, res) => {
+  Sdkah.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Income.find().then((result2) => {
+        res.render("sdkah", { sdkaharr: result, incomarr: result2 });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/sdkahview.html", (req, res) => {
+  Sdkah.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("sdkahview", { sdkaharr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editsdkah/:id", (req, res) => {
+  Sdkah.findById(req.params.id)
+    .then((result) => {
+      res.render("editsdkah", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// elag & elagview
+app.get("/elag.html", (req, res) => {
+  Elag.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Income.find().then((result2) => {
+        res.render("elag", { elagarr: result, incomarr: result2 });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/elagview.html", (req, res) => {
+  Elag.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("elagview", { elagarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editelag/:id", (req, res) => {
+  Elag.findById(req.params.id)
+    .then((result) => {
+      res.render("editelag", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// zab7 & zab7view
+app.get("/zab7.html", (req, res) => {
+  Zab7.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Income.find().then((result2) => {
+        res.render("zab7", { zab7arr: result, incomarr: result2 });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/zab7view.html", (req, res) => {
+  Zab7.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("zab7view", { zab7arr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editzab7/:id", (req, res) => {
+  Zab7.findById(req.params.id)
+    .then((result) => {
+      res.render("editzab7", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// worker & workerview
+app.get("/worker.html", (req, res) => {
+  Worker.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      Income.find().then((result2) => {
+        res.render("worker", { workerarr: result, incomarr: result2 });
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/workerview.html", (req, res) => {
+  Worker.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("workerview", { workerarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editworker/:id", (req, res) => {
+  Worker.findById(req.params.id)
+    .then((result) => {
+      res.render("editworker", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// financial & financialview
+app.get("/financial.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("financial", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/aswan.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("aswan", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/aswanview.html", (req, res) => {
+  Financial.find()
+    .then((result) => {
+      res.render("aswanview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/luxur.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("luxur", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/luxurview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("luxurview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/kena.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("kena", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/kenaview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("kenaview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/sohag.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("sohag", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/sohagview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("sohagview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/minya.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("minya", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/minyaview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("minyaview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/bnyswef.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("bnyswef", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/bnyswefview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("bnyswefview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/redsea.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("redsea", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/redseaview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("redseaview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/wahat.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("wahat", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/wahatview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("wahatview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/bhera.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("bhera", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/bheraview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("bheraview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/alex.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("alex", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/alexview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("alexview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/financialview.html", (req, res) => {
+  Financial.find()
+    .sort({ date: 1 })
+    .then((result) => {
+      res.render("financialview", { financialarr: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editaswan/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editaswan", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editluxur/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editluxur", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editsohag/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editsohag", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editkena/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editkena", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editminya/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editminya", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editbhera/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editbhera", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editwahat/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editwahat", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editredsea/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editredsea", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editalex/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editalex", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get("/editbnyswef/:id", (req, res) => {
+  Financial.findById(req.params.id)
+    .then((result) => {
+      res.render("editbnyswef", { obj: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 app.get("/reports.html", (req, res) => {
   Income.find({
     $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
@@ -557,544 +1173,6 @@ app.get("/reports.html", (req, res) => {
       });
     });
   });
-});
-
-// income & incomeview
-app.get("/incom.html", (req, res) => {
-  Income.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Zkah.find().then((result1) => {
-        Sdkah.find().then((result2) => {
-          Elag.find().then((result3) => {
-            Zab7.find().then((result4) => {
-              Worker.find().then((result5) => {
-                res.render("incom", {
-                  incomarr: result,
-                  zkaharr: result1,
-                  sdkaharr: result2,
-                  elagarr: result3,
-                  zab7arr: result4,
-                  workerarr: result5,
-                });
-              });
-            });
-          });
-        });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/incomview.html", (req, res) => {
-  Income.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Zkah.find().then((result1) => {
-        Sdkah.find().then((result2) => {
-          Elag.find().then((result3) => {
-            Zab7.find().then((result4) => {
-              res.render("incomview", {
-                incomarr: result,
-                zkaharr: result1,
-                sdkaharr: result2,
-                elagarr: result3,
-                zab7arr: result4,
-              });
-            });
-          });
-        });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/edit/:id", (req, res) => {
-  Income.findById(req.params.id)
-    .then((result) => {
-      res.render("edit", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// zkah & zkahview
-app.get("/zkah.html", (req, res) => {
-  Zkah.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Income.find().then((result2) => {
-        res.render("zkah", { zkaharr: result, incomarr: result2 });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/zkahview.html", (req, res) => {
-  Zkah.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("zkahview", { zkaharr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editzkah/:id", (req, res) => {
-  Zkah.findById(req.params.id)
-    .then((result) => {
-      res.render("editzkah", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// sdkah & sdkahview
-app.get("/sdkah.html", (req, res) => {
-  Sdkah.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Income.find().then((result2) => {
-        res.render("sdkah", { sdkaharr: result, incomarr: result2 });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/sdkahview.html", (req, res) => {
-  Sdkah.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("sdkahview", { sdkaharr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editsdkah/:id", (req, res) => {
-  Sdkah.findById(req.params.id)
-    .then((result) => {
-      res.render("editsdkah", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// elag & elagview
-app.get("/elag.html", (req, res) => {
-  Elag.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Income.find().then((result2) => {
-        res.render("elag", { elagarr: result, incomarr: result2 });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/elagview.html", (req, res) => {
-  Elag.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("elagview", { elagarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editelag/:id", (req, res) => {
-  Elag.findById(req.params.id)
-    .then((result) => {
-      res.render("editelag", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// zab7 & zab7view
-app.get("/zab7.html", (req, res) => {
-  Zab7.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Income.find().then((result2) => {
-        res.render("zab7", { zab7arr: result, incomarr: result2 });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/zab7view.html", (req, res) => {
-  Zab7.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("zab7view", { zab7arr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editzab7/:id", (req, res) => {
-  Zab7.findById(req.params.id)
-    .then((result) => {
-      res.render("editzab7", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// worker & workerview
-app.get("/worker.html", (req, res) => {
-  Worker.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      Income.find().then((result2) => {
-        res.render("worker", { workerarr: result, incomarr: result2 });
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/workerview.html", (req, res) => {
-  Worker.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("workerview", { workerarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editworker/:id", (req, res) => {
-  Worker.findById(req.params.id)
-    .then((result) => {
-      res.render("editworker", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// financial & financialview
-app.get("/financial.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("financial", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/aswan.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("aswan", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/aswanview.html", (req, res) => {
-  Financial.find()
-    .then((result) => {
-      res.render("aswanview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/luxur.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("luxur", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/luxurview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("luxurview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/kena.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("kena", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/kenaview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("kenaview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/sohag.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("sohag", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/sohagview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("sohagview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/minya.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("minya", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/minyaview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("minyaview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/bnyswef.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("bnyswef", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/bnyswefview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("bnyswefview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/redsea.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("redsea", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/redseaview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("redseaview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/wahat.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("wahat", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/wahatview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("wahatview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/bhera.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("bhera", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/bheraview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("bheraview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/alex.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("alex", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/alexview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("alexview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/financialview.html", (req, res) => {
-  Financial.find()
-    .sort({ date: 1 })
-    .then((result) => {
-      res.render("financialview", { financialarr: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editaswan/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editaswan", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editluxur/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editluxur", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editsohag/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editsohag", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editkena/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editkena", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editminya/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editminya", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editbhera/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editbhera", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editwahat/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editwahat", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editredsea/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editredsea", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editalex/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editalex", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-app.get("/editbnyswef/:id", (req, res) => {
-  Financial.findById(req.params.id)
-    .then((result) => {
-      res.render("editbnyswef", { obj: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 });
 
 //post Request all pages----------------------------------------------------------
