@@ -227,6 +227,69 @@ app.get("/sdkah.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/monthlysdkah.html", (req, res) => {
+  Sdkah.find({
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
+  }).sort({ date: 1 }).then((result) => {
+    Sdkah.find({
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
+    }).sort({ date: 1 }).then((result2) => {
+    Sdkah.find({
+      $and: [{ date: { $gte: "2024-03-01" } }, { date: { $lt: "2024-04-01" } }],
+    }).sort({ date: 1 }).then((result3) => {
+      Sdkah.find({
+        $and: [{ date: { $gte: "2024-04-01" } }, { date: { $lt: "2024-05-01" } }],
+      }).sort({ date: 1 }).then((result4) => {
+        Sdkah.find({
+          $and: [{ date: { $gte: "2024-05-01" } }, { date: { $lt: "2024-06-01" } }],
+        }).sort({ date: 1 }).then((result5) => {
+          Sdkah.find({
+            $and: [{ date: { $gte: "2024-06-01" } }, { date: { $lt: "2024-07-01" } }],
+          }).sort({ date: 1 }).then((result6) => {
+            Sdkah.find({
+              $and: [{ date: { $gte: "2024-07-01" } }, { date: { $lt: "2024-08-01" } }],
+            }).sort({ date: 1 }).then((result7) => {
+              Sdkah.find({
+                $and: [{ date: { $gte: "2024-08-01" } }, { date: { $lt: "2024-09-01" } }],
+              }).sort({ date: 1 }).then((result8) => {
+                Sdkah.find({
+                  $and: [{ date: { $gte: "2024-09-01" } }, { date: { $lt: "2024-10-01" } }],
+                }).sort({ date: 1 }).then((result9) => {
+                  Sdkah.find({
+                    $and: [{ date: { $gte: "2024-10-01" } }, { date: { $lt: "2024-11-01" } }],
+                  }).sort({ date: 1 }).then((result10) => {
+                    Sdkah.find({
+                      $and: [{ date: { $gte: "2024-11-01" } }, { date: { $lt: "2024-12-01" } }],
+                    }).sort({ date: 1 }).then((result11) => {
+                      Sdkah.find({
+                        $and: [{ date: { $gte: "2024-12-01" } }, { date: { $lt: "2025-01-01" } }],
+                      }).sort({ date: 1 }).then((result12) => {
+                        res.render("monthlysdkah", { 
+                          jansdkah: result, 
+                          febsdkah: result2,
+                          marsdkah: result3,
+                          aprsdkah: result4,
+                          maysdkah: result5,
+                          junesdkah: result6,
+                          julysdkah: result7,
+                          augsdkah: result8,
+                          sepsdkah: result9,
+                          octsdkah: result10,
+                          novsdkah: result11,
+                          decsdkah: result12,});
+                      })
+                    })
+                  })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+});
 app.get("/sdkahview.html", (req, res) => {
   Sdkah.find()
     .sort({ date: 1 })

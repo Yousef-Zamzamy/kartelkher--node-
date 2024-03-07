@@ -203,7 +203,11 @@ label b {
 .back{
   width: 60px;
   font-size: 20px;
-  margin-left: 25px;
+  
+}
+.xxx{
+   position: relative;
+   margin-left: 25px;;
 }
 
 .red th {
@@ -226,11 +230,15 @@ label b {
 .details {
   font-size: 40px;
   padding: 20px;
-  width: 96vw;
+  width: 90vw;
+  position: relative;
+    right: 35px;
 }
 .details2 {
   padding: 20px;
-  width: 96vw;
+  width: 75vw;
+  position: relative;
+    right: 35px;
 }
 
 .summ, .summ2 {
