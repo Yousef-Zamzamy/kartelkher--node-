@@ -7,6 +7,7 @@ const zkahSchema = new Schema({
   ways: String,
   places: String,
   money: Number,
+  quantity: Number,
 });
 
 // Create a model based on that schema

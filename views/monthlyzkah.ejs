@@ -62,9 +62,23 @@
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janda3mQuantity = 0;
+                   let janda3mOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    janda3mQuantity = janda3mQuantity + item.quantity
+                    janda3mOutcome = janda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janda3mQuantity %> حالة بمبلغ <%= janda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -82,9 +96,23 @@
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let jankrotQuantity = 0;
+                   let jankrotOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    jankrotQuantity = jankrotQuantity + item.quantity
+                    jankrotOutcome = jankrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jankrotQuantity %> كارت بمبلغ <%= jankrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -102,9 +130,23 @@
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let jan7fadatQuantity = 0;
+                   let jan7fadatOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    jan7fadatQuantity = jan7fadatQuantity + item.quantity
+                    jan7fadatOutcome = jan7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jan7fadatQuantity %> حالة بمبلغ <%= jan7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -122,9 +164,23 @@
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janmsarefQuantity = 0;
+                   let janmsarefOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    janmsarefQuantity = janmsarefQuantity + item.quantity
+                    janmsarefOutcome = janmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janmsarefQuantity %> حالة بمبلغ <%= janmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -142,9 +198,23 @@
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janeftarQuantity = 0;
+                   let janeftarOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    janeftarQuantity = janeftarQuantity + item.quantity
+                    janeftarOutcome = janeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janeftarQuantity %> حالة بمبلغ <%= janeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -162,9 +232,23 @@
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janmwa2edQuantity = 0;
+                   let janmwa2edOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    janmwa2edQuantity = janmwa2edQuantity + item.quantity
+                    janmwa2edOutcome = janmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janmwa2edQuantity %> حالة بمبلغ <%= janmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -182,9 +266,23 @@
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let jan3edyatQuantity = 0;
+                   let jan3edyatOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    jan3edyatQuantity = jan3edyatQuantity + item.quantity
+                    jan3edyatOutcome = jan3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jan3edyatQuantity %> حالة بمبلغ <%= jan3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -202,9 +300,23 @@
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janmlabsQuantity = 0;
+                   let janmlabsOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    janmlabsQuantity = janmlabsQuantity + item.quantity
+                    janmlabsOutcome = janmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janmlabsQuantity %> حالة بمبلغ <%= janmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -222,9 +334,23 @@
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let janzkahQuantity = 0;
+                   let janzkahOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    janzkahQuantity = janzkahQuantity + item.quantity
+                    janzkahOutcome = janzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janzkahQuantity %> حالة بمبلغ <%= janzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -242,9 +368,23 @@
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janud7yaQuantity = 0;
+                   let janud7yaOutcome = 0;
+                  janzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    janud7yaQuantity = janud7yaQuantity + item.quantity
+                    janud7yaOutcome = janud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janud7yaQuantity %> حالة بمبلغ <%= janud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -269,13 +409,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febda3mQuantity = 0;
+                   let febda3mOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    febda3mQuantity = febda3mQuantity + item.quantity
+                    febda3mOutcome = febda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febda3mQuantity %> حالة بمبلغ <%= febda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -289,13 +443,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febkrotQuantity = 0;
+                   let febkrotOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    febkrotQuantity = febkrotQuantity + item.quantity
+                    febkrotOutcome = febkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febkrotQuantity %> كارت بمبلغ <%= febkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -309,13 +477,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let feb7fadatQuantity = 0;
+                   let feb7fadatOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    feb7fadatQuantity = feb7fadatQuantity + item.quantity
+                    feb7fadatOutcome = feb7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= feb7fadatQuantity %> حالة بمبلغ <%= feb7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -329,13 +511,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febmsarefQuantity = 0;
+                   let febmsarefOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    febmsarefQuantity = febmsarefQuantity + item.quantity
+                    febmsarefOutcome = febmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febmsarefQuantity %> حالة بمبلغ <%= febmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -349,13 +545,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febeftarQuantity = 0;
+                   let febeftarOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    febeftarQuantity = febeftarQuantity + item.quantity
+                    febeftarOutcome = febeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febeftarQuantity %> حالة بمبلغ <%= febeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -369,13 +579,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febmwa2edQuantity = 0;
+                   let febmwa2edOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    febmwa2edQuantity = febmwa2edQuantity + item.quantity
+                    febmwa2edOutcome = febmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febmwa2edQuantity %> حالة بمبلغ <%= febmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -389,13 +613,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let feb3edyatQuantity = 0;
+                   let feb3edyatOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    feb3edyatQuantity = feb3edyatQuantity + item.quantity
+                    feb3edyatOutcome = feb3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= feb3edyatQuantity %> حالة بمبلغ <%= feb3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -409,13 +647,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febmlabsQuantity = 0;
+                   let febmlabsOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    febmlabsQuantity = febmlabsQuantity + item.quantity
+                    febmlabsOutcome = febmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febmlabsQuantity %> حالة بمبلغ <%= febmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -429,13 +681,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let febzkahQuantity = 0;
+                   let febzkahOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    febzkahQuantity = febzkahQuantity + item.quantity
+                    febzkahOutcome = febzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febzkahQuantity %> حالة بمبلغ <%= febzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -449,13 +715,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febzkah.forEach((item,index) => { 
+                <%febzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febud7yaQuantity = 0;
+                   let febud7yaOutcome = 0;
+                  febzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    febud7yaQuantity = febud7yaQuantity + item.quantity
+                    febud7yaOutcome = febud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febud7yaQuantity %> حالة بمبلغ <%= febud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -480,13 +760,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marda3mQuantity = 0;
+                   let marda3mOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    marda3mQuantity = marda3mQuantity + item.quantity
+                    marda3mOutcome = marda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marda3mQuantity %> حالة بمبلغ <%= marda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -500,13 +794,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let markrotQuantity = 0;
+                   let markrotOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    markrotQuantity = markrotQuantity + item.quantity
+                    markrotOutcome = markrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= markrotQuantity %> كارت بمبلغ <%= markrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -520,13 +828,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let mar7fadatQuantity = 0;
+                   let mar7fadatOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    mar7fadatQuantity = mar7fadatQuantity + item.quantity
+                    mar7fadatOutcome = mar7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mar7fadatQuantity %> حالة بمبلغ <%= mar7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -540,13 +862,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marmsarefQuantity = 0;
+                   let marmsarefOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    marmsarefQuantity = marmsarefQuantity + item.quantity
+                    marmsarefOutcome = marmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marmsarefQuantity %> حالة بمبلغ <%= marmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -560,13 +896,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mareftarQuantity = 0;
+                   let mareftarOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    mareftarQuantity = mareftarQuantity + item.quantity
+                    mareftarOutcome = mareftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mareftarQuantity %> حالة بمبلغ <%= mareftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -580,13 +930,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marmwa2edQuantity = 0;
+                   let marmwa2edOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    marmwa2edQuantity = marmwa2edQuantity + item.quantity
+                    marmwa2edOutcome = marmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marmwa2edQuantity %> حالة بمبلغ <%= marmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -600,13 +964,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let mar3edyatQuantity = 0;
+                   let mar3edyatOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    mar3edyatQuantity = mar3edyatQuantity + item.quantity
+                    mar3edyatOutcome = mar3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mar3edyatQuantity %> حالة بمبلغ <%= mar3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -620,13 +998,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marmlabsQuantity = 0;
+                   let marmlabsOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    marmlabsQuantity = marmlabsQuantity + item.quantity
+                    marmlabsOutcome = marmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marmlabsQuantity %> حالة بمبلغ <%= marmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -640,13 +1032,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let marzkahQuantity = 0;
+                   let marzkahOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    marzkahQuantity = marzkahQuantity + item.quantity
+                    marzkahOutcome = marzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marzkahQuantity %> حالة بمبلغ <%= marzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -660,13 +1066,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marzkah.forEach((item,index) => { 
+                <%marzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marud7yaQuantity = 0;
+                   let marud7yaOutcome = 0;
+                  marzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    marud7yaQuantity = marud7yaQuantity + item.quantity
+                    marud7yaOutcome = marud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marud7yaQuantity %> حالة بمبلغ <%= marud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -691,13 +1111,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprda3mQuantity = 0;
+                   let aprda3mOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    aprda3mQuantity = aprda3mQuantity + item.quantity
+                    aprda3mOutcome = aprda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprda3mQuantity %> حالة بمبلغ <%= aprda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -711,13 +1145,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprkrotQuantity = 0;
+                   let aprkrotOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    aprkrotQuantity = aprkrotQuantity + item.quantity
+                    aprkrotOutcome = aprkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprkrotQuantity %> كارت بمبلغ <%= aprkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -731,13 +1179,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let apr7fadatQuantity = 0;
+                   let apr7fadatOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    apr7fadatQuantity = apr7fadatQuantity + item.quantity
+                    apr7fadatOutcome = apr7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= apr7fadatQuantity %> حالة بمبلغ <%= apr7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -751,13 +1213,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprmsarefQuantity = 0;
+                   let aprmsarefOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    aprmsarefQuantity = aprmsarefQuantity + item.quantity
+                    aprmsarefOutcome = aprmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprmsarefQuantity %> حالة بمبلغ <%= aprmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -771,13 +1247,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let apreftarQuantity = 0;
+                   let apreftarOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    apreftarQuantity = apreftarQuantity + item.quantity
+                    apreftarOutcome = apreftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= apreftarQuantity %> حالة بمبلغ <%= apreftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -791,13 +1281,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprmwa2edQuantity = 0;
+                   let aprmwa2edOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    aprmwa2edQuantity = aprmwa2edQuantity + item.quantity
+                    aprmwa2edOutcome = aprmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprmwa2edQuantity %> حالة بمبلغ <%= aprmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -811,13 +1315,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let apr3edyatQuantity = 0;
+                   let apr3edyatOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    apr3edyatQuantity = apr3edyatQuantity + item.quantity
+                    apr3edyatOutcome = apr3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= apr3edyatQuantity %> حالة بمبلغ <%= apr3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -831,13 +1349,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprmlabsQuantity = 0;
+                   let aprmlabsOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    aprmlabsQuantity = aprmlabsQuantity + item.quantity
+                    aprmlabsOutcome = aprmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprmlabsQuantity %> حالة بمبلغ <%= aprmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -851,13 +1383,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let aprzkahQuantity = 0;
+                   let aprzkahOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    aprzkahQuantity = aprzkahQuantity + item.quantity
+                    aprzkahOutcome = aprzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprzkahQuantity %> حالة بمبلغ <%= aprzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -871,13 +1417,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprzkah.forEach((item,index) => { 
+                <%aprzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprud7yaQuantity = 0;
+                   let aprud7yaOutcome = 0;
+                  aprzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    aprud7yaQuantity = aprud7yaQuantity + item.quantity
+                    aprud7yaOutcome = aprud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprud7yaQuantity %> حالة بمبلغ <%= aprud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -902,13 +1462,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mayda3mQuantity = 0;
+                   let mayda3mOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    mayda3mQuantity = mayda3mQuantity + item.quantity
+                    mayda3mOutcome = mayda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayda3mQuantity %> حالة بمبلغ <%= mayda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -922,13 +1496,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maykrotQuantity = 0;
+                   let maykrotOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    maykrotQuantity = maykrotQuantity + item.quantity
+                    maykrotOutcome = maykrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maykrotQuantity %> كارت بمبلغ <%= maykrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -942,13 +1530,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let may7fadatQuantity = 0;
+                   let may7fadatOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    may7fadatQuantity = may7fadatQuantity + item.quantity
+                    may7fadatOutcome = may7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= may7fadatQuantity %> حالة بمبلغ <%= may7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -962,13 +1564,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maymsarefQuantity = 0;
+                   let maymsarefOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    maymsarefQuantity = maymsarefQuantity + item.quantity
+                    maymsarefOutcome = maymsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maymsarefQuantity %> حالة بمبلغ <%= maymsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -982,13 +1598,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mayeftarQuantity = 0;
+                   let mayeftarOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    mayeftarQuantity = mayeftarQuantity + item.quantity
+                    mayeftarOutcome = mayeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayeftarQuantity %> حالة بمبلغ <%= mayeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1002,13 +1632,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maymwa2edQuantity = 0;
+                   let maymwa2edOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    maymwa2edQuantity = maymwa2edQuantity + item.quantity
+                    maymwa2edOutcome = maymwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maymwa2edQuantity %> حالة بمبلغ <%= maymwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1022,13 +1666,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let may3edyatQuantity = 0;
+                   let may3edyatOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    may3edyatQuantity = may3edyatQuantity + item.quantity
+                    may3edyatOutcome = may3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= may3edyatQuantity %> حالة بمبلغ <%= may3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1042,13 +1700,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maymlabsQuantity = 0;
+                   let maymlabsOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    maymlabsQuantity = maymlabsQuantity + item.quantity
+                    maymlabsOutcome = maymlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maymlabsQuantity %> حالة بمبلغ <%= maymlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1062,13 +1734,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let mayzkahQuantity = 0;
+                   let mayzkahOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    mayzkahQuantity = mayzkahQuantity + item.quantity
+                    mayzkahOutcome = mayzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayzkahQuantity %> حالة بمبلغ <%= mayzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1082,13 +1768,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% mayzkah.forEach((item,index) => { 
+                <%mayzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mayud7yaQuantity = 0;
+                   let mayud7yaOutcome = 0;
+                  mayzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    mayud7yaQuantity = mayud7yaQuantity + item.quantity
+                    mayud7yaOutcome = mayud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayud7yaQuantity %> حالة بمبلغ <%= mayud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1113,13 +1813,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let juneda3mQuantity = 0;
+                   let juneda3mOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    juneda3mQuantity = juneda3mQuantity + item.quantity
+                    juneda3mOutcome = juneda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= juneda3mQuantity %> حالة بمبلغ <%= juneda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1133,13 +1847,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junekrotQuantity = 0;
+                   let junekrotOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    junekrotQuantity = junekrotQuantity + item.quantity
+                    junekrotOutcome = junekrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junekrotQuantity %> كارت بمبلغ <%= junekrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1153,13 +1881,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let june7fadatQuantity = 0;
+                   let june7fadatOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    june7fadatQuantity = june7fadatQuantity + item.quantity
+                    june7fadatOutcome = june7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= june7fadatQuantity %> حالة بمبلغ <%= june7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1173,13 +1915,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junemsarefQuantity = 0;
+                   let junemsarefOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    junemsarefQuantity = junemsarefQuantity + item.quantity
+                    junemsarefOutcome = junemsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junemsarefQuantity %> حالة بمبلغ <%= junemsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1193,13 +1949,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let juneeftarQuantity = 0;
+                   let juneeftarOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    juneeftarQuantity = juneeftarQuantity + item.quantity
+                    juneeftarOutcome = juneeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= juneeftarQuantity %> حالة بمبلغ <%= juneeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1213,13 +1983,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junemwa2edQuantity = 0;
+                   let junemwa2edOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    junemwa2edQuantity = junemwa2edQuantity + item.quantity
+                    junemwa2edOutcome = junemwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junemwa2edQuantity %> حالة بمبلغ <%= junemwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1233,13 +2017,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let june3edyatQuantity = 0;
+                   let june3edyatOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    june3edyatQuantity = june3edyatQuantity + item.quantity
+                    june3edyatOutcome = june3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= june3edyatQuantity %> حالة بمبلغ <%= june3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1253,13 +2051,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junemlabsQuantity = 0;
+                   let junemlabsOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    junemlabsQuantity = junemlabsQuantity + item.quantity
+                    junemlabsOutcome = junemlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junemlabsQuantity %> حالة بمبلغ <%= junemlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1273,13 +2085,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let junezkahQuantity = 0;
+                   let junezkahOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    junezkahQuantity = junezkahQuantity + item.quantity
+                    junezkahOutcome = junezkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junezkahQuantity %> حالة بمبلغ <%= junezkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1293,13 +2119,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junezkah.forEach((item,index) => { 
+                <%junezkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let juneud7yaQuantity = 0;
+                   let juneud7yaOutcome = 0;
+                  junezkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    juneud7yaQuantity = juneud7yaQuantity + item.quantity
+                    juneud7yaOutcome = juneud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= juneud7yaQuantity %> حالة بمبلغ <%= juneud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1324,13 +2164,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julyda3mQuantity = 0;
+                   let julyda3mOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    julyda3mQuantity = julyda3mQuantity + item.quantity
+                    julyda3mOutcome = julyda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyda3mQuantity %> حالة بمبلغ <%= julyda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1344,13 +2198,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julykrotQuantity = 0;
+                   let julykrotOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    julykrotQuantity = julykrotQuantity + item.quantity
+                    julykrotOutcome = julykrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julykrotQuantity %> كارت بمبلغ <%= julykrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1364,13 +2232,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let july7fadatQuantity = 0;
+                   let july7fadatOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    july7fadatQuantity = july7fadatQuantity + item.quantity
+                    july7fadatOutcome = july7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= july7fadatQuantity %> حالة بمبلغ <%= july7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1384,13 +2266,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julymsarefQuantity = 0;
+                   let julymsarefOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    julymsarefQuantity = julymsarefQuantity + item.quantity
+                    julymsarefOutcome = julymsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julymsarefQuantity %> حالة بمبلغ <%= julymsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1404,13 +2300,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julyeftarQuantity = 0;
+                   let julyeftarOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    julyeftarQuantity = julyeftarQuantity + item.quantity
+                    julyeftarOutcome = julyeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyeftarQuantity %> حالة بمبلغ <%= julyeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1424,13 +2334,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julymwa2edQuantity = 0;
+                   let julymwa2edOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    julymwa2edQuantity = julymwa2edQuantity + item.quantity
+                    julymwa2edOutcome = julymwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julymwa2edQuantity %> حالة بمبلغ <%= julymwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1444,13 +2368,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let july3edyatQuantity = 0;
+                   let july3edyatOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    july3edyatQuantity = july3edyatQuantity + item.quantity
+                    july3edyatOutcome = july3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= july3edyatQuantity %> حالة بمبلغ <%= july3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1464,13 +2402,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julymlabsQuantity = 0;
+                   let julymlabsOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    julymlabsQuantity = julymlabsQuantity + item.quantity
+                    julymlabsOutcome = julymlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julymlabsQuantity %> حالة بمبلغ <%= julymlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1484,13 +2436,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let julyzkahQuantity = 0;
+                   let julyzkahOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    julyzkahQuantity = julyzkahQuantity + item.quantity
+                    julyzkahOutcome = julyzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyzkahQuantity %> حالة بمبلغ <%= julyzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1504,13 +2470,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julyzkah.forEach((item,index) => { 
+                <%julyzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julyud7yaQuantity = 0;
+                   let julyud7yaOutcome = 0;
+                  julyzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    julyud7yaQuantity = julyud7yaQuantity + item.quantity
+                    julyud7yaOutcome = julyud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyud7yaQuantity %> حالة بمبلغ <%= julyud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1535,13 +2515,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augda3mQuantity = 0;
+                   let augda3mOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    augda3mQuantity = augda3mQuantity + item.quantity
+                    augda3mOutcome = augda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augda3mQuantity %> حالة بمبلغ <%= augda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1555,13 +2549,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augkrotQuantity = 0;
+                   let augkrotOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    augkrotQuantity = augkrotQuantity + item.quantity
+                    augkrotOutcome = augkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augkrotQuantity %> كارت بمبلغ <%= augkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1575,13 +2583,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let aug7fadatQuantity = 0;
+                   let aug7fadatOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    aug7fadatQuantity = aug7fadatQuantity + item.quantity
+                    aug7fadatOutcome = aug7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aug7fadatQuantity %> حالة بمبلغ <%= aug7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1595,13 +2617,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augmsarefQuantity = 0;
+                   let augmsarefOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    augmsarefQuantity = augmsarefQuantity + item.quantity
+                    augmsarefOutcome = augmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augmsarefQuantity %> حالة بمبلغ <%= augmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1615,13 +2651,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augeftarQuantity = 0;
+                   let augeftarOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    augeftarQuantity = augeftarQuantity + item.quantity
+                    augeftarOutcome = augeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augeftarQuantity %> حالة بمبلغ <%= augeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1635,13 +2685,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augmwa2edQuantity = 0;
+                   let augmwa2edOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    augmwa2edQuantity = augmwa2edQuantity + item.quantity
+                    augmwa2edOutcome = augmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augmwa2edQuantity %> حالة بمبلغ <%= augmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1655,13 +2719,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let aug3edyatQuantity = 0;
+                   let aug3edyatOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    aug3edyatQuantity = aug3edyatQuantity + item.quantity
+                    aug3edyatOutcome = aug3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aug3edyatQuantity %> حالة بمبلغ <%= aug3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1675,13 +2753,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augmlabsQuantity = 0;
+                   let augmlabsOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    augmlabsQuantity = augmlabsQuantity + item.quantity
+                    augmlabsOutcome = augmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augmlabsQuantity %> حالة بمبلغ <%= augmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1695,13 +2787,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let augzkahQuantity = 0;
+                   let augzkahOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    augzkahQuantity = augzkahQuantity + item.quantity
+                    augzkahOutcome = augzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augzkahQuantity %> حالة بمبلغ <%= augzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1715,13 +2821,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augzkah.forEach((item,index) => { 
+                <%augzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augud7yaQuantity = 0;
+                   let augud7yaOutcome = 0;
+                  augzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    augud7yaQuantity = augud7yaQuantity + item.quantity
+                    augud7yaOutcome = augud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augud7yaQuantity %> حالة بمبلغ <%= augud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1746,13 +2866,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepda3mQuantity = 0;
+                   let sepda3mOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    sepda3mQuantity = sepda3mQuantity + item.quantity
+                    sepda3mOutcome = sepda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepda3mQuantity %> حالة بمبلغ <%= sepda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1766,13 +2900,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepkrotQuantity = 0;
+                   let sepkrotOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    sepkrotQuantity = sepkrotQuantity + item.quantity
+                    sepkrotOutcome = sepkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepkrotQuantity %> كارت بمبلغ <%= sepkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1786,13 +2934,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let sep7fadatQuantity = 0;
+                   let sep7fadatOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    sep7fadatQuantity = sep7fadatQuantity + item.quantity
+                    sep7fadatOutcome = sep7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sep7fadatQuantity %> حالة بمبلغ <%= sep7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1806,13 +2968,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepmsarefQuantity = 0;
+                   let sepmsarefOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    sepmsarefQuantity = sepmsarefQuantity + item.quantity
+                    sepmsarefOutcome = sepmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepmsarefQuantity %> حالة بمبلغ <%= sepmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1826,13 +3002,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepeftarQuantity = 0;
+                   let sepeftarOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    sepeftarQuantity = sepeftarQuantity + item.quantity
+                    sepeftarOutcome = sepeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepeftarQuantity %> حالة بمبلغ <%= sepeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1846,13 +3036,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepmwa2edQuantity = 0;
+                   let sepmwa2edOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    sepmwa2edQuantity = sepmwa2edQuantity + item.quantity
+                    sepmwa2edOutcome = sepmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepmwa2edQuantity %> حالة بمبلغ <%= sepmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1866,13 +3070,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let sep3edyatQuantity = 0;
+                   let sep3edyatOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    sep3edyatQuantity = sep3edyatQuantity + item.quantity
+                    sep3edyatOutcome = sep3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sep3edyatQuantity %> حالة بمبلغ <%= sep3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1886,13 +3104,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepmlabsQuantity = 0;
+                   let sepmlabsOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    sepmlabsQuantity = sepmlabsQuantity + item.quantity
+                    sepmlabsOutcome = sepmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepmlabsQuantity %> حالة بمبلغ <%= sepmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1906,13 +3138,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let sepzkahQuantity = 0;
+                   let sepzkahOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    sepzkahQuantity = sepzkahQuantity + item.quantity
+                    sepzkahOutcome = sepzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepzkahQuantity %> حالة بمبلغ <%= sepzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1926,13 +3172,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepzkah.forEach((item,index) => { 
+                <%sepzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepud7yaQuantity = 0;
+                   let sepud7yaOutcome = 0;
+                  sepzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    sepud7yaQuantity = sepud7yaQuantity + item.quantity
+                    sepud7yaOutcome = sepud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepud7yaQuantity %> حالة بمبلغ <%= sepud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1957,13 +3217,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octda3mQuantity = 0;
+                   let octda3mOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    octda3mQuantity = octda3mQuantity + item.quantity
+                    octda3mOutcome = octda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octda3mQuantity %> حالة بمبلغ <%= octda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1977,13 +3251,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octkrotQuantity = 0;
+                   let octkrotOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    octkrotQuantity = octkrotQuantity + item.quantity
+                    octkrotOutcome = octkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octkrotQuantity %> كارت بمبلغ <%= octkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1997,13 +3285,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let oct7fadatQuantity = 0;
+                   let oct7fadatOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    oct7fadatQuantity = oct7fadatQuantity + item.quantity
+                    oct7fadatOutcome = oct7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= oct7fadatQuantity %> حالة بمبلغ <%= oct7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2017,13 +3319,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octmsarefQuantity = 0;
+                   let octmsarefOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    octmsarefQuantity = octmsarefQuantity + item.quantity
+                    octmsarefOutcome = octmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octmsarefQuantity %> حالة بمبلغ <%= octmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2037,13 +3353,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octeftarQuantity = 0;
+                   let octeftarOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    octeftarQuantity = octeftarQuantity + item.quantity
+                    octeftarOutcome = octeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octeftarQuantity %> حالة بمبلغ <%= octeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2057,13 +3387,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octmwa2edQuantity = 0;
+                   let octmwa2edOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    octmwa2edQuantity = octmwa2edQuantity + item.quantity
+                    octmwa2edOutcome = octmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octmwa2edQuantity %> حالة بمبلغ <%= octmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2077,13 +3421,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let oct3edyatQuantity = 0;
+                   let oct3edyatOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    oct3edyatQuantity = oct3edyatQuantity + item.quantity
+                    oct3edyatOutcome = oct3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= oct3edyatQuantity %> حالة بمبلغ <%= oct3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2097,13 +3455,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octmlabsQuantity = 0;
+                   let octmlabsOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    octmlabsQuantity = octmlabsQuantity + item.quantity
+                    octmlabsOutcome = octmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octmlabsQuantity %> حالة بمبلغ <%= octmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2117,13 +3489,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let octzkahQuantity = 0;
+                   let octzkahOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    octzkahQuantity = octzkahQuantity + item.quantity
+                    octzkahOutcome = octzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octzkahQuantity %> حالة بمبلغ <%= octzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2137,13 +3523,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octzkah.forEach((item,index) => { 
+                <%octzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octud7yaQuantity = 0;
+                   let octud7yaOutcome = 0;
+                  octzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    octud7yaQuantity = octud7yaQuantity + item.quantity
+                    octud7yaOutcome = octud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octud7yaQuantity %> حالة بمبلغ <%= octud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -2168,13 +3568,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novda3mQuantity = 0;
+                   let novda3mOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    novda3mQuantity = novda3mQuantity + item.quantity
+                    novda3mOutcome = novda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novda3mQuantity %> حالة بمبلغ <%= novda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -2188,13 +3602,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novkrotQuantity = 0;
+                   let novkrotOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    novkrotQuantity = novkrotQuantity + item.quantity
+                    novkrotOutcome = novkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novkrotQuantity %> كارت بمبلغ <%= novkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2208,13 +3636,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let nov7fadatQuantity = 0;
+                   let nov7fadatOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    nov7fadatQuantity = nov7fadatQuantity + item.quantity
+                    nov7fadatOutcome = nov7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= nov7fadatQuantity %> حالة بمبلغ <%= nov7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2228,13 +3670,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novmsarefQuantity = 0;
+                   let novmsarefOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    novmsarefQuantity = novmsarefQuantity + item.quantity
+                    novmsarefOutcome = novmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novmsarefQuantity %> حالة بمبلغ <%= novmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2248,13 +3704,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let noveftarQuantity = 0;
+                   let noveftarOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    noveftarQuantity = noveftarQuantity + item.quantity
+                    noveftarOutcome = noveftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= noveftarQuantity %> حالة بمبلغ <%= noveftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2268,13 +3738,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novmwa2edQuantity = 0;
+                   let novmwa2edOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    novmwa2edQuantity = novmwa2edQuantity + item.quantity
+                    novmwa2edOutcome = novmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novmwa2edQuantity %> حالة بمبلغ <%= novmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2288,13 +3772,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let nov3edyatQuantity = 0;
+                   let nov3edyatOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    nov3edyatQuantity = nov3edyatQuantity + item.quantity
+                    nov3edyatOutcome = nov3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= nov3edyatQuantity %> حالة بمبلغ <%= nov3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2308,13 +3806,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novmlabsQuantity = 0;
+                   let novmlabsOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    novmlabsQuantity = novmlabsQuantity + item.quantity
+                    novmlabsOutcome = novmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novmlabsQuantity %> حالة بمبلغ <%= novmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2328,13 +3840,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let novzkahQuantity = 0;
+                   let novzkahOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    novzkahQuantity = novzkahQuantity + item.quantity
+                    novzkahOutcome = novzkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novzkahQuantity %> حالة بمبلغ <%= novzkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2348,13 +3874,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novzkah.forEach((item,index) => { 
+                <%novzkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novud7yaQuantity = 0;
+                   let novud7yaOutcome = 0;
+                  novzkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    novud7yaQuantity = novud7yaQuantity + item.quantity
+                    novud7yaOutcome = novud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novud7yaQuantity %> حالة بمبلغ <%= novud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -2379,13 +3919,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع الدعم المادي لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "دعم مادي") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decda3mQuantity = 0;
+                   let decda3mOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "دعم مادي") {
+                    decda3mQuantity = decda3mQuantity + item.quantity
+                    decda3mOutcome = decda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decda3mQuantity %> حالة بمبلغ <%= decda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -2399,13 +3953,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع كروت الخير لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "كروت الخير") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> كارت بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let deckrotQuantity = 0;
+                   let deckrotOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "كروت الخير") {
+                    deckrotQuantity = deckrotQuantity + item.quantity
+                    deckrotOutcome = deckrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= deckrotQuantity %> كارت بمبلغ <%= deckrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2419,13 +3987,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع حفاضات لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "حفاضات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let dec7fadatQuantity = 0;
+                   let dec7fadatOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "حفاضات") {
+                    dec7fadatQuantity = dec7fadatQuantity + item.quantity
+                    dec7fadatOutcome = dec7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= dec7fadatQuantity %> حالة بمبلغ <%= dec7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2439,13 +4021,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع مصاريف مدارس لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "مصاريف مدارس") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decmsarefQuantity = 0;
+                   let decmsarefOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "مصاريف مدارس") {
+                    decmsarefQuantity = decmsarefQuantity + item.quantity
+                    decmsarefOutcome = decmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decmsarefQuantity %> حالة بمبلغ <%= decmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2459,13 +4055,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله إفطار صائمين بشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "إفطار صائم") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let deceftarQuantity = 0;
+                   let deceftarOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "إفطار صائم") {
+                    deceftarQuantity = deceftarQuantity + item.quantity
+                    deceftarOutcome = deceftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= deceftarQuantity %> حالة بمبلغ <%= deceftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2479,13 +4089,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من موائد الرحمن الخير لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "موائد الرحمن") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decmwa2edQuantity = 0;
+                   let decmwa2edOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "موائد الرحمن") {
+                    decmwa2edQuantity = decmwa2edQuantity + item.quantity
+                    decmwa2edOutcome = decmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decmwa2edQuantity %> حالة بمبلغ <%= decmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2499,13 +4123,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع عيديات لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "عيديات") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let dec3edyatQuantity = 0;
+                   let dec3edyatOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "عيديات") {
+                    dec3edyatQuantity = dec3edyatQuantity + item.quantity
+                    dec3edyatOutcome = dec3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= dec3edyatQuantity %> حالة بمبلغ <%= dec3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2519,13 +4157,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع ملابس عيد لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "ملابس عيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decmlabsQuantity = 0;
+                   let decmlabsOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "ملابس عيد") {
+                    decmlabsQuantity = decmlabsQuantity + item.quantity
+                    decmlabsOutcome = decmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decmlabsQuantity %> حالة بمبلغ <%= decmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2539,13 +4191,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع زكاة الفطر لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "زكاة الفطر") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let deczkahQuantity = 0;
+                   let deczkahOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "زكاة الفطر") {
+                    deczkahQuantity = deczkahQuantity + item.quantity
+                    deczkahOutcome = deczkahOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= deczkahQuantity %> حالة بمبلغ <%= deczkahOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2559,13 +4225,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع أضحية العيد لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% deczkah.forEach((item,index) => { 
+                <%deczkah.forEach((item,index) => { 
                   if (item.ways == "أضحية العيد") {
                     %>  
                     <div>
-                      - <%= item.places %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %> عدد <%= item.quantity %> حالة بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decud7yaQuantity = 0;
+                   let decud7yaOutcome = 0;
+                  deczkah.forEach((item,index) => { 
+                  if (item.ways == "أضحية العيد") {
+                    decud7yaQuantity = decud7yaQuantity + item.quantity
+                    decud7yaOutcome = decud7yaOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decud7yaQuantity %> حالة بمبلغ <%= decud7yaOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>

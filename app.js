@@ -323,6 +323,70 @@ app.get("/elag.html", (req, res) => {
       console.log(err);
     });
 });
+
+app.get("/monthlyelag.html", (req, res) => {
+  Elag.find({
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
+  }).sort({ date: 1 }).then((result) => {
+    Elag.find({
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
+    }).sort({ date: 1 }).then((result2) => {
+    Elag.find({
+      $and: [{ date: { $gte: "2024-03-01" } }, { date: { $lt: "2024-04-01" } }],
+    }).sort({ date: 1 }).then((result3) => {
+      Elag.find({
+        $and: [{ date: { $gte: "2024-04-01" } }, { date: { $lt: "2024-05-01" } }],
+      }).sort({ date: 1 }).then((result4) => {
+        Elag.find({
+          $and: [{ date: { $gte: "2024-05-01" } }, { date: { $lt: "2024-06-01" } }],
+        }).sort({ date: 1 }).then((result5) => {
+          Elag.find({
+            $and: [{ date: { $gte: "2024-06-01" } }, { date: { $lt: "2024-07-01" } }],
+          }).sort({ date: 1 }).then((result6) => {
+            Elag.find({
+              $and: [{ date: { $gte: "2024-07-01" } }, { date: { $lt: "2024-08-01" } }],
+            }).sort({ date: 1 }).then((result7) => {
+              Elag.find({
+                $and: [{ date: { $gte: "2024-08-01" } }, { date: { $lt: "2024-09-01" } }],
+              }).sort({ date: 1 }).then((result8) => {
+                Elag.find({
+                  $and: [{ date: { $gte: "2024-09-01" } }, { date: { $lt: "2024-10-01" } }],
+                }).sort({ date: 1 }).then((result9) => {
+                  Elag.find({
+                    $and: [{ date: { $gte: "2024-10-01" } }, { date: { $lt: "2024-11-01" } }],
+                  }).sort({ date: 1 }).then((result10) => {
+                    Elag.find({
+                      $and: [{ date: { $gte: "2024-11-01" } }, { date: { $lt: "2024-12-01" } }],
+                    }).sort({ date: 1 }).then((result11) => {
+                      Elag.find({
+                        $and: [{ date: { $gte: "2024-12-01" } }, { date: { $lt: "2025-01-01" } }],
+                      }).sort({ date: 1 }).then((result12) => {
+                        res.render("monthlyelag", { 
+                          janelag: result, 
+                          febelag: result2,
+                          marelag: result3,
+                          aprelag: result4,
+                          mayelag: result5,
+                          juneelag: result6,
+                          julyelag: result7,
+                          augelag: result8,
+                          sepelag: result9,
+                          octelag: result10,
+                          novelag: result11,
+                          decelag: result12,});
+                      })
+                    })
+                  })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+});
 app.get("/elagview.html", (req, res) => {
   Elag.find()
     .sort({ date: 1 })
@@ -355,6 +419,69 @@ app.get("/zab7.html", (req, res) => {
     .catch((err) => {
       console.log(err);
     });
+});
+app.get("/monthlyzab7.html", (req, res) => {
+  Zab7.find({
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
+  }).sort({ date: 1 }).then((result) => {
+    Zab7.find({
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
+    }).sort({ date: 1 }).then((result2) => {
+    Zab7.find({
+      $and: [{ date: { $gte: "2024-03-01" } }, { date: { $lt: "2024-04-01" } }],
+    }).sort({ date: 1 }).then((result3) => {
+      Zab7.find({
+        $and: [{ date: { $gte: "2024-04-01" } }, { date: { $lt: "2024-05-01" } }],
+      }).sort({ date: 1 }).then((result4) => {
+        Zab7.find({
+          $and: [{ date: { $gte: "2024-05-01" } }, { date: { $lt: "2024-06-01" } }],
+        }).sort({ date: 1 }).then((result5) => {
+          Zab7.find({
+            $and: [{ date: { $gte: "2024-06-01" } }, { date: { $lt: "2024-07-01" } }],
+          }).sort({ date: 1 }).then((result6) => {
+            Zab7.find({
+              $and: [{ date: { $gte: "2024-07-01" } }, { date: { $lt: "2024-08-01" } }],
+            }).sort({ date: 1 }).then((result7) => {
+              Zab7.find({
+                $and: [{ date: { $gte: "2024-08-01" } }, { date: { $lt: "2024-09-01" } }],
+              }).sort({ date: 1 }).then((result8) => {
+                Zab7.find({
+                  $and: [{ date: { $gte: "2024-09-01" } }, { date: { $lt: "2024-10-01" } }],
+                }).sort({ date: 1 }).then((result9) => {
+                  Zab7.find({
+                    $and: [{ date: { $gte: "2024-10-01" } }, { date: { $lt: "2024-11-01" } }],
+                  }).sort({ date: 1 }).then((result10) => {
+                    Zab7.find({
+                      $and: [{ date: { $gte: "2024-11-01" } }, { date: { $lt: "2024-12-01" } }],
+                    }).sort({ date: 1 }).then((result11) => {
+                      Zab7.find({
+                        $and: [{ date: { $gte: "2024-12-01" } }, { date: { $lt: "2025-01-01" } }],
+                      }).sort({ date: 1 }).then((result12) => {
+                        res.render("monthlyzab7", { 
+                          janzab7: result, 
+                          febzab7: result2,
+                          marzab7: result3,
+                          aprzab7: result4,
+                          mayzab7: result5,
+                          junezab7: result6,
+                          julyzab7: result7,
+                          augzab7: result8,
+                          sepzab7: result9,
+                          octzab7: result10,
+                          novzab7: result11,
+                          deczab7: result12,});
+                      })
+                    })
+                  })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
 });
 app.get("/zab7view.html", (req, res) => {
   Zab7.find()

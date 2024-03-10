@@ -60,8 +60,18 @@
       <span class="icon-th-list show-when-mobile" id="det"></span>
       <table  class="center inco show-when-mobile hide2" id="dettable">
         <tr class="">
-          <th class="">الاجمالي</th>
+          <th class="">الايرادات</th>
           <th class=""> <%= mobzkahIncom %> </th>
+        </tr>
+        <tr class="">
+          <th class="">عدد الحالات</th>
+          <th class=""> 
+            <% 
+            let mobzkahquantity = 0;
+            for (let i = 0; i < zkaharr.length; i++) {
+              mobzkahquantity = mobzkahquantity + zkaharr[i].quantity
+            } %>
+            <%= mobzkahquantity %> </th>
         </tr>
         <tr class="">
           <th class="">المصروفات</th>
@@ -88,6 +98,7 @@
           <th>التاريخ</th>
           <th>البيان</th>
           <th>المكان</th>
+          <th>عدد الحالات</th>
           <th>المصروفات</th>
           <th>المتبقي</th>
           <th>تعديلات</th>
@@ -98,6 +109,7 @@
             <td><%= item.date %></td>
             <td><%= item.ways %></td>
             <td><%= item.places %></td>
+            <td><%= item.quantity %></td>
             <td><%= item.money %></td>
             <td> 
           <%= zkahIncom - item.money %>
@@ -123,6 +135,13 @@
           <th class="extcell">الاجمالي</th>
           <th class="extcell" id="totalpaid">
             <% 
+            let zkahquantity = 0;
+            for (let i = 0; i < zkaharr.length; i++) {
+              zkahquantity = zkahquantity + zkaharr[i].quantity
+            } %>
+            <%= zkahquantity %></th>
+          <th class="extcell" id="totalpaid">
+            <% 
             let zkahall = 0;
             for (let i = 0; i < zkaharr.length; i++) {
               zkahall = zkahall + zkaharr[i].money
@@ -144,10 +163,14 @@
                          <span class="icon-circle-left"></span><span class="icon-circle-down hide2"></span></div>
                          <span><%= item.ways %></span> <span><%= item.places %></span>
                       </div>
-            <table class="detTable">
+            <table class="detTable">        
               <tr>
                 <td>التاريخ</td>
                 <td class="mobdate"><%= item.date %></td>
+              </tr>
+              <tr>
+                <td>عدد الحالات</td>
+                <td class="mobdate"><%= item.quantity %></td>
               </tr>
               <tr>
                 <td>المصروفات</td>
@@ -229,69 +252,14 @@
               <option value="كفر طهرمس / القاهرة">كفر طهرمس / القاهرة</option>
           </select>
           <br />
+          <label for="number"><b>عدد الحالات</b></label>
+          <input class="input ways" type="number" name="quantity" min="0" required />
+          <br />
           <label for="number"><b>المصروفات</b></label>
           <input class="input ways" type="number" name="money" min="0" required />
           <div>
             <button type="submit" class="btn savebtn" id="save" disabled>حفظ</button>
             <button type="submit" class="btn cancel" id="cancel">الغاء</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="form-popup2 hide-when-mobile" id="myForm2">
-        <form action="/action_page.php" class="form-container">
-          <h1>تعديل</h1>
-
-          <label for="data"><b>التاريخ</b></label>
-          <input id="dateinput2" type="date" name="data" required />
-          <br />
-          <label for="ways"><b>البيان</b></label>
-          <select id="ways2" class="Placeinput" value="0000" required>
-              <option value=""></option>
-              <option value="دعم مادي">دعم مادي</option>
-              <option value="كروت الخير">كروت الخير</option>
-              <option value="حفاضات">حفاضات</option>
-              <option value="مصاريف مدارس ">مصاريف مدارس</option>
-              <option value="إفطار صائم">إفطار صائم</option>
-              <option value="موائد الرحمن">موائد الرحمن</option>
-              <option value="عيديات">عيديات</option>
-              <option value="ملابس عيد">ملابس عيد</option>
-              <option value="زكاة الفطر">زكاة الفطر</option>
-              <option value="أضحية العيد">أضحية العيد</option>
-          </select>
-          <br />
-          <label for="place"><b>المكان</b></label>
-          <select id="places2" name="places" class="Placeinput" value="">
-              <option value=""></option>
-              <option value="دراو / أسوان">دراو / أسوان</option>
-              <option value="الضبعية / الأقصر">الضبعية / الأقصر</option>
-              <option value="قمولا / قنا">قمولا / قنا</option>
-              <option value="المحافظة / سوهاج">المحافظة / سوهاج</option>
-              <option value="إدفا و الغوانم / سوهاج">إدفا و الغوانم / سوهاج</option>
-              <option value="بهتا / سوهاج">بهتا / سوهاج</option>
-              <option value="الشوكا – طما / سوهاج">الشوكا – طما / سوهاج</option>
-              <option value="نزله البرشا - ملوي / المنيا">نزله البرشا - ملوي / المنيا</option>
-              <option value="بني سويف / بني سويف">بني سويف / بني سويف</option>
-              <option value="حلايب / البحر الأحمر">حلايب / البحر الأحمر</option>
-              <option value="شلاتين / البحر الأحمر">شلاتين / البحر الأحمر</option>
-              <option value="أبو رماد / البحر الأحمر">أبو رماد / البحر الأحمر</option>
-              <option value="القصر / الواحات البحرية">القصر / الواحات البحرية</option>
-              <option value="الحيز / الواحات البحرية">الحيز / الواحات البحرية</option>
-              <option value="الإنتاج الأول / البحيرة">الإنتاج الأول / البحيرة</option>
-              <option value="كريون – كفر الدوار / البحيرة">كريون – كفر الدوار / البحيرة</option>
-              <option value="العامرية / الإسكندرية">العامرية / الإسكندرية</option>
-              <option value="كوم الدكة / الإسكندرية">كوم الدكة / الإسكندرية</option>
-              <option value="الدخيلة / الإسكندرية">الدخيلة / الإسكندرية</option>
-              <option value="أبو قير / الإسكندرية">أبو قير / الإسكندرية</option>
-              <option value="كفر طهرمس / القاهرة">كفر طهرمس / القاهرة</option>
-          </select>
-          <br />
-          <label for="number"><b>المصروفات</b></label>
-          <input class="input2 ways" type="number" min="0" value="" required />
-
-          <div>
-            <button type="button" class="btn savebtn" id="save2" >حفظ</button>
-            <button type="button" class="btn cancel" id="cancel2">الغاء</button>
           </div>
         </form>
       </div>

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec" id="MainSec">
+      <div class="headParent">
+        <h1 class="MainTitle">تقارير علاج المرضي</h1>
+        <div class="xxx">
+          <a href="elag.html"><button class="back">Back</button></a>
+        </div>
+      </div>
+
+      <table class="center hide-when-mobile2" id="table">
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يناير</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر يناير 
+                  بجميع الأماكن على النحو التالى : <br>
+                <% janelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janda3mindex = 0;
+                   let janda3mOutcome = 0;
+                  janelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    janda3mindex = janda3mindex + 1
+                    janda3mOutcome = janda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janda3mindex %>   حالة بمبلغ <%= janda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر يناير 
+                  بجميع الأماكن على النحو التالى : <br>
+                <% janelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let jankrotindex = 0;
+                   let jankrotOutcome = 0;
+                  janelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    jankrotindex = jankrotindex + 1
+                    jankrotOutcome = jankrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jankrotindex %> حالة بمبلغ <%= jankrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر فبراير</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر فبراير 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%febelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febda3mindex = 0;
+                   let febda3mOutcome = 0;
+                  febelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    febda3mindex = febda3mindex + 1
+                    febda3mOutcome = febda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febda3mindex %>   حالة بمبلغ <%= febda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر فبراير 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%febelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febkrotindex = 0;
+                   let febkrotOutcome = 0;
+                  febelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    febkrotindex = febkrotindex + 1
+                    febkrotOutcome = febkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febkrotindex %> حالة بمبلغ <%= febkrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر مارس</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر مارس 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%marelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marda3mindex = 0;
+                   let marda3mOutcome = 0;
+                  marelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    marda3mindex = marda3mindex + 1
+                    marda3mOutcome = marda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marda3mindex %>   حالة بمبلغ <%= marda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر مارس 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%marelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let markrotindex = 0;
+                   let markrotOutcome = 0;
+                  marelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    markrotindex = markrotindex + 1
+                    markrotOutcome = markrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= markrotindex %> حالة بمبلغ <%= markrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أبريل</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر أبريل 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%aprelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprda3mindex = 0;
+                   let aprda3mOutcome = 0;
+                  aprelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    aprda3mindex = aprda3mindex + 1
+                    aprda3mOutcome = aprda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprda3mindex %>   حالة بمبلغ <%= aprda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر أبريل 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%aprelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprkrotindex = 0;
+                   let aprkrotOutcome = 0;
+                  aprelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    aprkrotindex = aprkrotindex + 1
+                    aprkrotOutcome = aprkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprkrotindex %> حالة بمبلغ <%= aprkrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر مايو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر مايو 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%mayelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mayda3mindex = 0;
+                   let mayda3mOutcome = 0;
+                  mayelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    mayda3mindex = mayda3mindex + 1
+                    mayda3mOutcome = mayda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayda3mindex %>   حالة بمبلغ <%= mayda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر مايو 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%mayelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maykrotindex = 0;
+                   let maykrotOutcome = 0;
+                  mayelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    maykrotindex = maykrotindex + 1
+                    maykrotOutcome = maykrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maykrotindex %> حالة بمبلغ <%= maykrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يونيو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر يونيو 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%juneelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let juneda3mindex = 0;
+                   let juneda3mOutcome = 0;
+                  juneelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    juneda3mindex = juneda3mindex + 1
+                    juneda3mOutcome = juneda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= juneda3mindex %>   حالة بمبلغ <%= juneda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر يونيو 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%juneelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junekrotindex = 0;
+                   let junekrotOutcome = 0;
+                  juneelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    junekrotindex = junekrotindex + 1
+                    junekrotOutcome = junekrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junekrotindex %> حالة بمبلغ <%= junekrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يوليو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر يوليو 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%julyelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julyda3mindex = 0;
+                   let julyda3mOutcome = 0;
+                  julyelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    julyda3mindex = julyda3mindex + 1
+                    julyda3mOutcome = julyda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyda3mindex %>   حالة بمبلغ <%= julyda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر يوليو 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%julyelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julykrotindex = 0;
+                   let julykrotOutcome = 0;
+                  julyelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    julykrotindex = julykrotindex + 1
+                    julykrotOutcome = julykrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julykrotindex %> حالة بمبلغ <%= julykrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أغسطس</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر أغسطس 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%augelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augda3mindex = 0;
+                   let augda3mOutcome = 0;
+                  augelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    augda3mindex = augda3mindex + 1
+                    augda3mOutcome = augda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augda3mindex %>   حالة بمبلغ <%= augda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر أغسطس 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%augelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augkrotindex = 0;
+                   let augkrotOutcome = 0;
+                  augelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    augkrotindex = augkrotindex + 1
+                    augkrotOutcome = augkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augkrotindex %> حالة بمبلغ <%= augkrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر سبتمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر سبتمبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%sepelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepda3mindex = 0;
+                   let sepda3mOutcome = 0;
+                  sepelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    sepda3mindex = sepda3mindex + 1
+                    sepda3mOutcome = sepda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepda3mindex %>   حالة بمبلغ <%= sepda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر سبتمبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%sepelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepkrotindex = 0;
+                   let sepkrotOutcome = 0;
+                  sepelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    sepkrotindex = sepkrotindex + 1
+                    sepkrotOutcome = sepkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepkrotindex %> حالة بمبلغ <%= sepkrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أكتوبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر أكتوبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%octelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octda3mindex = 0;
+                   let octda3mOutcome = 0;
+                  octelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    octda3mindex = octda3mindex + 1
+                    octda3mOutcome = octda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octda3mindex %>   حالة بمبلغ <%= octda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر أكتوبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%octelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octkrotindex = 0;
+                   let octkrotOutcome = 0;
+                  octelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    octkrotindex = octkrotindex + 1
+                    octkrotOutcome = octkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octkrotindex %> حالة بمبلغ <%= octkrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر نوفمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر نوفمبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%novelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novda3mindex = 0;
+                   let novda3mOutcome = 0;
+                  novelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    novda3mindex = novda3mindex + 1
+                    novda3mOutcome = novda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novda3mindex %>   حالة بمبلغ <%= novda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر نوفمبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%novelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novkrotindex = 0;
+                   let novkrotOutcome = 0;
+                  novelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    novkrotindex = novkrotindex + 1
+                    novkrotOutcome = novkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novkrotindex %> حالة بمبلغ <%= novkrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر ديسمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مركز محمد رشيد للأورام بالأسكندرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من أصلاحات مركز محمد رشيد للأورام بالأسكندرية لشهر ديسمبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%decelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decda3mindex = 0;
+                   let decda3mOutcome = 0;
+                  decelag.forEach((item,index) => { 
+                  if (item.places == "مركز محمد رشيد للأورام بالأسكندرية") {
+                    decda3mindex = decda3mindex + 1
+                    decda3mOutcome = decda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decda3mindex %>   حالة بمبلغ <%= decda3mOutcome %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مستشفي أبو الريش القاهره</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ مستشفي أبو الريش القاهره لشهر ديسمبر 
+                  بجميع الأماكن على النحو التالى : <br>
+                <%decelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    %>  
+                    <div>
+                      - <%= item.ways %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
+                    </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let deckrotindex = 0;
+                   let deckrotOutcome = 0;
+                  decelag.forEach((item,index) => { 
+                  if (item.places == "مستشفي أبو الريش القاهره") {
+                    deckrotindex = deckrotindex + 1
+                    deckrotOutcome = deckrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= deckrotindex %> حالة بمبلغ <%= deckrotOutcome %> ج
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </table>
+
+      <div class="show-when-mobile2" id="mobincom"></div>
+    </section>
+  </body>
+</html>

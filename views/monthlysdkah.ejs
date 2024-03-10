@@ -62,9 +62,23 @@
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janda3mindex = 0;
+                   let janda3mOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    janda3mindex = janda3mindex + 1
+                    janda3mOutcome = janda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janda3mindex %>   آبار مياه بمبلغ <%= janda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -82,9 +96,23 @@
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let jankrotindex = 0;
+                   let jankrotOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    jankrotindex = jankrotindex + 1
+                    jankrotOutcome = jankrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jankrotindex %> توصيلة مياه شرب بمبلغ <%= jankrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -93,18 +121,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر يناير 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر يناير 
                   بجميع الأماكن على النحو التالى : <br>
                 <% jansdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let jan7fadatindex = 0;
+                   let jan7fadatOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    jan7fadatindex = jan7fadatindex + 1
+                    jan7fadatOutcome = jan7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jan7fadatindex %>   حالات بمبلغ <%= jan7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -122,9 +164,23 @@
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janmsarefindex = 0;
+                   let janmsarefOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    janmsarefindex = janmsarefindex + 1
+                    janmsarefOutcome = janmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janmsarefindex %>   حالات بمبلغ <%= janmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -136,15 +192,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر يناير 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر يناير 
                   بجميع الأماكن على النحو التالى : <br>
                 <% jansdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janeftarindex = 0;
+                   let janeftarOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    janeftarindex = janeftarindex + 1
+                    janeftarOutcome = janeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janeftarindex %>   حالات بمبلغ <%= janeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -156,15 +226,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر يناير 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر يناير 
                   بجميع الأماكن على النحو التالى : <br>
                 <% jansdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janmwa2edindex = 0;
+                   let janmwa2edOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    janmwa2edindex = janmwa2edindex + 1
+                    janmwa2edOutcome = janmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janmwa2edindex %>   حالات بمبلغ <%= janmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -182,9 +266,23 @@
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let jan3edyatindex = 0;
+                   let jan3edyatOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    jan3edyatindex = jan3edyatindex + 1
+                    jan3edyatOutcome = jan3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= jan3edyatindex %>   حالات بمبلغ <%= jan3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -202,9 +300,23 @@
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let janmlabsindex = 0;
+                   let janmlabsOutcome = 0;
+                  jansdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    janmlabsindex = janmlabsindex + 1
+                    janmlabsOutcome = janmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= janmlabsindex %>   حالات بمبلغ <%= janmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -229,13 +341,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febda3mindex = 0;
+                   let febda3mOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    febda3mindex = febda3mindex + 1
+                    febda3mOutcome = febda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febda3mindex %>   آبار مياه بمبلغ <%= febda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -249,13 +375,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febkrotindex = 0;
+                   let febkrotOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    febkrotindex = febkrotindex + 1
+                    febkrotOutcome = febkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febkrotindex %> توصيلة مياه شرب بمبلغ <%= febkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -264,18 +404,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر فبراير 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let feb7fadatindex = 0;
+                   let feb7fadatOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    feb7fadatindex = feb7fadatindex + 1
+                    feb7fadatOutcome = feb7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= feb7fadatindex %>   حالات بمبلغ <%= feb7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -289,13 +443,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febmsarefindex = 0;
+                   let febmsarefOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    febmsarefindex = febmsarefindex + 1
+                    febmsarefOutcome = febmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febmsarefindex %>   حالات بمبلغ <%= febmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -307,15 +475,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر فبراير 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febeftarindex = 0;
+                   let febeftarOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    febeftarindex = febeftarindex + 1
+                    febeftarOutcome = febeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febeftarindex %>   حالات بمبلغ <%= febeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -327,15 +509,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر فبراير 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febmwa2edindex = 0;
+                   let febmwa2edOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    febmwa2edindex = febmwa2edindex + 1
+                    febmwa2edOutcome = febmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febmwa2edindex %>   حالات بمبلغ <%= febmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -349,13 +545,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let feb3edyatindex = 0;
+                   let feb3edyatOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    feb3edyatindex = feb3edyatindex + 1
+                    feb3edyatOutcome = feb3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= feb3edyatindex %>   حالات بمبلغ <%= feb3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -369,13 +579,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر فبراير 
                   بجميع الأماكن على النحو التالى : <br>
-                <% febsdkah.forEach((item,index) => { 
+                <%febsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let febmlabsindex = 0;
+                   let febmlabsOutcome = 0;
+                  febsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    febmlabsindex = febmlabsindex + 1
+                    febmlabsOutcome = febmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= febmlabsindex %>   حالات بمبلغ <%= febmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -400,13 +624,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marda3mindex = 0;
+                   let marda3mOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    marda3mindex = marda3mindex + 1
+                    marda3mOutcome = marda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marda3mindex %>   آبار مياه بمبلغ <%= marda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -420,13 +658,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let markrotindex = 0;
+                   let markrotOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    markrotindex = markrotindex + 1
+                    markrotOutcome = markrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= markrotindex %> توصيلة مياه شرب بمبلغ <%= markrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -435,18 +687,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر مارس 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let mar7fadatindex = 0;
+                   let mar7fadatOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    mar7fadatindex = mar7fadatindex + 1
+                    mar7fadatOutcome = mar7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mar7fadatindex %>   حالات بمبلغ <%= mar7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -460,13 +726,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marmsarefindex = 0;
+                   let marmsarefOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    marmsarefindex = marmsarefindex + 1
+                    marmsarefOutcome = marmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marmsarefindex %>   حالات بمبلغ <%= marmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -478,15 +758,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر مارس 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mareftarindex = 0;
+                   let mareftarOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    mareftarindex = mareftarindex + 1
+                    mareftarOutcome = mareftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mareftarindex %>   حالات بمبلغ <%= mareftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -498,15 +792,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر مارس 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marmwa2edindex = 0;
+                   let marmwa2edOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    marmwa2edindex = marmwa2edindex + 1
+                    marmwa2edOutcome = marmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marmwa2edindex %>   حالات بمبلغ <%= marmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -520,13 +828,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let mar3edyatindex = 0;
+                   let mar3edyatOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    mar3edyatindex = mar3edyatindex + 1
+                    mar3edyatOutcome = mar3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mar3edyatindex %>   حالات بمبلغ <%= mar3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -540,13 +862,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر مارس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% marsdkah.forEach((item,index) => { 
+                <%marsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let marmlabsindex = 0;
+                   let marmlabsOutcome = 0;
+                  marsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    marmlabsindex = marmlabsindex + 1
+                    marmlabsOutcome = marmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= marmlabsindex %>   حالات بمبلغ <%= marmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -571,13 +907,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprda3mindex = 0;
+                   let aprda3mOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    aprda3mindex = aprda3mindex + 1
+                    aprda3mOutcome = aprda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprda3mindex %>   آبار مياه بمبلغ <%= aprda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -591,13 +941,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprkrotindex = 0;
+                   let aprkrotOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    aprkrotindex = aprkrotindex + 1
+                    aprkrotOutcome = aprkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprkrotindex %> توصيلة مياه شرب بمبلغ <%= aprkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -606,18 +970,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر أبريل 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let apr7fadatindex = 0;
+                   let apr7fadatOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    apr7fadatindex = apr7fadatindex + 1
+                    apr7fadatOutcome = apr7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= apr7fadatindex %>   حالات بمبلغ <%= apr7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -631,13 +1009,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprmsarefindex = 0;
+                   let aprmsarefOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    aprmsarefindex = aprmsarefindex + 1
+                    aprmsarefOutcome = aprmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprmsarefindex %>   حالات بمبلغ <%= aprmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -649,15 +1041,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر أبريل 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let apreftarindex = 0;
+                   let apreftarOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    apreftarindex = apreftarindex + 1
+                    apreftarOutcome = apreftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= apreftarindex %>   حالات بمبلغ <%= apreftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -669,15 +1075,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر أبريل 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprmwa2edindex = 0;
+                   let aprmwa2edOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    aprmwa2edindex = aprmwa2edindex + 1
+                    aprmwa2edOutcome = aprmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprmwa2edindex %>   حالات بمبلغ <%= aprmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -691,13 +1111,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let apr3edyatindex = 0;
+                   let apr3edyatOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    apr3edyatindex = apr3edyatindex + 1
+                    apr3edyatOutcome = apr3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= apr3edyatindex %>   حالات بمبلغ <%= apr3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -711,13 +1145,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر أبريل 
                   بجميع الأماكن على النحو التالى : <br>
-                <% aprsdkah.forEach((item,index) => { 
+                <%aprsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let aprmlabsindex = 0;
+                   let aprmlabsOutcome = 0;
+                  aprsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    aprmlabsindex = aprmlabsindex + 1
+                    aprmlabsOutcome = aprmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aprmlabsindex %>   حالات بمبلغ <%= aprmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -742,13 +1190,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mayda3mindex = 0;
+                   let mayda3mOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    mayda3mindex = mayda3mindex + 1
+                    mayda3mOutcome = mayda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayda3mindex %>   آبار مياه بمبلغ <%= mayda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -762,13 +1224,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maykrotindex = 0;
+                   let maykrotOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    maykrotindex = maykrotindex + 1
+                    maykrotOutcome = maykrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maykrotindex %> توصيلة مياه شرب بمبلغ <%= maykrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -777,18 +1253,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر مايو 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let may7fadatindex = 0;
+                   let may7fadatOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    may7fadatindex = may7fadatindex + 1
+                    may7fadatOutcome = may7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= may7fadatindex %>   حالات بمبلغ <%= may7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -802,13 +1292,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maymsarefindex = 0;
+                   let maymsarefOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    maymsarefindex = maymsarefindex + 1
+                    maymsarefOutcome = maymsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maymsarefindex %>   حالات بمبلغ <%= maymsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -820,15 +1324,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر مايو 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let mayeftarindex = 0;
+                   let mayeftarOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    mayeftarindex = mayeftarindex + 1
+                    mayeftarOutcome = mayeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= mayeftarindex %>   حالات بمبلغ <%= mayeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -840,15 +1358,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر مايو 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maymwa2edindex = 0;
+                   let maymwa2edOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    maymwa2edindex = maymwa2edindex + 1
+                    maymwa2edOutcome = maymwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maymwa2edindex %>   حالات بمبلغ <%= maymwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -862,13 +1394,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let may3edyatindex = 0;
+                   let may3edyatOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    may3edyatindex = may3edyatindex + 1
+                    may3edyatOutcome = may3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= may3edyatindex %>   حالات بمبلغ <%= may3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -882,13 +1428,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر مايو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% maysdkah.forEach((item,index) => { 
+                <%maysdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let maymlabsindex = 0;
+                   let maymlabsOutcome = 0;
+                  maysdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    maymlabsindex = maymlabsindex + 1
+                    maymlabsOutcome = maymlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= maymlabsindex %>   حالات بمبلغ <%= maymlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -913,13 +1473,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let juneda3mindex = 0;
+                   let juneda3mOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    juneda3mindex = juneda3mindex + 1
+                    juneda3mOutcome = juneda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= juneda3mindex %>   آبار مياه بمبلغ <%= juneda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -933,13 +1507,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junekrotindex = 0;
+                   let junekrotOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    junekrotindex = junekrotindex + 1
+                    junekrotOutcome = junekrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junekrotindex %> توصيلة مياه شرب بمبلغ <%= junekrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -948,18 +1536,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر يونيو 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let june7fadatindex = 0;
+                   let june7fadatOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    june7fadatindex = june7fadatindex + 1
+                    june7fadatOutcome = june7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= june7fadatindex %>   حالات بمبلغ <%= june7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -973,13 +1575,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junemsarefindex = 0;
+                   let junemsarefOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    junemsarefindex = junemsarefindex + 1
+                    junemsarefOutcome = junemsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junemsarefindex %>   حالات بمبلغ <%= junemsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -991,15 +1607,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر يونيو 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let juneeftarindex = 0;
+                   let juneeftarOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    juneeftarindex = juneeftarindex + 1
+                    juneeftarOutcome = juneeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= juneeftarindex %>   حالات بمبلغ <%= juneeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1011,15 +1641,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر يونيو 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junemwa2edindex = 0;
+                   let junemwa2edOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    junemwa2edindex = junemwa2edindex + 1
+                    junemwa2edOutcome = junemwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junemwa2edindex %>   حالات بمبلغ <%= junemwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1033,13 +1677,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let june3edyatindex = 0;
+                   let june3edyatOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    june3edyatindex = june3edyatindex + 1
+                    june3edyatOutcome = june3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= june3edyatindex %>   حالات بمبلغ <%= june3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1053,13 +1711,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر يونيو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% junesdkah.forEach((item,index) => { 
+                <%junesdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let junemlabsindex = 0;
+                   let junemlabsOutcome = 0;
+                  junesdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    junemlabsindex = junemlabsindex + 1
+                    junemlabsOutcome = junemlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= junemlabsindex %>   حالات بمبلغ <%= junemlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1084,13 +1756,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julyda3mindex = 0;
+                   let julyda3mOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    julyda3mindex = julyda3mindex + 1
+                    julyda3mOutcome = julyda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyda3mindex %>   آبار مياه بمبلغ <%= julyda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1104,13 +1790,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julykrotindex = 0;
+                   let julykrotOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    julykrotindex = julykrotindex + 1
+                    julykrotOutcome = julykrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julykrotindex %> توصيلة مياه شرب بمبلغ <%= julykrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1119,18 +1819,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر يوليو 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let july7fadatindex = 0;
+                   let july7fadatOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    july7fadatindex = july7fadatindex + 1
+                    july7fadatOutcome = july7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= july7fadatindex %>   حالات بمبلغ <%= july7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1144,13 +1858,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julymsarefindex = 0;
+                   let julymsarefOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    julymsarefindex = julymsarefindex + 1
+                    julymsarefOutcome = julymsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julymsarefindex %>   حالات بمبلغ <%= julymsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1162,15 +1890,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر يوليو 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julyeftarindex = 0;
+                   let julyeftarOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    julyeftarindex = julyeftarindex + 1
+                    julyeftarOutcome = julyeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julyeftarindex %>   حالات بمبلغ <%= julyeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1182,15 +1924,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر يوليو 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julymwa2edindex = 0;
+                   let julymwa2edOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    julymwa2edindex = julymwa2edindex + 1
+                    julymwa2edOutcome = julymwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julymwa2edindex %>   حالات بمبلغ <%= julymwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1204,13 +1960,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let july3edyatindex = 0;
+                   let july3edyatOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    july3edyatindex = july3edyatindex + 1
+                    july3edyatOutcome = july3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= july3edyatindex %>   حالات بمبلغ <%= july3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1224,13 +1994,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر يوليو 
                   بجميع الأماكن على النحو التالى : <br>
-                <% julysdkah.forEach((item,index) => { 
+                <%julysdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let julymlabsindex = 0;
+                   let julymlabsOutcome = 0;
+                  julysdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    julymlabsindex = julymlabsindex + 1
+                    julymlabsOutcome = julymlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= julymlabsindex %>   حالات بمبلغ <%= julymlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1255,13 +2039,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augda3mindex = 0;
+                   let augda3mOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    augda3mindex = augda3mindex + 1
+                    augda3mOutcome = augda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augda3mindex %>   آبار مياه بمبلغ <%= augda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1275,13 +2073,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augkrotindex = 0;
+                   let augkrotOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    augkrotindex = augkrotindex + 1
+                    augkrotOutcome = augkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augkrotindex %> توصيلة مياه شرب بمبلغ <%= augkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1290,18 +2102,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر أغسطس 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let aug7fadatindex = 0;
+                   let aug7fadatOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    aug7fadatindex = aug7fadatindex + 1
+                    aug7fadatOutcome = aug7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aug7fadatindex %>   حالات بمبلغ <%= aug7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1315,13 +2141,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augmsarefindex = 0;
+                   let augmsarefOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    augmsarefindex = augmsarefindex + 1
+                    augmsarefOutcome = augmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augmsarefindex %>   حالات بمبلغ <%= augmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1333,15 +2173,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر أغسطس 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augeftarindex = 0;
+                   let augeftarOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    augeftarindex = augeftarindex + 1
+                    augeftarOutcome = augeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augeftarindex %>   حالات بمبلغ <%= augeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1353,15 +2207,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر أغسطس 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augmwa2edindex = 0;
+                   let augmwa2edOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    augmwa2edindex = augmwa2edindex + 1
+                    augmwa2edOutcome = augmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augmwa2edindex %>   حالات بمبلغ <%= augmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1375,13 +2243,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let aug3edyatindex = 0;
+                   let aug3edyatOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    aug3edyatindex = aug3edyatindex + 1
+                    aug3edyatOutcome = aug3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= aug3edyatindex %>   حالات بمبلغ <%= aug3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1395,13 +2277,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر أغسطس 
                   بجميع الأماكن على النحو التالى : <br>
-                <% augsdkah.forEach((item,index) => { 
+                <%augsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let augmlabsindex = 0;
+                   let augmlabsOutcome = 0;
+                  augsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    augmlabsindex = augmlabsindex + 1
+                    augmlabsOutcome = augmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= augmlabsindex %>   حالات بمبلغ <%= augmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1426,13 +2322,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepda3mindex = 0;
+                   let sepda3mOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    sepda3mindex = sepda3mindex + 1
+                    sepda3mOutcome = sepda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepda3mindex %>   آبار مياه بمبلغ <%= sepda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1446,13 +2356,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepkrotindex = 0;
+                   let sepkrotOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    sepkrotindex = sepkrotindex + 1
+                    sepkrotOutcome = sepkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepkrotindex %> توصيلة مياه شرب بمبلغ <%= sepkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1461,18 +2385,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر سبتمبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let sep7fadatindex = 0;
+                   let sep7fadatOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    sep7fadatindex = sep7fadatindex + 1
+                    sep7fadatOutcome = sep7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sep7fadatindex %>   حالات بمبلغ <%= sep7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1486,13 +2424,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepmsarefindex = 0;
+                   let sepmsarefOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    sepmsarefindex = sepmsarefindex + 1
+                    sepmsarefOutcome = sepmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepmsarefindex %>   حالات بمبلغ <%= sepmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1504,15 +2456,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر سبتمبر 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepeftarindex = 0;
+                   let sepeftarOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    sepeftarindex = sepeftarindex + 1
+                    sepeftarOutcome = sepeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepeftarindex %>   حالات بمبلغ <%= sepeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1524,15 +2490,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر سبتمبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepmwa2edindex = 0;
+                   let sepmwa2edOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    sepmwa2edindex = sepmwa2edindex + 1
+                    sepmwa2edOutcome = sepmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepmwa2edindex %>   حالات بمبلغ <%= sepmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1546,13 +2526,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let sep3edyatindex = 0;
+                   let sep3edyatOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    sep3edyatindex = sep3edyatindex + 1
+                    sep3edyatOutcome = sep3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sep3edyatindex %>   حالات بمبلغ <%= sep3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1566,13 +2560,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر سبتمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% sepsdkah.forEach((item,index) => { 
+                <%sepsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let sepmlabsindex = 0;
+                   let sepmlabsOutcome = 0;
+                  sepsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    sepmlabsindex = sepmlabsindex + 1
+                    sepmlabsOutcome = sepmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= sepmlabsindex %>   حالات بمبلغ <%= sepmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1597,13 +2605,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octda3mindex = 0;
+                   let octda3mOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    octda3mindex = octda3mindex + 1
+                    octda3mOutcome = octda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octda3mindex %>   آبار مياه بمبلغ <%= octda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1617,13 +2639,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octkrotindex = 0;
+                   let octkrotOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    octkrotindex = octkrotindex + 1
+                    octkrotOutcome = octkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octkrotindex %> توصيلة مياه شرب بمبلغ <%= octkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1632,18 +2668,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر أكتوبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let oct7fadatindex = 0;
+                   let oct7fadatOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    oct7fadatindex = oct7fadatindex + 1
+                    oct7fadatOutcome = oct7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= oct7fadatindex %>   حالات بمبلغ <%= oct7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1657,13 +2707,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octmsarefindex = 0;
+                   let octmsarefOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    octmsarefindex = octmsarefindex + 1
+                    octmsarefOutcome = octmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octmsarefindex %>   حالات بمبلغ <%= octmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1675,15 +2739,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر أكتوبر 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octeftarindex = 0;
+                   let octeftarOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    octeftarindex = octeftarindex + 1
+                    octeftarOutcome = octeftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octeftarindex %>   حالات بمبلغ <%= octeftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1695,15 +2773,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر أكتوبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octmwa2edindex = 0;
+                   let octmwa2edOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    octmwa2edindex = octmwa2edindex + 1
+                    octmwa2edOutcome = octmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octmwa2edindex %>   حالات بمبلغ <%= octmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1717,13 +2809,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let oct3edyatindex = 0;
+                   let oct3edyatOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    oct3edyatindex = oct3edyatindex + 1
+                    oct3edyatOutcome = oct3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= oct3edyatindex %>   حالات بمبلغ <%= oct3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1737,13 +2843,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر أكتوبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% octsdkah.forEach((item,index) => { 
+                <%octsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let octmlabsindex = 0;
+                   let octmlabsOutcome = 0;
+                  octsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    octmlabsindex = octmlabsindex + 1
+                    octmlabsOutcome = octmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= octmlabsindex %>   حالات بمبلغ <%= octmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1768,13 +2888,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novda3mindex = 0;
+                   let novda3mOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    novda3mindex = novda3mindex + 1
+                    novda3mOutcome = novda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novda3mindex %>   آبار مياه بمبلغ <%= novda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1788,13 +2922,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novkrotindex = 0;
+                   let novkrotOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    novkrotindex = novkrotindex + 1
+                    novkrotOutcome = novkrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novkrotindex %> توصيلة مياه شرب بمبلغ <%= novkrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1803,18 +2951,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر نوفمبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let nov7fadatindex = 0;
+                   let nov7fadatOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    nov7fadatindex = nov7fadatindex + 1
+                    nov7fadatOutcome = nov7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= nov7fadatindex %>   حالات بمبلغ <%= nov7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1828,13 +2990,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novmsarefindex = 0;
+                   let novmsarefOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    novmsarefindex = novmsarefindex + 1
+                    novmsarefOutcome = novmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novmsarefindex %>   حالات بمبلغ <%= novmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1846,15 +3022,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر نوفمبر 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let noveftarindex = 0;
+                   let noveftarOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    noveftarindex = noveftarindex + 1
+                    noveftarOutcome = noveftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= noveftarindex %>   حالات بمبلغ <%= noveftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1866,15 +3056,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر نوفمبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novmwa2edindex = 0;
+                   let novmwa2edOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    novmwa2edindex = novmwa2edindex + 1
+                    novmwa2edOutcome = novmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novmwa2edindex %>   حالات بمبلغ <%= novmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1888,13 +3092,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let nov3edyatindex = 0;
+                   let nov3edyatOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    nov3edyatindex = nov3edyatindex + 1
+                    nov3edyatOutcome = nov3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= nov3edyatindex %>   حالات بمبلغ <%= nov3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1908,13 +3126,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر نوفمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% novsdkah.forEach((item,index) => { 
+                <%novsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let novmlabsindex = 0;
+                   let novmlabsOutcome = 0;
+                  novsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    novmlabsindex = novmlabsindex + 1
+                    novmlabsOutcome = novmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= novmlabsindex %>   حالات بمبلغ <%= novmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
@@ -1939,13 +3171,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ آبار مياه لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "آبار مياه") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decda3mindex = 0;
+                   let decda3mOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "آبار مياه") {
+                    decda3mindex = decda3mindex + 1
+                    decda3mOutcome = decda3mOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decda3mindex %>   آبار مياه بمبلغ <%= decda3mOutcome %> ج
+                    </div>
+                </div>
               </div>
             </div>
             <div class="details2">
@@ -1959,13 +3205,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيلة مياه شرب لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيلة مياه شرب") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>  بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let deckrotindex = 0;
+                   let deckrotOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيلة مياه شرب") {
+                    deckrotindex = deckrotindex + 1
+                    deckrotOutcome = deckrotOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= deckrotindex %> توصيلة مياه شرب بمبلغ <%= deckrotOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -1974,18 +3234,32 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>توصيل كهرباء والعداد</span>
+                <span> توصيل كهرباء والعداد</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من تنفيذ توصيل كهرباء والعداد لشهر ديسمبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توصيل كهرباء والعداد لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "توصيل كهرباء والعداد") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let dec7fadatindex = 0;
+                   let dec7fadatOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "توصيل كهرباء والعداد") {
+                    dec7fadatindex = dec7fadatindex + 1
+                    dec7fadatOutcome = dec7fadatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= dec7fadatindex %>   حالات بمبلغ <%= dec7fadatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -1999,13 +3273,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من ترميم حمامات لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "حمامات") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decmsarefindex = 0;
+                   let decmsarefOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "حمامات") {
+                    decmsarefindex = decmsarefindex + 1
+                    decmsarefOutcome = decmsarefOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decmsarefindex %>   حالات بمبلغ <%= decmsarefOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2017,15 +3305,29 @@
                 <span>بناء اسقف</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله بناء اسقف بشهر ديسمبر 
+                <div class="cont">تم بحمد الله الأنتهاء من بناء اسقف بشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "بناء اسقف") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let deceftarindex = 0;
+                   let deceftarOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "بناء اسقف") {
+                    deceftarindex = deceftarindex + 1
+                    deceftarOutcome = deceftarOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= deceftarindex %>   حالات بمبلغ <%= deceftarOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2037,15 +3339,29 @@
                 <span>ماكينات خياطة</span>
               </div>
               <div class="detTable2">
-                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة الخير لشهر ديسمبر 
+                <div class="cont">تم بحمد الله الإنتهاء من توزيع ماكينات خياطة لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "ماكينات خياطة") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decmwa2edindex = 0;
+                   let decmwa2edOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "ماكينات خياطة") {
+                    decmwa2edindex = decmwa2edindex + 1
+                    decmwa2edOutcome = decmwa2edOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decmwa2edindex %>   حالات بمبلغ <%= decmwa2edOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
             <div class="details2">
@@ -2059,13 +3375,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من اصلاح اجهزة طبية لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "اصلاح اجهزة طبية") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %>
+                -------------------------------------
+                <% let dec3edyatindex = 0;
+                   let dec3edyatOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "اصلاح اجهزة طبية") {
+                    dec3edyatindex = dec3edyatindex + 1
+                    dec3edyatOutcome = dec3edyatOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= dec3edyatindex %>   حالات بمبلغ <%= dec3edyatOutcome %> ج
+                    </div>
+                     </div>
               </div>
             </div>
             <div class="details2">
@@ -2079,13 +3409,27 @@
               <div class="detTable2">
                 <div class="cont">تم بحمد الله الإنتهاء من توزيع اكفان لشهر ديسمبر 
                   بجميع الأماكن على النحو التالى : <br>
-                <% decsdkah.forEach((item,index) => { 
+                <%decsdkah.forEach((item,index) => { 
                   if (item.ways == "اكفان") {
                     %>  
                     <div>
-                      - <%= item.places %> رقم <%= item.list %> بتاريخ <%= item.date %> بمبلغ <%= item.money %> ج
+                      - <%= item.places %>   بتاريخ <%= item.date %>  بمبلغ <%= item.money %> ج
                     </div>
-                <% } }) %> </div>
+                <% } }) %> 
+                -------------------------------------
+                <% let decmlabsindex = 0;
+                   let decmlabsOutcome = 0;
+                  decsdkah.forEach((item,index) => { 
+                  if (item.ways == "اكفان") {
+                    decmlabsindex = decmlabsindex + 1
+                    decmlabsOutcome = decmlabsOutcome + item.money
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                      - الاجمالي: عدد <%= decmlabsindex %>   حالات بمبلغ <%= decmlabsOutcome %> ج
+                    </div>
+                    </div>
               </div>
             </div>
           </div>
