@@ -64,10 +64,6 @@ table.inco {
   width: 390px;
 }
 
-.tall {
-  overflow: scroll;
-}
-
 .addcurrency {
   position: fixed;
   color: #fff;
