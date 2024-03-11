@@ -38,6 +38,7 @@
           <th>التاريخ</th>
           <th>البيان</th>
           <th>المكان</th>
+          <th>عدد الحالات</th>
           <th>المصروفات</th>
         </tr>
         <% zkaharr.forEach((item,index) => { %>
@@ -46,6 +47,7 @@
             <td><%= item.date %></td>
             <td><%= item.ways %></td>
             <td><%= item.places %></td>
+            <td><%= item.quantity %></td>
             <td><%= item.money %></td>
           </tr>
         <% }) %>
@@ -56,12 +58,19 @@
           <th class="extcell">الاجمالي</th>
           <th class="extcell" id="totalpaid">
             <% 
-            let zkahall = 0;
+            let zkahquan = 0;
             for (let i = 0; i < zkaharr.length; i++) {
-              zkahall = zkahall + zkaharr[i].money
+              zkahquan = zkahquan + zkaharr[i].quantity
             } %>
-            <%= zkahall %></th>
-        </tr>
+            <%= zkahquan %></th>
+        <th class="extcell" id="totalpaid">
+          <% 
+          let zkahall = 0;
+          for (let i = 0; i < zkaharr.length; i++) {
+            zkahall = zkahall + zkaharr[i].money
+          } %>
+          <%= zkahall %></th>
+      </tr>
       
       </table>
 
