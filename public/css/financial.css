@@ -64,24 +64,11 @@ table.inco {
   width: 390px;
 }
 
-.addcurrency {
-  position: fixed;
-  color: #fff;
-  bottom: 13vh;
-  right: 3vh;
-  background-color: #1b1b1b;
-  padding: 12px 8px;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  cursor: pointer;
-}
 
 .addoutcome {
   position: fixed;
   color: #fff;
-  bottom: 4vh;
+  bottom: 7vh;
   right: 3vh;
   background-color: #1b1b1b;
   padding: 12px 8px;
