@@ -372,7 +372,7 @@
                   - الرصيد السابق هو  <%= JanCurrence3 %>  ج
                 </div>
                 <% let fenIncome3 = 0;
-                  fensohag.forEach((item,index) => { 
+                  febsohag .forEach((item,index) => { 
                   if (item.places == "رداد مراد / بهتا – سوهاج") {
                     if (item.type == "أضافة رصيد") {
                     fenIncome3 = fenIncome3 + item.money
@@ -385,7 +385,7 @@
                   - ايرادات شهر فبراير <%= fenIncome3 %> ج
                 </div>
                 <% let fenOutcome3 = 0;
-                  fensohag.forEach((item,index) => { 
+                  febsohag .forEach((item,index) => { 
                   if (item.places == "رداد مراد / بهتا – سوهاج") {
                     if (item.type == "أضافة مصروفات") {
                     fenOutcome3 = fenOutcome3 + item.money
@@ -440,7 +440,7 @@
                       - مصروفات شهر فبراير <%= febOutcome4 %> ج
                     </div>
                     <div>
-                  <% let FebCurrence4 =  JanCurrence44 + febIncome44 - febOutcome44 %>
+                  <% let FebCurrence4 =  JanCurrence4 + febIncome4 - febOutcome4 %>
                       - الرصيد الحالي هو <%=  FebCurrence4 %> ج
                     </div>
                 </div>
