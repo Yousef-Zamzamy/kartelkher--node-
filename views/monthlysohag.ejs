@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec" id="MainSec">
+      <div class="headParent">
+        <h1 class="MainTitle">تقارير سوهاج</h1>
+        <div class="xxx">
+          <a href="sohag.html"><button class="back">Back</button></a>
+        </div>
+      </div>
+
+      <table class="center hide-when-mobile2" id="table">
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يناير</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">                
+                  <% let oldCurrence1 = 0;
+                  oldsohag.forEach((item,index) => { 
+                  if (item.places == "دياب / المحافظة – سوهاج" || item.type == "أضافة رصيد") {
+                    oldCurrence1 = oldCurrence1 + item.money  
+                    %>  
+                <% } }) 
+                %>
+                <div>
+                  - الرصيد السابق هو  <%= oldCurrence1 %>  ج
+                </div>
+                <% let janIncome1 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "دياب / المحافظة – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    janIncome1 = janIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يناير <%= janIncome1 %> ج
+                </div>
+                <% let janOutcome1 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "دياب / المحافظة – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    janOutcome1 = janOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يناير <%= janOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let JanCurrence1 =  oldCurrence1 + janIncome1 - janOutcome1 %>
+                      - الرصيد الحالي هو <%=  JanCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / إدفا و الغوانم – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">                
+                  <% let oldCurrence2 = 0;
+                  oldsohag.forEach((item,index) => { 
+                  if (item.places == "دياب / إدفا و الغوانم – سوهاج" ) {
+                    if (item.type == "أضافة رصيد") {
+                    oldCurrence2 = oldCurrence2 + item.money  
+                    %>  
+                <% } } }) 
+                %>
+                <div>
+                  - الرصيد السابق هو  <%= oldCurrence2 %>  ج
+                </div>
+                <% let janIncome2 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    janIncome2 = janIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يناير <%= janIncome2 %> ج
+                </div>
+                <% let janOutcome2 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    janOutcome2 = janOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يناير <%= janOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let JanCurrence2 =  oldCurrence2 + janIncome2 - janOutcome2 %>
+                      - الرصيد الحالي هو <%=  JanCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>رداد مراد / بهتا – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">                
+                  <% let oldCurrence3 = 0;
+                  oldsohag.forEach((item,index) => { 
+                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                      
+                    
+                    oldCurrence3 = oldCurrence3 + item.money  
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                  - الرصيد السابق هو  <%= oldCurrence3 %>  ج
+                </div>
+                <% let janIncome3 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    janIncome3 = janIncome3 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يناير <%= janIncome3 %> ج
+                </div>
+                <% let janOutcome3 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    janOutcome3 = janOutcome3 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يناير <%= janOutcome3 %> ج
+                    </div>
+                    <div>
+                  <% let JanCurrence3 =  oldCurrence3 + janIncome3 - janOutcome3 %>
+                      - الرصيد الحالي هو <%=  JanCurrence3 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">                
+                  <% let oldCurrence4 = 0;
+                  oldsohag.forEach((item,index) => { 
+                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                      
+                    
+                    oldCurrence4 = oldCurrence4 + item.money  
+                    %>  
+                <% } }}) 
+                %>
+                <div>
+                  - الرصيد السابق هو  <%= oldCurrence4 %>  ج
+                </div>
+                <% let janIncome4 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    janIncome4 = janIncome4 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يناير <%= janIncome4 %> ج
+                </div>
+                <% let janOutcome4 = 0;
+                  jansohag.forEach((item,index) => { 
+                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    janOutcome4 = janOutcome4 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يناير <%= janOutcome4 %> ج
+                    </div>
+                    <div>
+                  <% let JanCurrence4 =  oldCurrence4 + janIncome4 - janOutcome4 %>
+                      - الرصيد الحالي هو <%=  JanCurrence4 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر فبراير</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  JanCurrence1 %> ج
+                </div>
+                <% let febIncome1 = 0;
+                  febsohag.forEach((item,index) => { 
+                  if (item.places == "دياب / المحافظة – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    febIncome1 = febIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر فبراير <%= febIncome1 %> ج
+                </div>
+                <% let febOutcome1 = 0;
+                  febsohag.forEach((item,index) => { 
+                  if (item.places == "دياب / المحافظة – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    febOutcome1 = febOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر فبراير <%= febOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let FebCurrence1 =  JanCurrence1 + febIncome1 - febOutcome1 %>
+                      - الرصيد الحالي هو <%=  FebCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / إدفا و الغوانم – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= JanCurrence2 %>  ج
+                </div>
+                <% let febIncome2 = 0;
+                  febsohag.forEach((item,index) => { 
+                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    febIncome2 = febIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر فبراير <%= febIncome2 %> ج
+                </div>
+                <% let febOutcome2 = 0;
+                  febsohag.forEach((item,index) => { 
+                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    febOutcome2 = febOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر فبراير <%= febOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let FebCurrence2 =  oldCurrence2 + febIncome2 - febOutcome2 %>
+                      - الرصيد الحالي هو <%=  FebCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>رداد مراد / بهتا – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= JanCurrence3 %>  ج
+                </div>
+                <% let fenIncome3 = 0;
+                  fensohag.forEach((item,index) => { 
+                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    fenIncome3 = fenIncome3 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر فبراير <%= fenIncome3 %> ج
+                </div>
+                <% let fenOutcome3 = 0;
+                  fensohag.forEach((item,index) => { 
+                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    fenOutcome3 = fenOutcome3 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر فبراير <%= fenOutcome3 %> ج
+                    </div>
+                    <div>
+                  <% let FebCurrence3 =  JanCurrence3 + fenIncome3 - fenOutcome3 %>
+                      - الرصيد الحالي هو <%=  FebCurrence3 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%= JanCurrence4 %>  ج
+                </div>
+                <% let febIncome4 = 0;
+                  febsohag.forEach((item,index) => { 
+                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+                    if (item.type == "أضافة رصيد") {
+                    febIncome4 = febIncome4 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر فبراير <%= febIncome4 %> ج
+                </div>
+                <% let febOutcome4 = 0;
+                  febsohag.forEach((item,index) => { 
+                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
+                    if (item.type == "أضافة مصروفات") {
+                    febOutcome4 = febOutcome4 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر فبراير <%= febOutcome4 %> ج
+                    </div>
+                    <div>
+                  <% let FebCurrence4 =  JanCurrence44 + febIncome44 - febOutcome44 %>
+                      - الرصيد الحالي هو <%=  FebCurrence4 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر مارس</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر مارس</span>
+              </div>
+              <div class="detTable2">
+          
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر مارس</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أبريل</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر أبريل</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر أبريل</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر مايو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر مايو</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر مايو</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يونيو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر يونيو</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر يونيو</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يوليو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر يوليو</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر يوليو</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+            
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أغسطس</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر أغسطس</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر أغسطس</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر سبتمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+            
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر سبتمبر</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر سبتمبر</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أكتوبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر أكتوبر</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر أكتوبر</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر نوفمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر نوفمبر</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر نوفمبر</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر ديسمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>دياب / المحافظة – سوهاج</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>ايرادات شهر ديسمبر</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>مصروفات شهر ديسمبر</span>
+              </div>
+              <div class="detTable2">
+              
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>الرصيد الحالي</span>
+              </div>
+              <div class="detTable2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </table>
+
+      <div class="show-when-mobile2" id="mobincom"></div>
+    </section>
+    <%- include('./components/footer.ejs') %>
+  </body>
+</html>

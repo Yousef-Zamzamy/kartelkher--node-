@@ -557,6 +557,72 @@ app.get("/aswan.html", (req, res) => {
       console.log(err);
     });
 });
+app.get("/monthlyaswan.html", (req, res) => {
+  Financial.find({
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
+  }).sort({ date: 1 }).then((result) => {
+    Financial.find({
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
+    }).sort({ date: 1 }).then((result2) => {
+    Financial.find({
+      $and: [{ date: { $gte: "2024-03-01" } }, { date: { $lt: "2024-04-01" } }],
+    }).sort({ date: 1 }).then((result3) => {
+      Financial.find({
+        $and: [{ date: { $gte: "2024-04-01" } }, { date: { $lt: "2024-05-01" } }],
+      }).sort({ date: 1 }).then((result4) => {
+        Financial.find({
+          $and: [{ date: { $gte: "2024-05-01" } }, { date: { $lt: "2024-06-01" } }],
+        }).sort({ date: 1 }).then((result5) => {
+          Financial.find({
+            $and: [{ date: { $gte: "2024-06-01" } }, { date: { $lt: "2024-07-01" } }],
+          }).sort({ date: 1 }).then((result6) => {
+            Financial.find({
+              $and: [{ date: { $gte: "2024-07-01" } }, { date: { $lt: "2024-08-01" } }],
+            }).sort({ date: 1 }).then((result7) => {
+              Financial.find({
+                $and: [{ date: { $gte: "2024-08-01" } }, { date: { $lt: "2024-09-01" } }],
+              }).sort({ date: 1 }).then((result8) => {
+                Financial.find({
+                  $and: [{ date: { $gte: "2024-09-01" } }, { date: { $lt: "2024-10-01" } }],
+                }).sort({ date: 1 }).then((result9) => {
+                  Financial.find({
+                    $and: [{ date: { $gte: "2024-10-01" } }, { date: { $lt: "2024-11-01" } }],
+                  }).sort({ date: 1 }).then((result10) => {
+                    Financial.find({
+                      $and: [{ date: { $gte: "2024-11-01" } }, { date: { $lt: "2024-12-01" } }],
+                    }).sort({ date: 1 }).then((result11) => {
+                      Financial.find({
+                        $and: [{ date: { $gte: "2024-12-01" } }, { date: { $lt: "2025-01-01" } }],
+                      }).sort({ date: 1 }).then((result12) => {
+                        Financial.find({ date: {$lt: "2024-01-01"} }).sort({ date: 1 }).then((result13) => {
+                          res.render("monthlyaswan", { 
+                            janaswan: result, 
+                            febaswan: result2,
+                            maraswan: result3,
+                            apraswan: result4,
+                            mayaswan: result5,
+                            juneaswan: result6,
+                            julyaswan: result7,
+                            augaswan: result8,
+                            sepaswan: result9,
+                            octaswan: result10,
+                            novaswan: result11,
+                            decaswan: result12,
+                            oldaswan: result13});
+                        })
+                      })
+                    })
+                  })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+});
 app.get("/aswanview.html", (req, res) => {
   Financial.find()
     .then((result) => {
@@ -615,6 +681,72 @@ app.get("/sohag.html", (req, res) => {
     .catch((err) => {
       console.log(err);
     });
+});
+app.get("/monthlysohag.html", (req, res) => {
+  Financial.find({
+    $and: [{ date: { $gte: "2024-01-01" } }, { date: { $lt: "2024-02-01" } }],
+  }).sort({ date: 1 }).then((result) => {
+    Financial.find({
+      $and: [{ date: { $gte: "2024-02-01" } }, { date: { $lt: "2024-03-01" } }],
+    }).sort({ date: 1 }).then((result2) => {
+    Financial.find({
+      $and: [{ date: { $gte: "2024-03-01" } }, { date: { $lt: "2024-04-01" } }],
+    }).sort({ date: 1 }).then((result3) => {
+      Financial.find({
+        $and: [{ date: { $gte: "2024-04-01" } }, { date: { $lt: "2024-05-01" } }],
+      }).sort({ date: 1 }).then((result4) => {
+        Financial.find({
+          $and: [{ date: { $gte: "2024-05-01" } }, { date: { $lt: "2024-06-01" } }],
+        }).sort({ date: 1 }).then((result5) => {
+          Financial.find({
+            $and: [{ date: { $gte: "2024-06-01" } }, { date: { $lt: "2024-07-01" } }],
+          }).sort({ date: 1 }).then((result6) => {
+            Financial.find({
+              $and: [{ date: { $gte: "2024-07-01" } }, { date: { $lt: "2024-08-01" } }],
+            }).sort({ date: 1 }).then((result7) => {
+              Financial.find({
+                $and: [{ date: { $gte: "2024-08-01" } }, { date: { $lt: "2024-09-01" } }],
+              }).sort({ date: 1 }).then((result8) => {
+                Financial.find({
+                  $and: [{ date: { $gte: "2024-09-01" } }, { date: { $lt: "2024-10-01" } }],
+                }).sort({ date: 1 }).then((result9) => {
+                  Financial.find({
+                    $and: [{ date: { $gte: "2024-10-01" } }, { date: { $lt: "2024-11-01" } }],
+                  }).sort({ date: 1 }).then((result10) => {
+                    Financial.find({
+                      $and: [{ date: { $gte: "2024-11-01" } }, { date: { $lt: "2024-12-01" } }],
+                    }).sort({ date: 1 }).then((result11) => {
+                      Financial.find({
+                        $and: [{ date: { $gte: "2024-12-01" } }, { date: { $lt: "2025-01-01" } }],
+                      }).sort({ date: 1 }).then((result12) => {
+                        Financial.find({ date: {$lt: "2024-01-01"} }).sort({ date: 1 }).then((result13) => {
+                          res.render("monthlysohag", { 
+                            jansohag: result, 
+                            febsohag: result2,
+                            marsohag: result3,
+                            aprsohag: result4,
+                            maysohag: result5,
+                            junesohag: result6,
+                            julysohag: result7,
+                            augsohag: result8,
+                            sepsohag: result9,
+                            octsohag: result10,
+                            novsohag: result11,
+                            decsohag: result12,
+                            oldsohag: result13});
+                        })
+                      })
+                    })
+                  })
+                  })
+                })
+              })
+            })
+          })
+        })
+      })
+    })
+  })
 });
 app.get("/sohagview.html", (req, res) => {
   Financial.find()
