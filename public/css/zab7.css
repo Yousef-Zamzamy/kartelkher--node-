@@ -80,3 +80,14 @@ table.inco {
   0%   {opacity: 0;}
   100% {opacity: 1;}
 } 
+
+th {
+  font-size: 18px;
+}
+
+
+@media (max-width: 840px) {
+  th {
+    font-size: 14px;
+  }
+}
