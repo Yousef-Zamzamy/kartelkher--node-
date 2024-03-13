@@ -7,7 +7,7 @@
 /* ------------table------------- */
 
 .MainTitle {
-  font-size: 60px;
+  font-size: 50px;
   color: #1b1b1b;
   padding: 10px 75px;
   display: inline-block;
@@ -263,12 +263,4 @@ label b {
 }
 .cont {
   font-size: 25px ;
-}
-
-
-@media (max-width: 600px) {
-  .MainTitle {
-    font-size: 50px;
-    padding: 10px 25px;
-  }
 }
