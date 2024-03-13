@@ -31,9 +31,9 @@
 
     <section class="MainSec" id="MainSec">
       <div class="headParent">
-        <h1 class="MainTitle">تقارير أسوان</h1>
+        <h1 class="MainTitle">تقارير قنا</h1>
         <div class="xxx">
-          <a href="aswan.html"><button class="back">Back</button></a>
+          <a href="kena.html"><button class="back">Back</button></a>
         </div>
       </div>
 
@@ -53,13 +53,13 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">                
                   <% let oldCurrence1 = 0;
-                  oldaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  oldkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                       
                     
@@ -71,8 +71,8 @@
                   - الرصيد السابق هو  <%= oldCurrence1 %>  ج
                 </div>
                 <% let janIncome1 = 0;
-                  janaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  jankena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     janIncome1 = janIncome1 + item.money
                     %>  
@@ -84,8 +84,8 @@
                   - ايرادات شهر يناير <%= janIncome1 %> ج
                 </div>
                 <% let janOutcome1 = 0;
-                  janaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  jankena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     janOutcome1 = janOutcome1 + item.money
                     %>  
@@ -118,7 +118,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -126,8 +126,8 @@
                   - الرصيد السابق هو  <%=  JanCurrence1 %> ج
                 </div>
                 <% let febIncome1 = 0;
-                  febaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  febkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     febIncome1 = febIncome1 + item.money
                     %>  
@@ -139,8 +139,8 @@
                   - ايرادات شهر فبراير <%= febIncome1 %> ج
                 </div>
                 <% let febOutcome1 = 0;
-                  febaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  febkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     febOutcome1 = febOutcome1 + item.money
                     %>  
@@ -173,7 +173,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -181,8 +181,8 @@
                   - الرصيد السابق هو  <%=  FebCurrence1 %> ج
                 </div>
                 <% let marIncome1 = 0;
-                  maraswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  markena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     marIncome1 = marIncome1 + item.money
                     %>  
@@ -194,8 +194,8 @@
                   - ايرادات شهر مارس <%= marIncome1 %> ج
                 </div>
                 <% let marOutcome1 = 0;
-                  maraswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  markena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     marOutcome1 = marOutcome1 + item.money
                     %>  
@@ -228,7 +228,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -236,8 +236,8 @@
                   - الرصيد السابق هو  <%=  MarCurrence1 %> ج
                 </div>
                 <% let aprIncome1 = 0;
-                  apraswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  aprkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     aprIncome1 = aprIncome1 + item.money
                     %>  
@@ -249,8 +249,8 @@
                   - ايرادات شهر أبريل <%= aprIncome1 %> ج
                 </div>
                 <% let aprOutcome1 = 0;
-                  apraswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  aprkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     aprOutcome1 = aprOutcome1 + item.money
                     %>  
@@ -283,7 +283,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -291,8 +291,8 @@
                   - الرصيد السابق هو  <%=  AprCurrence1 %> ج
                 </div>
                 <% let mayIncome1 = 0;
-                  mayaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  maykena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     mayIncome1 = mayIncome1 + item.money
                     %>  
@@ -304,8 +304,8 @@
                   - ايرادات شهر مايو <%= mayIncome1 %> ج
                 </div>
                 <% let mayOutcome1 = 0;
-                  mayaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  maykena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     mayOutcome1 = mayOutcome1 + item.money
                     %>  
@@ -338,7 +338,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -346,8 +346,8 @@
                   - الرصيد السابق هو  <%=  MayCurrence1 %> ج
                 </div>
                 <% let juneIncome1 = 0;
-                  juneaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  junekena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     juneIncome1 = juneIncome1 + item.money
                     %>  
@@ -359,8 +359,8 @@
                   - ايرادات شهر يونيو <%= juneIncome1 %> ج
                 </div>
                 <% let juneOutcome1 = 0;
-                  juneaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  junekena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     juneOutcome1 = juneOutcome1 + item.money
                     %>  
@@ -393,7 +393,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -401,8 +401,8 @@
                   - الرصيد السابق هو  <%=  JuneCurrence1 %> ج
                 </div>
                 <% let julyIncome1 = 0;
-                  julyaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  julykena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     julyIncome1 = julyIncome1 + item.money
                     %>  
@@ -414,8 +414,8 @@
                   - ايرادات شهر يوليو <%= julyIncome1 %> ج
                 </div>
                 <% let julyOutcome1 = 0;
-                  julyaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  julykena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     julyOutcome1 = julyOutcome1 + item.money
                     %>  
@@ -448,7 +448,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -456,8 +456,8 @@
                   - الرصيد السابق هو  <%=  JulyCurrence1 %> ج
                 </div>
                 <% let augIncome1 = 0;
-                  augaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  augkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     augIncome1 = augIncome1 + item.money
                     %>  
@@ -469,8 +469,8 @@
                   - ايرادات شهر أغسطس <%= augIncome1 %> ج
                 </div>
                 <% let augOutcome1 = 0;
-                  augaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  augkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     augOutcome1 = augOutcome1 + item.money
                     %>  
@@ -503,7 +503,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -511,8 +511,8 @@
                   - الرصيد السابق هو  <%=  AugCurrence1 %> ج
                 </div>
                 <% let sepIncome1 = 0;
-                  sepaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  sepkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     sepIncome1 = sepIncome1 + item.money
                     %>  
@@ -524,8 +524,8 @@
                   - ايرادات شهر سبتمبر <%= sepIncome1 %> ج
                 </div>
                 <% let sepOutcome1 = 0;
-                  sepaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  sepkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     sepOutcome1 = sepOutcome1 + item.money
                     %>  
@@ -558,7 +558,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -566,8 +566,8 @@
                   - الرصيد السابق هو  <%=  SepCurrence1 %> ج
                 </div>
                 <% let octIncome1 = 0;
-                  octaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  octkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     octIncome1 = octIncome1 + item.money
                     %>  
@@ -579,8 +579,8 @@
                   - ايرادات شهر أكتوبر <%= octIncome1 %> ج
                 </div>
                 <% let octOutcome1 = 0;
-                  octaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  octkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     octOutcome1 = octOutcome1 + item.money
                     %>  
@@ -613,7 +613,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -621,8 +621,8 @@
                   - الرصيد السابق هو  <%=  OctCurrence1 %> ج
                 </div>
                 <% let novIncome1 = 0;
-                  novaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  novkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     novIncome1 = novIncome1 + item.money
                     %>  
@@ -634,8 +634,8 @@
                   - ايرادات شهر نوفمبر <%= novIncome1 %> ج
                 </div>
                 <% let novOutcome1 = 0;
-                  novaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  novkena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     novOutcome1 = novOutcome1 + item.money
                     %>  
@@ -668,7 +668,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>الحج كمال / دراو – أسوان</span>
+                <span>عبده لاوندي / قمولا – قنا</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -676,8 +676,8 @@
                   - الرصيد السابق هو  <%=  NovCurrence1 %> ج
                 </div>
                 <% let decIncome1 = 0;
-                  decaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  deckena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة رصيد") {
                     decIncome1 = decIncome1 + item.money
                     %>  
@@ -689,8 +689,8 @@
                   - ايرادات شهر نوفمبر <%= decIncome1 %> ج
                 </div>
                 <% let decOutcome1 = 0;
-                  decaswan.forEach((item,index) => { 
-                  if (item.places == "الحج كمال / دراو – أسوان") {
+                  deckena.forEach((item,index) => { 
+                  if (item.places == "عبده لاوندي / قمولا – قنا") {
                     if (item.type == "أضافة مصروفات") {
                     decOutcome1 = decOutcome1 + item.money
                     %>  

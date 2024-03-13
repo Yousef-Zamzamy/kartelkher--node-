@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كارت الخير</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile-pages.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/mobile-header2.css"
+      media="(max-width: 367px)"
+    />
+
+    <link rel="stylesheet" href="iconmoon/style.css" />
+    <script defer src="js/pages.js"></script>
+    <script defer src="js/mobile-header.js"></script>
+  </head>
+  <body dir="rtl" id="body">
+    <%- include('./components/header.ejs') %>
+
+    <section class="MainSec" id="MainSec">
+      <div class="headParent">
+        <h1 class="MainTitle">تقارير الواحات البحرية</h1>
+        <div class="xxx">
+          <a href="wahat.html"><button class="back">Back</button></a>
+        </div>
+      </div>
+
+      <table class="center hide-when-mobile2" id="table">
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يناير</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">                
+                  <% let oldCurrence1 = 0;
+                  oldwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                      
+                    
+                    oldCurrence1 = oldCurrence1 + item.money  
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                  - الرصيد السابق هو  <%= oldCurrence1 %>  ج
+                </div>
+                <% let janIncome1 = 0;
+                  janwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    janIncome1 = janIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يناير <%= janIncome1 %> ج
+                </div>
+                <% let janOutcome1 = 0;
+                  janwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    janOutcome1 = janOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يناير <%= janOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let JanCurrence1 =  oldCurrence1 + janIncome1 - janOutcome1 %>
+                      - الرصيد الحالي هو <%=  JanCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">                
+                  <% let oldCurrence2 = 0;
+                  oldwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية" ) {
+                    if (item.type == "أضافة رصيد") {
+                    oldCurrence2 = oldCurrence2 + item.money  
+                    %>  
+                <% } } }) 
+                %>
+                <div>
+                  - الرصيد السابق هو  <%= oldCurrence2 %>  ج
+                </div>
+                <% let janIncome2 = 0;
+                  janwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    janIncome2 = janIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يناير <%= janIncome2 %> ج
+                </div>
+                <% let janOutcome2 = 0;
+                  janwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    janOutcome2 = janOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يناير <%= janOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let JanCurrence2 =  oldCurrence2 + janIncome2 - janOutcome2 %>
+                      - الرصيد الحالي هو <%=  JanCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر فبراير</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  JanCurrence1 %> ج
+                </div>
+                <% let febIncome1 = 0;
+                  febwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    febIncome1 = febIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر فبراير <%= febIncome1 %> ج
+                </div>
+                <% let febOutcome1 = 0;
+                  febwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    febOutcome1 = febOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر فبراير <%= febOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let FebCurrence1 =  JanCurrence1 + febIncome1 - febOutcome1 %>
+                      - الرصيد الحالي هو <%=  FebCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= JanCurrence2 %>  ج
+                </div>
+                <% let febIncome2 = 0;
+                  febwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    febIncome2 = febIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر فبراير <%= febIncome2 %> ج
+                </div>
+                <% let febOutcome2 = 0;
+                  febwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    febOutcome2 = febOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر فبراير <%= febOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let FebCurrence2 =  JanCurrence2 + febIncome2 - febOutcome2 %>
+                      - الرصيد الحالي هو <%=  FebCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر مارس</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  FebCurrence1 %> ج
+                </div>
+                <% let marIncome1 = 0;
+                  marwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    marIncome1 = marIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر مارس <%= marIncome1 %> ج
+                </div>
+                <% let marOutcome1 = 0;
+                  marwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    marOutcome1 = marOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر مارس <%= marOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let MarCurrence1 =  FebCurrence1 + marIncome1 - marOutcome1 %>
+                      - الرصيد الحالي هو <%=  MarCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= FebCurrence2 %>  ج
+                </div>
+                <% let marIncome2 = 0;
+                  marwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    marIncome2 = marIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر مارس <%= marIncome2 %> ج
+                </div>
+                <% let marOutcome2 = 0;
+                  marwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    marOutcome2 = marOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر مارس <%= marOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let MarCurrence2 =  FebCurrence2 + marIncome2 - marOutcome2 %>
+                      - الرصيد الحالي هو <%=  MarCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أبريل</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  MarCurrence1 %> ج
+                </div>
+                <% let aprIncome1 = 0;
+                  aprwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    aprIncome1 = aprIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر أبريل <%= aprIncome1 %> ج
+                </div>
+                <% let aprOutcome1 = 0;
+                  aprwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    aprOutcome1 = aprOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر أبريل <%= aprOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let AprCurrence1 =  MarCurrence1 + aprIncome1 - aprOutcome1 %>
+                      - الرصيد الحالي هو <%=  AprCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= MarCurrence2 %>  ج
+                </div>
+                <% let aprIncome2 = 0;
+                  aprwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    aprIncome2 = aprIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر أبريل <%= aprIncome2 %> ج
+                </div>
+                <% let aprOutcome2 = 0;
+                  aprwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    aprOutcome2 = aprOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر أبريل <%= aprOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let AprCurrence2 =  MarCurrence2 + aprIncome2 - aprOutcome2 %>
+                      - الرصيد الحالي هو <%=  AprCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر مايو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  AprCurrence1 %> ج
+                </div>
+                <% let mayIncome1 = 0;
+                  maywahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    mayIncome1 = mayIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر مايو <%= mayIncome1 %> ج
+                </div>
+                <% let mayOutcome1 = 0;
+                  maywahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    mayOutcome1 = mayOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر مايو <%= mayOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let MayCurrence1 =  AprCurrence1 + mayIncome1 - mayOutcome1 %>
+                      - الرصيد الحالي هو <%=  MayCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= AprCurrence2 %>  ج
+                </div>
+                <% let mayIncome2 = 0;
+                  maywahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    mayIncome2 = mayIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر مايو <%= mayIncome2 %> ج
+                </div>
+                <% let mayOutcome2 = 0;
+                  maywahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    mayOutcome2 = mayOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر مايو <%= mayOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let MayCurrence2 =  AprCurrence2 + mayIncome2 - mayOutcome2 %>
+                      - الرصيد الحالي هو <%=  MayCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>        
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يونيو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  MayCurrence1 %> ج
+                </div>
+                <% let juneIncome1 = 0;
+                  junewahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    juneIncome1 = juneIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يونيو <%= juneIncome1 %> ج
+                </div>
+                <% let juneOutcome1 = 0;
+                  junewahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    juneOutcome1 = juneOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يونيو <%= juneOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let JuneCurrence1 =  MayCurrence1 + juneIncome1 - juneOutcome1 %>
+                      - الرصيد الحالي هو <%=  JuneCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= MayCurrence2 %>  ج
+                </div>
+                <% let juneIncome2 = 0;
+                  junewahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    juneIncome2 = juneIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يونيو <%= juneIncome2 %> ج
+                </div>
+                <% let juneOutcome2 = 0;
+                  junewahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    juneOutcome2 = juneOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يونيو <%= juneOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let JuneCurrence2 =  MayCurrence2 + juneIncome2 - juneOutcome2 %>
+                      - الرصيد الحالي هو <%=  JuneCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>       
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر يوليو</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  JuneCurrence1 %> ج
+                </div>
+                <% let julyIncome1 = 0;
+                  julywahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    julyIncome1 = julyIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يوليو <%= julyIncome1 %> ج
+                </div>
+                <% let julyOutcome1 = 0;
+                  julywahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    julyOutcome1 = julyOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يوليو <%= julyOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let JulyCurrence1 =  JuneCurrence1 + julyIncome1 - julyOutcome1 %>
+                      - الرصيد الحالي هو <%=  JulyCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= JuneCurrence2 %>  ج
+                </div>
+                <% let julyIncome2 = 0;
+                  julywahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    julyIncome2 = julyIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر يوليو <%= julyIncome2 %> ج
+                </div>
+                <% let julyOutcome2 = 0;
+                  julywahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    julyOutcome2 = julyOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر يوليو <%= julyOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let JulyCurrence2 =  JuneCurrence2 + julyIncome2 - julyOutcome2 %>
+                      - الرصيد الحالي هو <%=  JulyCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>       
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أغسطس</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  JulyCurrence1 %> ج
+                </div>
+                <% let augIncome1 = 0;
+                  augwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    augIncome1 = augIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر أغسطس <%= augIncome1 %> ج
+                </div>
+                <% let augOutcome1 = 0;
+                  augwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    augOutcome1 = augOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر أغسطس <%= augOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let AugCurrence1 =  JulyCurrence1 + augIncome1 - augOutcome1 %>
+                      - الرصيد الحالي هو <%=  AugCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= JulyCurrence2 %>  ج
+                </div>
+                <% let augIncome2 = 0;
+                  augwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    augIncome2 = augIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر أغسطس <%= augIncome2 %> ج
+                </div>
+                <% let augOutcome2 = 0;
+                  augwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    augOutcome2 = augOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر أغسطس <%= augOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let AugCurrence2 =  JulyCurrence2 + augIncome2 - augOutcome2 %>
+                      - الرصيد الحالي هو <%=  AugCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>         
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر سبتمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  AugCurrence1 %> ج
+                </div>
+                <% let sepIncome1 = 0;
+                  sepwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    sepIncome1 = sepIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر سبتمبر <%= sepIncome1 %> ج
+                </div>
+                <% let sepOutcome1 = 0;
+                  sepwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    sepOutcome1 = sepOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر سبتمبر <%= sepOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let SepCurrence1 =  AugCurrence1 + sepIncome1 - sepOutcome1 %>
+                      - الرصيد الحالي هو <%=  SepCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= AugCurrence2 %>  ج
+                </div>
+                <% let sepIncome2 = 0;
+                  sepwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    sepIncome2 = sepIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر سبتمبر <%= sepIncome2 %> ج
+                </div>
+                <% let sepOutcome2 = 0;
+                  sepwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    sepOutcome2 = sepOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر سبتمبر <%= sepOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let SepCurrence2 =  AugCurrence2 + sepIncome2 - sepOutcome2 %>
+                      - الرصيد الحالي هو <%=  SepCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>         
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر أكتوبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  SepCurrence1 %> ج
+                </div>
+                <% let octIncome1 = 0;
+                  octwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    octIncome1 = octIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر أكتوبر <%= octIncome1 %> ج
+                </div>
+                <% let octOutcome1 = 0;
+                  octwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    octOutcome1 = octOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر أكتوبر <%= octOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let OctCurrence1 =  SepCurrence1 + octIncome1 - octOutcome1 %>
+                      - الرصيد الحالي هو <%=  OctCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= SepCurrence2 %>  ج
+                </div>
+                <% let octIncome2 = 0;
+                  octwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    octIncome2 = octIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر أكتوبر <%= octIncome2 %> ج
+                </div>
+                <% let octOutcome2 = 0;
+                  octwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    octOutcome2 = octOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر أكتوبر <%= octOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let OctCurrence2 =  SepCurrence2 + octIncome2 - octOutcome2 %>
+                      - الرصيد الحالي هو <%=  OctCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>       
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر نوفمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  OctCurrence1 %> ج
+                </div>
+                <% let novIncome1 = 0;
+                  novwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    novIncome1 = novIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر نوفمبر <%= novIncome1 %> ج
+                </div>
+                <% let novOutcome1 = 0;
+                  novwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    novOutcome1 = novOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر نوفمبر <%= novOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let NovCurrence1 =  OctCurrence1 + novIncome1 - novOutcome1 %>
+                      - الرصيد الحالي هو <%=  NovCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= OctCurrence2 %>  ج
+                </div>
+                <% let novIncome2 = 0;
+                  novwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    novIncome2 = novIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر نوفمبر <%= novIncome2 %> ج
+                </div>
+                <% let novOutcome2 = 0;
+                  novwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    novOutcome2 = novOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر نوفمبر <%= novOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let NovCurrence2 =  OctCurrence2 + novIncome2 - novOutcome2 %>
+                      - الرصيد الحالي هو <%=  NovCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>       
+          </div>
+        </div>
+        <div class="details">
+          <div class="summ">
+            <div class="iconstyl">
+              <span class="icon-circle-left"></span
+              ><span class="icon-circle-down hide2"></span>
+            </div>
+            <span>تقرير شهر ديسمبر</span>
+          </div>
+          <div class="detTable">
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>شكري / القصر - الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont">
+                <div>
+                  - الرصيد السابق هو  <%=  NovCurrence1 %> ج
+                </div>
+                <% let decIncome1 = 0;
+                  decwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    decIncome1 = decIncome1 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر نوفمبر <%= decIncome1 %> ج
+                </div>
+                <% let decOutcome1 = 0;
+                  decwahat.forEach((item,index) => { 
+                  if (item.places == "شكري / القصر - الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    decOutcome1 = decOutcome1 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر نوفمبر <%= decOutcome1 %> ج
+                    </div>
+                    <div>
+                  <% let DecCurrence1 =  NovCurrence1 + decIncome1 - decOutcome1 %>
+                      - الرصيد الحالي هو <%=  DecCurrence1 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="details2">
+              <div class="summ2">
+                <div class="iconstyl2">
+                  <span class="icon-circle-left"></span>
+                  <span class="icon-circle-down hide2"></span>
+                </div>
+                <span>عبدالله بدار / الحيز – الواحات البحرية</span>
+              </div>
+              <div class="detTable2">
+                <div class="cont"> 
+                <div>
+                  - الرصيد السابق هو  <%= NovCurrence2 %>  ج
+                </div>
+                <% let decIncome2 = 0;
+                  decwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة رصيد") {
+                    decIncome2 = decIncome2 + item.money
+                    %>  
+                <% }
+              } 
+            }) 
+                %>
+                <div>
+                  - ايرادات شهر نوفمبر <%= decIncome2 %> ج
+                </div>
+                <% let decOutcome2 = 0;
+                  decwahat.forEach((item,index) => { 
+                  if (item.places == "عبدالله بدار / الحيز – الواحات البحرية") {
+                    if (item.type == "أضافة مصروفات") {
+                    decOutcome2 = decOutcome2 + item.money
+                    %>  
+                <% }} }) 
+                %>
+                <div>
+                      - مصروفات شهر نوفمبر <%= decOutcome2 %> ج
+                    </div>
+                    <div>
+                  <% let DecCurrence2 =  NovCurrence2 + decIncome2 - decOutcome2 %>
+                      - الرصيد الحالي هو <%=  DecCurrence2 %> ج
+                    </div>
+                </div>
+              </div>
+            </div>       
+          </div>
+        </div>
+      </table>
+    </section>
+    <%- include('./components/footer.ejs') %>
+  </body>
+</html>

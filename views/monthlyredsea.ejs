@@ -31,9 +31,9 @@
 
     <section class="MainSec" id="MainSec">
       <div class="headParent">
-        <h1 class="MainTitle">تقارير سوهاج</h1>
+        <h1 class="MainTitle">تقارير البحر الأحمر</h1>
         <div class="xxx">
-          <a href="sohag.html"><button class="back">Back</button></a>
+          <a href="redsea.html"><button class="back">Back</button></a>
         </div>
       </div>
 
@@ -53,24 +53,26 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">                
                   <% let oldCurrence1 = 0;
-                  oldsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  oldredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
+                      
+                    
                     oldCurrence1 = oldCurrence1 + item.money  
                     %>  
-                <% } }}) 
+                <% }} }) 
                 %>
                 <div>
                   - الرصيد السابق هو  <%= oldCurrence1 %>  ج
                 </div>
                 <% let janIncome1 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  janredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     janIncome1 = janIncome1 + item.money
                     %>  
@@ -82,8 +84,8 @@
                   - ايرادات شهر يناير <%= janIncome1 %> ج
                 </div>
                 <% let janOutcome1 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  janredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     janOutcome1 = janOutcome1 + item.money
                     %>  
@@ -105,13 +107,13 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">                
                   <% let oldCurrence2 = 0;
-                  oldsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج" ) {
+                  oldredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر" ) {
                     if (item.type == "أضافة رصيد") {
                     oldCurrence2 = oldCurrence2 + item.money  
                     %>  
@@ -121,8 +123,8 @@
                   - الرصيد السابق هو  <%= oldCurrence2 %>  ج
                 </div>
                 <% let janIncome2 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  janredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     janIncome2 = janIncome2 + item.money
                     %>  
@@ -134,8 +136,8 @@
                   - ايرادات شهر يناير <%= janIncome2 %> ج
                 </div>
                 <% let janOutcome2 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  janredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     janOutcome2 = janOutcome2 + item.money
                     %>  
@@ -157,13 +159,13 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">                
                   <% let oldCurrence3 = 0;
-                  oldsohag.forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  oldredsea.forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                       
                     
@@ -175,8 +177,8 @@
                   - الرصيد السابق هو  <%= oldCurrence3 %>  ج
                 </div>
                 <% let janIncome3 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  janredsea.forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     janIncome3 = janIncome3 + item.money
                     %>  
@@ -188,8 +190,8 @@
                   - ايرادات شهر يناير <%= janIncome3 %> ج
                 </div>
                 <% let janOutcome3 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  janredsea.forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     janOutcome3 = janOutcome3 + item.money
                     %>  
@@ -205,61 +207,6 @@
                 </div>
               </div>
             </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">                
-                  <% let oldCurrence4 = 0;
-                  oldsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                      
-                    
-                    oldCurrence4 = oldCurrence4 + item.money  
-                    %>  
-                <% } }}) 
-                %>
-                <div>
-                  - الرصيد السابق هو  <%= oldCurrence4 %>  ج
-                </div>
-                <% let janIncome4 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    janIncome4 = janIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر يناير <%= janIncome4 %> ج
-                </div>
-                <% let janOutcome4 = 0;
-                  jansohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    janOutcome4 = janOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر يناير <%= janOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let JanCurrence4 =  oldCurrence4 + janIncome4 - janOutcome4 %>
-                      - الرصيد الحالي هو <%=  JanCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
         <div class="details">
@@ -277,7 +224,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -285,8 +232,8 @@
                   - الرصيد السابق هو  <%=  JanCurrence1 %> ج
                 </div>
                 <% let febIncome1 = 0;
-                  febsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  febredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     febIncome1 = febIncome1 + item.money
                     %>  
@@ -298,8 +245,8 @@
                   - ايرادات شهر فبراير <%= febIncome1 %> ج
                 </div>
                 <% let febOutcome1 = 0;
-                  febsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  febredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     febOutcome1 = febOutcome1 + item.money
                     %>  
@@ -321,7 +268,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -329,8 +276,8 @@
                   - الرصيد السابق هو  <%= JanCurrence2 %>  ج
                 </div>
                 <% let febIncome2 = 0;
-                  febsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  febredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     febIncome2 = febIncome2 + item.money
                     %>  
@@ -342,8 +289,8 @@
                   - ايرادات شهر فبراير <%= febIncome2 %> ج
                 </div>
                 <% let febOutcome2 = 0;
-                  febsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  febredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     febOutcome2 = febOutcome2 + item.money
                     %>  
@@ -365,7 +312,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -373,8 +320,8 @@
                   - الرصيد السابق هو  <%= JanCurrence3 %>  ج
                 </div>
                 <% let febIncome3 = 0;
-                  febsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  febredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     febIncome3 = febIncome3 + item.money
                     %>  
@@ -386,8 +333,8 @@
                   - ايرادات شهر فبراير <%= febIncome3 %> ج
                 </div>
                 <% let febOutcome3 = 0;
-                  febsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  febredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     febOutcome3 = febOutcome3 + item.money
                     %>  
@@ -403,51 +350,6 @@
                 </div>
               </div>
             </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= JanCurrence4 %>  ج
-                </div>
-                <% let febIncome4 = 0;
-                  febsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    febIncome4 = febIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر فبراير <%= febIncome4 %> ج
-                </div>
-                <% let febOutcome4 = 0;
-                  febsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    febOutcome4 = febOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر فبراير <%= febOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let FebCurrence4 =  JanCurrence4 + febIncome4 - febOutcome4 %>
-                      - الرصيد الحالي هو <%=  FebCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
         <div class="details">
@@ -465,7 +367,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -473,8 +375,8 @@
                   - الرصيد السابق هو  <%=  FebCurrence1 %> ج
                 </div>
                 <% let marIncome1 = 0;
-                  marsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  marredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     marIncome1 = marIncome1 + item.money
                     %>  
@@ -486,8 +388,8 @@
                   - ايرادات شهر مارس <%= marIncome1 %> ج
                 </div>
                 <% let marOutcome1 = 0;
-                  marsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  marredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     marOutcome1 = marOutcome1 + item.money
                     %>  
@@ -509,7 +411,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -517,8 +419,8 @@
                   - الرصيد السابق هو  <%= FebCurrence2 %>  ج
                 </div>
                 <% let marIncome2 = 0;
-                  marsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  marredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     marIncome2 = marIncome2 + item.money
                     %>  
@@ -530,8 +432,8 @@
                   - ايرادات شهر مارس <%= marIncome2 %> ج
                 </div>
                 <% let marOutcome2 = 0;
-                  marsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  marredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     marOutcome2 = marOutcome2 + item.money
                     %>  
@@ -553,7 +455,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -561,8 +463,8 @@
                   - الرصيد السابق هو  <%= FebCurrence3 %>  ج
                 </div>
                 <% let marIncome3 = 0;
-                  marsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  marredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     marIncome3 = marIncome3 + item.money
                     %>  
@@ -574,8 +476,8 @@
                   - ايرادات شهر مارس <%= marIncome3 %> ج
                 </div>
                 <% let marOutcome3 = 0;
-                  marsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  marredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     marOutcome3 = marOutcome3 + item.money
                     %>  
@@ -591,51 +493,6 @@
                 </div>
               </div>
             </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= FebCurrence4 %>  ج
-                </div>
-                <% let marIncome4 = 0;
-                  marsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    marIncome4 = marIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر مارس <%= marIncome4 %> ج
-                </div>
-                <% let marOutcome4 = 0;
-                  marsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    marOutcome4 = marOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر مارس <%= marOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let MarCurrence4 =  FebCurrence4 + marIncome4 - marOutcome4 %>
-                      - الرصيد الحالي هو <%=  MarCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
         <div class="details">
@@ -653,7 +510,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -661,8 +518,8 @@
                   - الرصيد السابق هو  <%=  MarCurrence1 %> ج
                 </div>
                 <% let aprIncome1 = 0;
-                  aprsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  aprredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     aprIncome1 = aprIncome1 + item.money
                     %>  
@@ -674,8 +531,8 @@
                   - ايرادات شهر أبريل <%= aprIncome1 %> ج
                 </div>
                 <% let aprOutcome1 = 0;
-                  aprsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  aprredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     aprOutcome1 = aprOutcome1 + item.money
                     %>  
@@ -697,7 +554,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -705,8 +562,8 @@
                   - الرصيد السابق هو  <%= MarCurrence2 %>  ج
                 </div>
                 <% let aprIncome2 = 0;
-                  aprsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  aprredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     aprIncome2 = aprIncome2 + item.money
                     %>  
@@ -718,8 +575,8 @@
                   - ايرادات شهر أبريل <%= aprIncome2 %> ج
                 </div>
                 <% let aprOutcome2 = 0;
-                  aprsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  aprredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     aprOutcome2 = aprOutcome2 + item.money
                     %>  
@@ -741,7 +598,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -749,8 +606,8 @@
                   - الرصيد السابق هو  <%= MarCurrence3 %>  ج
                 </div>
                 <% let aprIncome3 = 0;
-                  aprsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  aprredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     aprIncome3 = aprIncome3 + item.money
                     %>  
@@ -762,8 +619,8 @@
                   - ايرادات شهر أبريل <%= aprIncome3 %> ج
                 </div>
                 <% let aprOutcome3 = 0;
-                  aprsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  aprredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     aprOutcome3 = aprOutcome3 + item.money
                     %>  
@@ -779,51 +636,6 @@
                 </div>
               </div>
             </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= MarCurrence4 %>  ج
-                </div>
-                <% let aprIncome4 = 0;
-                  aprsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    aprIncome4 = aprIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر أبريل <%= aprIncome4 %> ج
-                </div>
-                <% let aprOutcome4 = 0;
-                  aprsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    aprOutcome4 = aprOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر أبريل <%= aprOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let AprCurrence4 =  MarCurrence4 + aprIncome4 - aprOutcome4 %>
-                      - الرصيد الحالي هو <%=  AprCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
         <div class="details">
@@ -841,7 +653,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -849,8 +661,8 @@
                   - الرصيد السابق هو  <%=  AprCurrence1 %> ج
                 </div>
                 <% let mayIncome1 = 0;
-                  maysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  mayredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     mayIncome1 = mayIncome1 + item.money
                     %>  
@@ -862,8 +674,8 @@
                   - ايرادات شهر مايو <%= mayIncome1 %> ج
                 </div>
                 <% let mayOutcome1 = 0;
-                  maysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  mayredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     mayOutcome1 = mayOutcome1 + item.money
                     %>  
@@ -885,7 +697,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -893,8 +705,8 @@
                   - الرصيد السابق هو  <%= AprCurrence2 %>  ج
                 </div>
                 <% let mayIncome2 = 0;
-                  maysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  mayredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     mayIncome2 = mayIncome2 + item.money
                     %>  
@@ -906,8 +718,8 @@
                   - ايرادات شهر مايو <%= mayIncome2 %> ج
                 </div>
                 <% let mayOutcome2 = 0;
-                  maysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  mayredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     mayOutcome2 = mayOutcome2 + item.money
                     %>  
@@ -929,7 +741,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -937,8 +749,8 @@
                   - الرصيد السابق هو  <%= AprCurrence3 %>  ج
                 </div>
                 <% let mayIncome3 = 0;
-                  maysohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  mayredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     mayIncome3 = mayIncome3 + item.money
                     %>  
@@ -950,8 +762,8 @@
                   - ايرادات شهر مايو <%= mayIncome3 %> ج
                 </div>
                 <% let mayOutcome3 = 0;
-                  maysohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  mayredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     mayOutcome3 = mayOutcome3 + item.money
                     %>  
@@ -966,51 +778,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= AprCurrence4 %>  ج
-                </div>
-                <% let mayIncome4 = 0;
-                  maysohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    mayIncome4 = mayIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر مايو <%= mayIncome4 %> ج
-                </div>
-                <% let mayOutcome4 = 0;
-                  maysohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    mayOutcome4 = mayOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر مايو <%= mayOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let MayCurrence4 =  AprCurrence4 + mayIncome4 - mayOutcome4 %>
-                      - الرصيد الحالي هو <%=  MayCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
         </div>
         <div class="details">
@@ -1028,7 +796,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -1036,8 +804,8 @@
                   - الرصيد السابق هو  <%=  MayCurrence1 %> ج
                 </div>
                 <% let juneIncome1 = 0;
-                  junesohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  juneredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     juneIncome1 = juneIncome1 + item.money
                     %>  
@@ -1049,8 +817,8 @@
                   - ايرادات شهر يونيو <%= juneIncome1 %> ج
                 </div>
                 <% let juneOutcome1 = 0;
-                  junesohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  juneredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     juneOutcome1 = juneOutcome1 + item.money
                     %>  
@@ -1072,7 +840,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1080,8 +848,8 @@
                   - الرصيد السابق هو  <%= MayCurrence2 %>  ج
                 </div>
                 <% let juneIncome2 = 0;
-                  junesohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  juneredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     juneIncome2 = juneIncome2 + item.money
                     %>  
@@ -1093,8 +861,8 @@
                   - ايرادات شهر يونيو <%= juneIncome2 %> ج
                 </div>
                 <% let juneOutcome2 = 0;
-                  junesohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  juneredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     juneOutcome2 = juneOutcome2 + item.money
                     %>  
@@ -1116,7 +884,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1124,8 +892,8 @@
                   - الرصيد السابق هو  <%= MayCurrence3 %>  ج
                 </div>
                 <% let juneIncome3 = 0;
-                  junesohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  juneredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     juneIncome3 = juneIncome3 + item.money
                     %>  
@@ -1137,8 +905,8 @@
                   - ايرادات شهر يونيو <%= juneIncome3 %> ج
                 </div>
                 <% let juneOutcome3 = 0;
-                  junesohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  juneredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     juneOutcome3 = juneOutcome3 + item.money
                     %>  
@@ -1153,51 +921,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= MayCurrence4 %>  ج
-                </div>
-                <% let juneIncome4 = 0;
-                  junesohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    juneIncome4 = juneIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر يونيو <%= juneIncome4 %> ج
-                </div>
-                <% let juneOutcome4 = 0;
-                  junesohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    juneOutcome4 = juneOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر يونيو <%= juneOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let JuneCurrence4 =  MayCurrence4 + juneIncome4 - juneOutcome4 %>
-                      - الرصيد الحالي هو <%=  JuneCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
         </div>
         <div class="details">
@@ -1215,7 +939,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -1223,8 +947,8 @@
                   - الرصيد السابق هو  <%=  JuneCurrence1 %> ج
                 </div>
                 <% let julyIncome1 = 0;
-                  julysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  julyredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     julyIncome1 = julyIncome1 + item.money
                     %>  
@@ -1236,8 +960,8 @@
                   - ايرادات شهر يوليو <%= julyIncome1 %> ج
                 </div>
                 <% let julyOutcome1 = 0;
-                  julysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  julyredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     julyOutcome1 = julyOutcome1 + item.money
                     %>  
@@ -1259,7 +983,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1267,8 +991,8 @@
                   - الرصيد السابق هو  <%= JuneCurrence2 %>  ج
                 </div>
                 <% let julyIncome2 = 0;
-                  julysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  julyredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     julyIncome2 = julyIncome2 + item.money
                     %>  
@@ -1280,8 +1004,8 @@
                   - ايرادات شهر يوليو <%= julyIncome2 %> ج
                 </div>
                 <% let julyOutcome2 = 0;
-                  julysohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  julyredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     julyOutcome2 = julyOutcome2 + item.money
                     %>  
@@ -1303,7 +1027,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1311,8 +1035,8 @@
                   - الرصيد السابق هو  <%= JuneCurrence3 %>  ج
                 </div>
                 <% let julyIncome3 = 0;
-                  julysohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  julyredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     julyIncome3 = julyIncome3 + item.money
                     %>  
@@ -1324,8 +1048,8 @@
                   - ايرادات شهر يوليو <%= julyIncome3 %> ج
                 </div>
                 <% let julyOutcome3 = 0;
-                  julysohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  julyredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     julyOutcome3 = julyOutcome3 + item.money
                     %>  
@@ -1340,51 +1064,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= JuneCurrence4 %>  ج
-                </div>
-                <% let julyIncome4 = 0;
-                  julysohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    julyIncome4 = julyIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر يوليو <%= julyIncome4 %> ج
-                </div>
-                <% let julyOutcome4 = 0;
-                  julysohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    julyOutcome4 = julyOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر يوليو <%= julyOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let JulyCurrence4 =  JuneCurrence4 + julyIncome4 - julyOutcome4 %>
-                      - الرصيد الحالي هو <%=  JulyCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
         </div>
         <div class="details">
@@ -1402,7 +1082,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -1410,8 +1090,8 @@
                   - الرصيد السابق هو  <%=  JulyCurrence1 %> ج
                 </div>
                 <% let augIncome1 = 0;
-                  augsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  augredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     augIncome1 = augIncome1 + item.money
                     %>  
@@ -1423,8 +1103,8 @@
                   - ايرادات شهر أغسطس <%= augIncome1 %> ج
                 </div>
                 <% let augOutcome1 = 0;
-                  augsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  augredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     augOutcome1 = augOutcome1 + item.money
                     %>  
@@ -1446,7 +1126,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1454,8 +1134,8 @@
                   - الرصيد السابق هو  <%= JulyCurrence2 %>  ج
                 </div>
                 <% let augIncome2 = 0;
-                  augsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  augredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     augIncome2 = augIncome2 + item.money
                     %>  
@@ -1467,8 +1147,8 @@
                   - ايرادات شهر أغسطس <%= augIncome2 %> ج
                 </div>
                 <% let augOutcome2 = 0;
-                  augsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  augredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     augOutcome2 = augOutcome2 + item.money
                     %>  
@@ -1490,7 +1170,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1498,8 +1178,8 @@
                   - الرصيد السابق هو  <%= JulyCurrence3 %>  ج
                 </div>
                 <% let augIncome3 = 0;
-                  augsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  augredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     augIncome3 = augIncome3 + item.money
                     %>  
@@ -1511,8 +1191,8 @@
                   - ايرادات شهر أغسطس <%= augIncome3 %> ج
                 </div>
                 <% let augOutcome3 = 0;
-                  augsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  augredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     augOutcome3 = augOutcome3 + item.money
                     %>  
@@ -1527,51 +1207,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= JulyCurrence4 %>  ج
-                </div>
-                <% let augIncome4 = 0;
-                  augsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    augIncome4 = augIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر أغسطس <%= augIncome4 %> ج
-                </div>
-                <% let augOutcome4 = 0;
-                  augsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    augOutcome4 = augOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر أغسطس <%= augOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let AugCurrence4 =  JulyCurrence4 + augIncome4 - augOutcome4 %>
-                      - الرصيد الحالي هو <%=  AugCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
         </div>
         <div class="details">
@@ -1589,7 +1225,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -1597,8 +1233,8 @@
                   - الرصيد السابق هو  <%=  AugCurrence1 %> ج
                 </div>
                 <% let sepIncome1 = 0;
-                  sepsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  sepredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     sepIncome1 = sepIncome1 + item.money
                     %>  
@@ -1610,8 +1246,8 @@
                   - ايرادات شهر سبتمبر <%= sepIncome1 %> ج
                 </div>
                 <% let sepOutcome1 = 0;
-                  sepsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  sepredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     sepOutcome1 = sepOutcome1 + item.money
                     %>  
@@ -1633,7 +1269,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1641,8 +1277,8 @@
                   - الرصيد السابق هو  <%= AugCurrence2 %>  ج
                 </div>
                 <% let sepIncome2 = 0;
-                  sepsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  sepredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     sepIncome2 = sepIncome2 + item.money
                     %>  
@@ -1654,8 +1290,8 @@
                   - ايرادات شهر سبتمبر <%= sepIncome2 %> ج
                 </div>
                 <% let sepOutcome2 = 0;
-                  sepsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  sepredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     sepOutcome2 = sepOutcome2 + item.money
                     %>  
@@ -1677,7 +1313,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1685,8 +1321,8 @@
                   - الرصيد السابق هو  <%= AugCurrence3 %>  ج
                 </div>
                 <% let sepIncome3 = 0;
-                  sepsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  sepredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     sepIncome3 = sepIncome3 + item.money
                     %>  
@@ -1698,8 +1334,8 @@
                   - ايرادات شهر سبتمبر <%= sepIncome3 %> ج
                 </div>
                 <% let sepOutcome3 = 0;
-                  sepsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  sepredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     sepOutcome3 = sepOutcome3 + item.money
                     %>  
@@ -1714,51 +1350,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= AugCurrence4 %>  ج
-                </div>
-                <% let sepIncome4 = 0;
-                  sepsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    sepIncome4 = sepIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر سبتمبر <%= sepIncome4 %> ج
-                </div>
-                <% let sepOutcome4 = 0;
-                  sepsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    sepOutcome4 = sepOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر سبتمبر <%= sepOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let SepCurrence4 =  AugCurrence4 + sepIncome4 - sepOutcome4 %>
-                      - الرصيد الحالي هو <%=  SepCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
         </div>
         <div class="details">
@@ -1776,7 +1368,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -1784,8 +1376,8 @@
                   - الرصيد السابق هو  <%=  SepCurrence1 %> ج
                 </div>
                 <% let octIncome1 = 0;
-                  octsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  octredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     octIncome1 = octIncome1 + item.money
                     %>  
@@ -1797,8 +1389,8 @@
                   - ايرادات شهر أكتوبر <%= octIncome1 %> ج
                 </div>
                 <% let octOutcome1 = 0;
-                  octsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  octredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     octOutcome1 = octOutcome1 + item.money
                     %>  
@@ -1820,7 +1412,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1828,8 +1420,8 @@
                   - الرصيد السابق هو  <%= SepCurrence2 %>  ج
                 </div>
                 <% let octIncome2 = 0;
-                  octsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  octredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     octIncome2 = octIncome2 + item.money
                     %>  
@@ -1841,8 +1433,8 @@
                   - ايرادات شهر أكتوبر <%= octIncome2 %> ج
                 </div>
                 <% let octOutcome2 = 0;
-                  octsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  octredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     octOutcome2 = octOutcome2 + item.money
                     %>  
@@ -1864,7 +1456,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -1872,8 +1464,8 @@
                   - الرصيد السابق هو  <%= SepCurrence3 %>  ج
                 </div>
                 <% let octIncome3 = 0;
-                  octsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  octredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     octIncome3 = octIncome3 + item.money
                     %>  
@@ -1885,8 +1477,8 @@
                   - ايرادات شهر أكتوبر <%= octIncome3 %> ج
                 </div>
                 <% let octOutcome3 = 0;
-                  octsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  octredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     octOutcome3 = octOutcome3 + item.money
                     %>  
@@ -1901,51 +1493,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= SepCurrence4 %>  ج
-                </div>
-                <% let octIncome4 = 0;
-                  octsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    octIncome4 = octIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر أكتوبر <%= octIncome4 %> ج
-                </div>
-                <% let octOutcome4 = 0;
-                  octsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    octOutcome4 = octOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر أكتوبر <%= octOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let OctCurrence4 =  SepCurrence4 + octIncome4 - octOutcome4 %>
-                      - الرصيد الحالي هو <%=  OctCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>           
           </div>
         </div>
         <div class="details">
@@ -1963,7 +1511,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -1971,8 +1519,8 @@
                   - الرصيد السابق هو  <%=  OctCurrence1 %> ج
                 </div>
                 <% let novIncome1 = 0;
-                  novsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  novredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     novIncome1 = novIncome1 + item.money
                     %>  
@@ -1984,8 +1532,8 @@
                   - ايرادات شهر نوفمبر <%= novIncome1 %> ج
                 </div>
                 <% let novOutcome1 = 0;
-                  novsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  novredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     novOutcome1 = novOutcome1 + item.money
                     %>  
@@ -2007,7 +1555,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -2015,8 +1563,8 @@
                   - الرصيد السابق هو  <%= OctCurrence2 %>  ج
                 </div>
                 <% let novIncome2 = 0;
-                  novsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  novredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     novIncome2 = novIncome2 + item.money
                     %>  
@@ -2028,8 +1576,8 @@
                   - ايرادات شهر نوفمبر <%= novIncome2 %> ج
                 </div>
                 <% let novOutcome2 = 0;
-                  novsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  novredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     novOutcome2 = novOutcome2 + item.money
                     %>  
@@ -2051,7 +1599,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -2059,8 +1607,8 @@
                   - الرصيد السابق هو  <%= OctCurrence3 %>  ج
                 </div>
                 <% let novIncome3 = 0;
-                  novsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  novredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     novIncome3 = novIncome3 + item.money
                     %>  
@@ -2072,8 +1620,8 @@
                   - ايرادات شهر نوفمبر <%= novIncome3 %> ج
                 </div>
                 <% let novOutcome3 = 0;
-                  novsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  novredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     novOutcome3 = novOutcome3 + item.money
                     %>  
@@ -2088,51 +1636,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= OctCurrence4 %>  ج
-                </div>
-                <% let novIncome4 = 0;
-                  novsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    novIncome4 = novIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر نوفمبر <%= novIncome4 %> ج
-                </div>
-                <% let novOutcome4 = 0;
-                  novsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    novOutcome4 = novOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر نوفمبر <%= novOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let NovCurrence4 =  OctCurrence4 + novIncome4 - novOutcome4 %>
-                      - الرصيد الحالي هو <%=  NovCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
         </div>
         <div class="details">
@@ -2150,7 +1654,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / المحافظة – سوهاج</span>
+                <span>هاشم عثمان / حلايب – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont">
@@ -2158,8 +1662,8 @@
                   - الرصيد السابق هو  <%=  NovCurrence1 %> ج
                 </div>
                 <% let decIncome1 = 0;
-                  decsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  decredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     decIncome1 = decIncome1 + item.money
                     %>  
@@ -2171,8 +1675,8 @@
                   - ايرادات شهر نوفمبر <%= decIncome1 %> ج
                 </div>
                 <% let decOutcome1 = 0;
-                  decsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / المحافظة – سوهاج") {
+                  decredsea.forEach((item,index) => { 
+                  if (item.places == "هاشم عثمان / حلايب – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     decOutcome1 = decOutcome1 + item.money
                     %>  
@@ -2194,7 +1698,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>دياب / إدفا و الغوانم – سوهاج</span>
+                <span>محمود حسنين / شلاتين – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -2202,8 +1706,8 @@
                   - الرصيد السابق هو  <%= NovCurrence2 %>  ج
                 </div>
                 <% let decIncome2 = 0;
-                  decsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  decredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     decIncome2 = decIncome2 + item.money
                     %>  
@@ -2215,8 +1719,8 @@
                   - ايرادات شهر نوفمبر <%= decIncome2 %> ج
                 </div>
                 <% let decOutcome2 = 0;
-                  decsohag.forEach((item,index) => { 
-                  if (item.places == "دياب / إدفا و الغوانم – سوهاج") {
+                  decredsea.forEach((item,index) => { 
+                  if (item.places == "محمود حسنين / شلاتين – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     decOutcome2 = decOutcome2 + item.money
                     %>  
@@ -2238,7 +1742,7 @@
                   <span class="icon-circle-left"></span>
                   <span class="icon-circle-down hide2"></span>
                 </div>
-                <span>رداد مراد / بهتا – سوهاج</span>
+                <span>الشيخ اوهاج / أبو رماد – البحر الأحمر</span>
               </div>
               <div class="detTable2">
                 <div class="cont"> 
@@ -2246,8 +1750,8 @@
                   - الرصيد السابق هو  <%= NovCurrence3 %>  ج
                 </div>
                 <% let decIncome3 = 0;
-                  decsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  decredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة رصيد") {
                     decIncome3 = decIncome3 + item.money
                     %>  
@@ -2259,8 +1763,8 @@
                   - ايرادات شهر نوفمبر <%= decIncome3 %> ج
                 </div>
                 <% let decOutcome3 = 0;
-                  decsohag .forEach((item,index) => { 
-                  if (item.places == "رداد مراد / بهتا – سوهاج") {
+                  decredsea .forEach((item,index) => { 
+                  if (item.places == "الشيخ اوهاج / أبو رماد – البحر الأحمر") {
                     if (item.type == "أضافة مصروفات") {
                     decOutcome3 = decOutcome3 + item.money
                     %>  
@@ -2275,51 +1779,7 @@
                     </div>
                 </div>
               </div>
-            </div>
-            <div class="details2">
-              <div class="summ2">
-                <div class="iconstyl2">
-                  <span class="icon-circle-left"></span>
-                  <span class="icon-circle-down hide2"></span>
-                </div>
-                <span>عثمان أبو مروان / الشوكا – طما – سوهاج</span>
-              </div>
-              <div class="detTable2">
-                <div class="cont">
-                <div>
-                  - الرصيد السابق هو  <%= NovCurrence4 %>  ج
-                </div>
-                <% let decIncome4 = 0;
-                  decsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة رصيد") {
-                    decIncome4 = decIncome4 + item.money
-                    %>  
-                <% }
-              } 
-            }) 
-                %>
-                <div>
-                  - ايرادات شهر نوفمبر <%= decIncome4 %> ج
-                </div>
-                <% let decOutcome4 = 0;
-                  decsohag.forEach((item,index) => { 
-                  if (item.places == "عثمان أبو مروان / الشوكا – طما – سوهاج") {
-                    if (item.type == "أضافة مصروفات") {
-                    decOutcome4 = decOutcome4 + item.money
-                    %>  
-                <% }} }) 
-                %>
-                <div>
-                      - مصروفات شهر نوفمبر <%= decOutcome4 %> ج
-                    </div>
-                    <div>
-                  <% let DecCurrence4 =  NovCurrence4 + decIncome4 - decOutcome4 %>
-                      - الرصيد الحالي هو <%=  DecCurrence4 %> ج
-                    </div>
-                </div>
-              </div>
-            </div>            
+            </div>         
           </div>
         </div>
 
