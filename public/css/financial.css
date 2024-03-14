@@ -120,3 +120,17 @@ table.inco {
     padding: 10px 15px;
   }
 }
+
+.details {
+
+  margin-right: 0;
+}
+
+.detTable {
+  width: 90vw;
+}
+
+.shooow {
+  display: block;
+  overflow: scroll;
+}
