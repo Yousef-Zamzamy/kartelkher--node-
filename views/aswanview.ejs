@@ -221,59 +221,6 @@
           </table>
         </div>
       </div>
-
-      <div class="form-popup form-popup11 hide-when-mobile" id="myForm3">
-        <form action="/aswan.html" method="post" class="form-container">
-          <h1>الحسابات</h1>
-
-          <label for="data"><b>التاريخ</b></label>
-          <input id="dateinput3" type="date" name="date" required />
-          <br />
-          <label for="place"><b>المسئول/المكان</b></label>
-          <select id="places3" class="Placeinput" name="places" value="0000" required>
-            <option value=""></option>
-            <option class="options" value="الحج كمال / دراو – أسوان">الحج كمال / دراو – أسوان </option>
-            </select>
-          <br />
-          <label for="ways"><b>النوع</b></label>
-          <select id="type" class="Placeinput" name="type" required>
-              <option value=""></option>
-              <option value="أضافة رصيد">أضافة رصيد</option>
-              <option value="أضافة مصروفات">أضافة مصروفات</option>
-              
-          </select>
-          <br />
-          <label for="ways"><b>البيان</b></label>
-          <select id="ways3" class="Placeinput" name="ways" required>
-              <option value=""></option>
-              <option value="دعم مادي">دعم مادي</option>
-              <option value="كروت الخير">كروت الخير</option>
-              <option value="حفاضات">حفاضات</option>
-              <option value="مصاريف مدارس">مصاريف مدارس</option>
-              <option value="إفطار صائم">إفطار صائم</option>
-              <option value="موائد الرحمن">موائد الرحمن</option>
-              <option value="عيديات">عيديات</option>
-              <option value="ملابس عيد">ملابس عيد</option>
-              <option value="ذكاة الفطر">ذكاة الفطر</option>
-              <option value="أضحية العيد">أضحية العيد</option>
-              <option value="آبار مياه">آبار مياه</option>
-              <option value="توصيلة مياه شرب">توصيلة مياه شرب</option>
-              <option value="توصيل كهرباء والعداد">توصيل كهرباء والعداد</option>
-              <option value="حمامات">حمامات</option>
-              <option value="بناء اسقف">بناء اسقف</option>
-              <option value="ماكينات خياطة">ماكينات خياطة</option>
-              <option value="اصلاح اجهزة طبية">اصلاح اجهزة طبية</option>
-              <option value="اكفان">اكفان</option>
-          </select>
-          <br />
-          <label for="number"><b>المصروفات</b></label>
-          <input class="input3" type="number" name="money" min="0" required />
-          <div>
-            <button type="submit" class="btn savebtn" id="save3" disabled>حفظ</button>
-            <button type="button" class="btn cancel" id="cancel3">الغاء</button>
-          </div>
-        </form>
-      </div>
     </section>
     <%- include('./components/footer.ejs') %>
   </body>
