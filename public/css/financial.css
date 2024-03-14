@@ -115,3 +115,8 @@ table.inco {
   display: flex;
     justify-content: space-around;
 }
+@media (max-width: 600px) {
+  .MainTitle {
+    padding: 10px 15px;
+  }
+}

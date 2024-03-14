@@ -266,8 +266,12 @@ label b {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   .MainTitle {
     padding: 10px 15px;
   }
+}
+
+.head a {
+  margin: 0 12px;
 }

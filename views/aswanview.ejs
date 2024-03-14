@@ -147,7 +147,6 @@
               <th class="">التاريخ</th>
               <th class="">البيان</th>
               <th class="">الرصيد</th>
-              <th class="">تعديلات</th>
             </tr>
             <% 
         financialarr.forEach((item,index) => { 
@@ -158,17 +157,6 @@
             <td class=""><%= item.date %></td>
             <td class=""><%= item.ways %></td>
             <td class=""><%= item.money %></td>
-            <td class="">
-              <div>
-                <form class="buttons" style="display: inline;" action="/aswan.html/<%= item._id %>?_method=DELETE"  method="post">
-                  <button><span class="icon-trash del"></span></button>
-                </form>
-                <a href="editaswan/<%= item._id %>">
-                  <button>
-                  <span class="icon-pencil"></span>
-                </button>
-              </div>
-            </td>
           </tr>
         <%
         } }) %>
@@ -177,7 +165,6 @@
               <th class="hidecell">المكان</th>
               <th class="extcell">الاجمالي</th>
               <th class="extcell mobtotalcurrence"><%= mobtotal %></th>
-              <th class="hidecell">تعديلات</th>
             </tr>
           </table>
         </div>
@@ -200,7 +187,6 @@
               <th class="">البيان</th>
               <th class="">المصروفات</th>
               <th class="">المتبقي</th>
-              <th class="">تعديلات</th>
             </tr>
             <% financialarr.forEach((item,index) => { 
           if ( item.type == "أضافة مصروفات" && item.places == "الحج كمال / دراو – أسوان") {
@@ -212,17 +198,7 @@
             <td class=""><%= item.money %></td>
             <td class=""> <%= mobtotal - item.money %>
                           <% mobtotal = mobtotal - item.money %>   </td>
-            <td class="">
-              <div>
-                <form class="buttons" style="display: inline;" action="/aswan.html/<%= item._id %>?_method=DELETE"  method="post">
-                  <button><span class="icon-trash del"></span></button>
-                </form>
-                <a href="editaswan/<%= item._id %>">
-                  <button>
-                  <span class="icon-pencil"></span>
-                </button>
-              </div>
-            </td>
+            
           </tr>
         <%
         } }) %>
@@ -241,7 +217,6 @@
             <%= mobtotal2 %>
             </th>
           <th class="extcell totalremain"> <%= mobtotall - mobtotal2 %> </th>
-              <th class="hidecell">تعديلات</th>
             </tr>
           </table>
         </div>
