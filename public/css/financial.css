@@ -118,6 +118,7 @@ table.inco {
 @media (max-width: 600px) {
   .MainTitle {
     padding: 10px 15px;
+    font-size: 35px;
   }
 }
 
