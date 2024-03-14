@@ -41,7 +41,8 @@ table.inco {
 }
 
 .form-popup11 {
-  right: 217px;
+  right: -11px;
+  left: -11px;
   bottom: 55px;
   transform: scale(1.2);
 }
@@ -52,7 +53,7 @@ table.inco {
   }
 
   .form-popup11 {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
   
   .form-popup2 {
@@ -134,4 +135,10 @@ table.inco {
 .shooow {
   display: block;
   overflow: scroll;
+}
+
+input {
+  color: #1b1b1b;
+  padding: 5px 10px;
+  width: 50%;
 }
